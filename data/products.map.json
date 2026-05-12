@@ -1,0 +1,908 @@
+[
+  {
+    "id": "semaglutide",
+    "name": "Semaglutide",
+    "aka": [
+      "Ozempic",
+      "Wegovy",
+      "GLP-1 RA"
+    ],
+    "category": "GLP-1 & Metabolic",
+    "peptidedb_slug": "semaglutide",
+    "pdp_slug": "semaglutide"
+  },
+  {
+    "id": "tirzepatide",
+    "name": "Tirzepatide",
+    "aka": [
+      "Mounjaro",
+      "Zepbound",
+      "GIP/GLP-1"
+    ],
+    "category": "GLP-1 & Metabolic",
+    "peptidedb_slug": "tirzepatide",
+    "pdp_slug": "tirzepatide"
+  },
+  {
+    "id": "retatrutide",
+    "name": "Retatrutide",
+    "aka": [
+      "Triple-G",
+      "GGG agonist"
+    ],
+    "category": "GLP-1 & Metabolic",
+    "peptidedb_slug": "retatrutide",
+    "pdp_slug": "retatrutide"
+  },
+  {
+    "id": "cagrilintide",
+    "name": "Cagrilintide",
+    "aka": [
+      "Cagri",
+      "amylin analog"
+    ],
+    "category": "GLP-1 & Metabolic",
+    "peptidedb_slug": "cagrilintide",
+    "pdp_slug": "cagrilintide"
+  },
+  {
+    "id": "mazdutide",
+    "name": "Mazdutide",
+    "aka": [
+      "IBI362",
+      "GLP-1/glucagon"
+    ],
+    "category": "GLP-1 & Metabolic",
+    "peptidedb_slug": "mazdutide"
+  },
+  {
+    "id": "survodutide",
+    "name": "Survodutide",
+    "aka": [
+      "BI 456906",
+      "GLP-1/glucagon"
+    ],
+    "category": "GLP-1 & Metabolic",
+    "peptidedb_slug": "survodutide"
+  },
+  {
+    "id": "liraglutide",
+    "name": "Liraglutide",
+    "aka": [
+      "Saxenda",
+      "Victoza"
+    ],
+    "category": "GLP-1 & Metabolic",
+    "note": "compiled"
+  },
+  {
+    "id": "cagri-plus-sema-blend",
+    "name": "Cagri+Sema Blend",
+    "aka": [
+      "CagriSema"
+    ],
+    "category": "GLP-1 & Metabolic",
+    "note": "compiled"
+  },
+  {
+    "id": "reta-plus-cagri-blend",
+    "name": "Reta+Cagri Blend",
+    "aka": [],
+    "category": "GLP-1 & Metabolic",
+    "note": "compiled"
+  },
+  {
+    "id": "reta-plus-tirz-blend",
+    "name": "Reta+Tirz Blend",
+    "aka": [],
+    "category": "GLP-1 & Metabolic",
+    "note": "compiled"
+  },
+  {
+    "id": "tesamorelin",
+    "name": "Tesamorelin",
+    "aka": [
+      "Egrifta",
+      "GHRH analog"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "peptidedb_slug": "tesamorelin",
+    "pdp_slug": "tesamorelin"
+  },
+  {
+    "id": "hgh-191aa",
+    "name": "HGH 191AA",
+    "aka": [
+      "Somatropin",
+      "recombinant hGH"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "peptidedb_slug": "hgh"
+  },
+  {
+    "id": "hgh-fragment-176-191",
+    "name": "HGH Fragment 176-191",
+    "aka": [
+      "AOD-precursor frag",
+      "lipolytic GH frag"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "peptidedb_slug": "hgh-frag-176-191"
+  },
+  {
+    "id": "ghrp-2",
+    "name": "GHRP-2",
+    "aka": [
+      "pralmorelin"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "peptidedb_slug": "ghrp-2"
+  },
+  {
+    "id": "ghrp-6",
+    "name": "GHRP-6",
+    "aka": [],
+    "category": "Growth Hormone & Secretagogues",
+    "peptidedb_slug": "ghrp-6"
+  },
+  {
+    "id": "sermorelin",
+    "name": "Sermorelin",
+    "aka": [
+      "GHRH 1-29"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "peptidedb_slug": "sermorelin",
+    "pdp_slug": "sermorelin"
+  },
+  {
+    "id": "ipamorelin",
+    "name": "Ipamorelin",
+    "aka": [
+      "GH secretagogue"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "peptidedb_slug": "ipamorelin",
+    "pdp_slug": "ipamorelin"
+  },
+  {
+    "id": "cjc-1295-dac",
+    "name": "CJC-1295 DAC",
+    "aka": [
+      "DAC:GRF",
+      "modified GRF w/ DAC"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "peptidedb_slug": "cjc-1295-dac",
+    "pdp_slug": "cjc-1295-dac"
+  },
+  {
+    "id": "cjc-1295-no-dac",
+    "name": "CJC-1295 no-DAC",
+    "aka": [
+      "Mod-GRF 1-29",
+      "CJC-1295 without DAC"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "peptidedb_slug": "cjc-1295",
+    "pdp_slug": "cjc-1295-no-dac"
+  },
+  {
+    "id": "cjc-1295-plus-ipamorelin-blend",
+    "name": "CJC-1295 + Ipamorelin Blend",
+    "aka": [
+      "CJC/Ipa"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "peptidedb_slug": "cjc-ipa-protocol"
+  },
+  {
+    "id": "hexarelin",
+    "name": "Hexarelin",
+    "aka": [
+      "examorelin"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "peptidedb_slug": "hexarelin"
+  },
+  {
+    "id": "mk-677",
+    "name": "MK-677",
+    "aka": [
+      "ibutamoren",
+      "oral GH secretagogue"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "peptidedb_slug": "mk-677"
+  },
+  {
+    "id": "ipamorelin-plus-tesamorelin-blend",
+    "name": "Ipamorelin + Tesamorelin Blend",
+    "aka": [
+      "Ipa/Tesa"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "peptidedb_slug": "tesa-ipa-protocol"
+  },
+  {
+    "id": "igf-1-lr3",
+    "name": "IGF-1 LR3",
+    "aka": [
+      "Long R3 IGF-1"
+    ],
+    "category": "IGF & Growth Factors",
+    "peptidedb_slug": "igf-1-lr3",
+    "pdp_slug": "igf-1-lr3"
+  },
+  {
+    "id": "igf-1-des",
+    "name": "IGF-1 DES",
+    "aka": [
+      "DES(1-3) IGF-1"
+    ],
+    "category": "IGF & Growth Factors",
+    "peptidedb_slug": "igf-1-des"
+  },
+  {
+    "id": "mgf",
+    "name": "MGF",
+    "aka": [
+      "mechano growth factor",
+      "IGF-1Ec"
+    ],
+    "category": "IGF & Growth Factors",
+    "peptidedb_slug": "mgf"
+  },
+  {
+    "id": "peg-mgf",
+    "name": "PEG-MGF",
+    "aka": [
+      "pegylated MGF"
+    ],
+    "category": "IGF & Growth Factors",
+    "peptidedb_slug": "peg-mgf"
+  },
+  {
+    "id": "bpc-157",
+    "name": "BPC-157",
+    "aka": [
+      "Body Protection Compound-157",
+      "pentadecapeptide"
+    ],
+    "category": "Healing & Recovery",
+    "peptidedb_slug": "bpc-157",
+    "pdp_slug": "bpc-157"
+  },
+  {
+    "id": "tb-500",
+    "name": "TB-500",
+    "aka": [
+      "thymosin beta-4 fragment",
+      "TB4 frag"
+    ],
+    "category": "Healing & Recovery",
+    "peptidedb_slug": "tb-500",
+    "pdp_slug": "tb-500"
+  },
+  {
+    "id": "bpc-157-plus-tb-500-blend",
+    "name": "BPC-157 + TB-500 Blend",
+    "aka": [
+      "Wolverine stack",
+      "BPC/TB"
+    ],
+    "category": "Healing & Recovery",
+    "peptidedb_slug": "wolverine-stack"
+  },
+  {
+    "id": "ara-290",
+    "name": "ARA-290",
+    "aka": [
+      "cibinetide",
+      "ARA290"
+    ],
+    "category": "Healing & Recovery",
+    "peptidedb_slug": "ara-290"
+  },
+  {
+    "id": "kpv",
+    "name": "KPV",
+    "aka": [
+      "lys-pro-val",
+      "alpha-MSH frag"
+    ],
+    "category": "Healing & Recovery",
+    "peptidedb_slug": "kpv",
+    "pdp_slug": "kpv"
+  },
+  {
+    "id": "vip",
+    "name": "VIP",
+    "aka": [
+      "vasoactive intestinal peptide"
+    ],
+    "category": "Healing & Recovery",
+    "peptidedb_slug": "vip"
+  },
+  {
+    "id": "ll-37",
+    "name": "LL-37",
+    "aka": [
+      "cathelicidin",
+      "cap-18"
+    ],
+    "category": "Healing & Recovery",
+    "peptidedb_slug": "ll-37"
+  },
+  {
+    "id": "b7-33",
+    "name": "B7-33",
+    "aka": [
+      "relaxin analog"
+    ],
+    "category": "Healing & Recovery",
+    "peptidedb_slug": "b7-33"
+  },
+  {
+    "id": "glow70",
+    "name": "GLOW70 (BBG70)",
+    "aka": [
+      "BPC+TB500+GHK-Cu blend",
+      "Glow protocol"
+    ],
+    "category": "Healing & Recovery",
+    "peptidedb_slug": "glow-protocol"
+  },
+  {
+    "id": "glow50",
+    "name": "GLOW50",
+    "aka": [
+      "Glow blend 50"
+    ],
+    "category": "Healing & Recovery",
+    "note": "compiled"
+  },
+  {
+    "id": "klow",
+    "name": "KLOW (BBKG80)",
+    "aka": [
+      "KPV+BPC+TB500+GHK-Cu blend",
+      "Klow protocol"
+    ],
+    "category": "Healing & Recovery",
+    "peptidedb_slug": "klow-protocol"
+  },
+  {
+    "id": "aod-9604",
+    "name": "AOD-9604",
+    "aka": [
+      "anti-obesity drug 9604",
+      "HGH frag 176-191 analog"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "peptidedb_slug": "aod-9604",
+    "pdp_slug": "aod-9604"
+  },
+  {
+    "id": "adipotide",
+    "name": "Adipotide",
+    "aka": [
+      "FTPP",
+      "prohibitin-TP01"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "peptidedb_slug": "adipotide",
+    "note": "high-risk"
+  },
+  {
+    "id": "5-amino-1mq",
+    "name": "5-Amino-1MQ",
+    "aka": [
+      "5-amino-1-methylquinolinium",
+      "NNMT inhibitor"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "peptidedb_slug": "5-amino-1mq"
+  },
+  {
+    "id": "slu-pp-332",
+    "name": "SLU-PP-332",
+    "aka": [
+      "ERR agonist",
+      "exercise mimetic"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "peptidedb_slug": "slu-pp-332",
+    "pdp_slug": "slu-pp-332"
+  },
+  {
+    "id": "aicar",
+    "name": "AICAR",
+    "aka": [
+      "acadesine",
+      "AMPK activator"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "peptidedb_slug": "aicar"
+  },
+  {
+    "id": "l-carnitine",
+    "name": "L-Carnitine (injectable)",
+    "aka": [
+      "levocarnitine"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "peptidedb_slug": "l-carnitine"
+  },
+  {
+    "id": "lipo-b",
+    "name": "Lipo-B (LC120)",
+    "aka": [
+      "MIC+B12 lipotropic"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "note": "compiled"
+  },
+  {
+    "id": "lipo-c",
+    "name": "Lipo-C (LC526)",
+    "aka": [
+      "MIC + L-carnitine lipotropic"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "note": "compiled"
+  },
+  {
+    "id": "super-shred",
+    "name": "Super Shred (LC553)",
+    "aka": [
+      "multi-lipotropic blend"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "note": "compiled"
+  },
+  {
+    "id": "mic-plus-b",
+    "name": "MIC+B (LC216)",
+    "aka": [
+      "methionine-inositol-choline + B12"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "note": "compiled"
+  },
+  {
+    "id": "hcg",
+    "name": "HCG",
+    "aka": [
+      "human chorionic gonadotropin"
+    ],
+    "category": "Hormonal & Fertility",
+    "peptidedb_slug": "hcg"
+  },
+  {
+    "id": "hmg",
+    "name": "HMG",
+    "aka": [
+      "human menopausal gonadotropin",
+      "menotropin"
+    ],
+    "category": "Hormonal & Fertility",
+    "peptidedb_slug": "hmg"
+  },
+  {
+    "id": "kisspeptin-10",
+    "name": "Kisspeptin-10",
+    "aka": [
+      "metastin frag",
+      "KISS1"
+    ],
+    "category": "Hormonal & Fertility",
+    "peptidedb_slug": "kisspeptin",
+    "pdp_slug": "kisspeptin"
+  },
+  {
+    "id": "gonadorelin",
+    "name": "Gonadorelin",
+    "aka": [
+      "GnRH",
+      "LHRH"
+    ],
+    "category": "Hormonal & Fertility",
+    "peptidedb_slug": "gonadorelin"
+  },
+  {
+    "id": "oxytocin",
+    "name": "Oxytocin",
+    "aka": [
+      "pitocin"
+    ],
+    "category": "Hormonal & Fertility",
+    "peptidedb_slug": "oxytocin",
+    "pdp_slug": "oxytocin"
+  },
+  {
+    "id": "pt-141",
+    "name": "PT-141",
+    "aka": [
+      "bremelanotide",
+      "Vyleesi"
+    ],
+    "category": "Sexual Health",
+    "peptidedb_slug": "pt-141",
+    "pdp_slug": "bremelanotide-pt-141"
+  },
+  {
+    "id": "melanotan-2",
+    "name": "Melanotan 2",
+    "aka": [
+      "MT-2",
+      "melanotan-II"
+    ],
+    "category": "Cosmetic & Skin",
+    "peptidedb_slug": "melanotan-ii",
+    "pdp_slug": "melanotan-ii"
+  },
+  {
+    "id": "melanotan-1",
+    "name": "Melanotan 1",
+    "aka": [
+      "MT-1",
+      "afamelanotide",
+      "Scenesse"
+    ],
+    "category": "Cosmetic & Skin",
+    "peptidedb_slug": "melanotan-i"
+  },
+  {
+    "id": "ghk-cu",
+    "name": "GHK-Cu",
+    "aka": [
+      "copper peptide GHK",
+      "copper tripeptide-1"
+    ],
+    "category": "Cosmetic & Skin",
+    "peptidedb_slug": "ghk-cu",
+    "pdp_slug": "ghk-cu"
+  },
+  {
+    "id": "ahk-cu",
+    "name": "AHK-Cu",
+    "aka": [
+      "copper tripeptide AHK"
+    ],
+    "category": "Cosmetic & Skin",
+    "peptidedb_slug": "ahk-cu"
+  },
+  {
+    "id": "glutathione",
+    "name": "Glutathione (injectable)",
+    "aka": [
+      "GSH",
+      "reduced glutathione"
+    ],
+    "category": "Cosmetic & Skin",
+    "peptidedb_slug": "glutathione"
+  },
+  {
+    "id": "hyaluronic-acid",
+    "name": "Hyaluronic Acid (injectable)",
+    "aka": [
+      "HA",
+      "sodium hyaluronate"
+    ],
+    "category": "Cosmetic & Skin",
+    "note": "compiled"
+  },
+  {
+    "id": "snap-8",
+    "name": "SNAP-8",
+    "aka": [
+      "acetyl octapeptide-3",
+      "argireline peptide"
+    ],
+    "category": "Cosmetic & Skin",
+    "peptidedb_slug": "snap-8"
+  },
+  {
+    "id": "matrixyl",
+    "name": "Matrixyl",
+    "aka": [
+      "palmitoyl pentapeptide-4",
+      "Matrixyl 3000"
+    ],
+    "category": "Cosmetic & Skin",
+    "note": "compiled"
+  },
+  {
+    "id": "lemon-bottle",
+    "name": "Lemon Bottle",
+    "aka": [
+      "lipolysis solution",
+      "fat dissolving"
+    ],
+    "category": "Cosmetic & Skin",
+    "note": "compiled"
+  },
+  {
+    "id": "selank",
+    "name": "Selank",
+    "aka": [
+      "TP-7",
+      "tuftsin analog"
+    ],
+    "category": "Cognitive & Mood",
+    "peptidedb_slug": "selank",
+    "pdp_slug": "selank"
+  },
+  {
+    "id": "semax",
+    "name": "Semax",
+    "aka": [
+      "ACTH 4-10 analog",
+      "heptapeptide"
+    ],
+    "category": "Cognitive & Mood",
+    "peptidedb_slug": "semax",
+    "pdp_slug": "semax"
+  },
+  {
+    "id": "cerebrolysin",
+    "name": "Cerebrolysin",
+    "aka": [
+      "FPF-1070",
+      "neuropeptide preparation"
+    ],
+    "category": "Cognitive & Mood",
+    "peptidedb_slug": "cerebrolysin"
+  },
+  {
+    "id": "adamax",
+    "name": "Adamax",
+    "aka": [
+      "N-acetyl semax amidate analog"
+    ],
+    "category": "Cognitive & Mood",
+    "peptidedb_slug": "adamax"
+  },
+  {
+    "id": "pinealon",
+    "name": "Pinealon",
+    "aka": [
+      "Cytogen tripeptide",
+      "EDR peptide"
+    ],
+    "category": "Cognitive & Mood",
+    "peptidedb_slug": "pinealon"
+  },
+  {
+    "id": "dsip",
+    "name": "DSIP",
+    "aka": [
+      "delta sleep-inducing peptide"
+    ],
+    "category": "Sleep",
+    "peptidedb_slug": "dsip",
+    "pdp_slug": "dsip"
+  },
+  {
+    "id": "melatonin",
+    "name": "Melatonin (injectable)",
+    "aka": [
+      "N-acetyl-5-methoxytryptamine"
+    ],
+    "category": "Sleep",
+    "note": "compiled"
+  },
+  {
+    "id": "thymosin-alpha-1",
+    "name": "Thymosin Alpha-1",
+    "aka": [
+      "Ta1",
+      "Zadaxin"
+    ],
+    "category": "Immune & Thymic",
+    "peptidedb_slug": "thymosin-alpha-1",
+    "pdp_slug": "thymosin-alpha-1"
+  },
+  {
+    "id": "thymalin",
+    "name": "Thymalin",
+    "aka": [
+      "thymus polypeptide extract"
+    ],
+    "category": "Immune & Thymic",
+    "peptidedb_slug": "thymalin"
+  },
+  {
+    "id": "foxo4-dri",
+    "name": "FOXO4-DRI",
+    "aka": [
+      "FOXO4 D-retro-inverso",
+      "senolytic peptide"
+    ],
+    "category": "Longevity & Bioregulators",
+    "peptidedb_slug": "foxo4-dri",
+    "note": "high-risk"
+  },
+  {
+    "id": "epithalon",
+    "name": "Epithalon",
+    "aka": [
+      "Epitalon",
+      "epithalamin tetrapeptide",
+      "AEDG"
+    ],
+    "category": "Longevity & Bioregulators",
+    "peptidedb_slug": "epitalon"
+  },
+  {
+    "id": "humanin",
+    "name": "Humanin",
+    "aka": [
+      "HN",
+      "mitochondrial-derived peptide"
+    ],
+    "category": "Longevity & Bioregulators",
+    "peptidedb_slug": "humanin",
+    "pdp_slug": "humanin"
+  },
+  {
+    "id": "mots-c",
+    "name": "MOTS-c",
+    "aka": [
+      "mitochondrial ORF of 12S rRNA-c"
+    ],
+    "category": "Longevity & Bioregulators",
+    "peptidedb_slug": "mots-c",
+    "pdp_slug": "mots-c"
+  },
+  {
+    "id": "ss-31",
+    "name": "SS-31",
+    "aka": [
+      "elamipretide",
+      "MTP-131",
+      "Bendavia"
+    ],
+    "category": "Longevity & Bioregulators",
+    "peptidedb_slug": "ss-31",
+    "pdp_slug": "ss-31"
+  },
+  {
+    "id": "cartalax",
+    "name": "Cartalax",
+    "aka": [
+      "Cartilax",
+      "AED peptide bioregulator"
+    ],
+    "category": "Longevity & Bioregulators",
+    "peptidedb_slug": "cartalax"
+  },
+  {
+    "id": "vesugen",
+    "name": "Vesugen",
+    "aka": [
+      "KED tripeptide bioregulator"
+    ],
+    "category": "Longevity & Bioregulators",
+    "peptidedb_slug": "vesugen"
+  },
+  {
+    "id": "nad-plus",
+    "name": "NAD+",
+    "aka": [
+      "nicotinamide adenine dinucleotide"
+    ],
+    "category": "Longevity & Bioregulators",
+    "peptidedb_slug": "nad-plus",
+    "pdp_slug": "nad-plus"
+  },
+  {
+    "id": "pnc-27",
+    "name": "PNC-27",
+    "aka": [
+      "p53-derived anticancer peptide"
+    ],
+    "category": "Longevity & Bioregulators",
+    "peptidedb_slug": "pnc-27",
+    "note": "experimental"
+  },
+  {
+    "id": "follistatin-344",
+    "name": "Follistatin 344",
+    "aka": [
+      "FS344",
+      "myostatin antagonist"
+    ],
+    "category": "Myostatin & Anabolic",
+    "note": "compiled"
+  },
+  {
+    "id": "ace-031",
+    "name": "ACE-031",
+    "aka": [
+      "ramatercept",
+      "ActRIIB-Fc"
+    ],
+    "category": "Myostatin & Anabolic",
+    "peptidedb_slug": "ace-031",
+    "note": "experimental"
+  },
+  {
+    "id": "dermorphin",
+    "name": "Dermorphin",
+    "aka": [
+      "[D-Ala2]-dermorphin",
+      "mu-opioid heptapeptide"
+    ],
+    "category": "Other / Analgesic",
+    "note": "opioid-caution"
+  },
+  {
+    "id": "bacteriostatic-water",
+    "name": "Bacteriostatic Water",
+    "aka": [
+      "bac water",
+      "0.9% benzyl alcohol water"
+    ],
+    "category": "Solvents & Ancillaries",
+    "note": "compiled"
+  },
+  {
+    "id": "sterile-water-for-injection",
+    "name": "Sterile Water for Injection",
+    "aka": [
+      "WFI",
+      "sterile water"
+    ],
+    "category": "Solvents & Ancillaries",
+    "note": "compiled"
+  },
+  {
+    "id": "acetic-acid",
+    "name": "Acetic Acid (0.6%)",
+    "aka": [
+      "dilute acetic acid reconstitution solvent"
+    ],
+    "category": "Solvents & Ancillaries",
+    "note": "compiled"
+  },
+  {
+    "id": "vitamin-b12",
+    "name": "Vitamin B12 (injectable)",
+    "aka": [
+      "cyanocobalamin",
+      "methylcobalamin",
+      "hydroxocobalamin"
+    ],
+    "category": "Solvents & Ancillaries",
+    "note": "compiled"
+  },
+  {
+    "id": "hhb-blend",
+    "name": "HHB Blend",
+    "aka": [
+      "Synex proprietary HHB blend"
+    ],
+    "category": "Other / Analgesic",
+    "note": "compiled"
+  },
+  {
+    "id": "shb-blend",
+    "name": "SHB Blend",
+    "aka": [
+      "Synex proprietary SHB blend"
+    ],
+    "category": "Other / Analgesic",
+    "note": "compiled"
+  },
+  {
+    "id": "atm-15-blend",
+    "name": "ATM-15 Blend",
+    "aka": [
+      "Synex proprietary ATM-15 blend"
+    ],
+    "category": "Other / Analgesic",
+    "note": "compiled"
+  }
+]

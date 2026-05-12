@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Interactive peptide reference — searchable cards with dosing, cycles, side effects, stacks and sources.">
+<title>Peptide Cheat Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0C0E11; --bg-2:#12151A; --bg-3:#181C22; --bg-4:#1E232B;
+    --line:rgba(255,255,255,0.07); --line-2:rgba(255,255,255,0.12);
+    --ink:#F2F4F7; --ink-2:#AEB6C2; --ink-3:#727B89;
+    --accent:#5EC8B0; --accent-2:#2C9E86; --accent-soft:rgba(94,200,176,0.12);
+    --warn:#E0A33C; --warn-soft:rgba(224,163,60,0.13);
+    --danger:#E2685A; --danger-soft:rgba(226,104,90,0.14);
+    --chip:#1C212A; --shadow:0 10px 40px rgba(0,0,0,0.45);
+    --radius:14px;
+  }
+  html[data-theme="light"]{
+    --bg:#F7F6F2; --bg-2:#FFFFFF; --bg-3:#FBFAF6; --bg-4:#F0EEE7;
+    --line:#E6E3D9; --line-2:#D7D3C6;
+    --ink:#1B1F27; --ink-2:#545C68; --ink-3:#8A8F99;
+    --accent:#1A8C6B; --accent-2:#0F5441; --accent-soft:rgba(26,140,107,0.10);
+    --warn:#B8761C; --warn-soft:rgba(184,118,28,0.12);
+    --danger:#B8463A; --danger-soft:rgba(184,70,58,0.10);
+    --chip:#F0EEE7; --shadow:0 12px 36px rgba(26,31,44,0.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Syne',system-ui,sans-serif;font-size:16px;line-height:1.6;min-height:100vh;-webkit-font-smoothing:antialiased;transition:background .2s,color .2s}
+  body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 60% 45% at 12% 8%,var(--accent-soft) 0%,transparent 62%),radial-gradient(ellipse 50% 50% at 92% 95%,var(--accent-soft) 0%,transparent 60%)}
+  .wrap{position:relative;z-index:1;max-width:1240px;margin:0 auto;padding:0 22px 100px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  code,.mono{font-family:'DM Mono',monospace}
+
+  /* ---- disclaimer banner ---- */
+  .disclaimer-bar{background:var(--warn-soft);border-bottom:1px solid var(--line);font-family:'DM Mono',monospace;font-size:12px;color:var(--ink-2);padding:9px 22px;display:flex;gap:14px;align-items:flex-start;line-height:1.5}
+  .disclaimer-bar strong{color:var(--warn)}
+  .disclaimer-bar button{margin-left:auto;flex:none;background:none;border:1px solid var(--line-2);color:var(--ink-3);border-radius:6px;padding:2px 9px;font-family:inherit;font-size:11px;cursor:pointer}
+  .disclaimer-bar button:hover{color:var(--ink);border-color:var(--ink-3)}
+  .disclaimer-bar.hidden{display:none}
+
+  /* ---- header ---- */
+  header.masthead{padding:46px 0 26px;border-bottom:1px solid var(--line);margin-bottom:26px}
+  .eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+  .title-row{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(34px,5vw,56px);line-height:1;letter-spacing:-.02em}
+  h1 .dot{color:var(--accent)}
+  .lede{color:var(--ink-2);font-size:16px;margin-top:14px;max-width:600px}
+  .theme-toggle{flex:none;background:var(--bg-3);border:1px solid var(--line-2);color:var(--ink-2);border-radius:999px;padding:8px 16px;font-family:'DM Mono',monospace;font-size:12px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:background .15s}
+  .theme-toggle:hover{background:var(--bg-4);color:var(--ink)}
+
+  /* ---- controls ---- */
+  .controls{position:sticky;top:0;z-index:30;background:var(--bg);padding:16px 0 14px;margin-bottom:8px;border-bottom:1px solid var(--line)}
+  .search-box{position:relative;margin-bottom:12px}
+  .search-box input{width:100%;background:var(--bg-2);border:1px solid var(--line-2);border-radius:12px;color:var(--ink);font-family:'Syne',sans-serif;font-size:16px;padding:13px 16px 13px 42px;outline:none;transition:border-color .15s}
+  .search-box input:focus{border-color:var(--accent)}
+  .search-box::before{content:'⌕';position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--ink-3);font-size:18px}
+  .search-box .clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--ink-3);font-size:18px;cursor:pointer;display:none;padding:4px 8px}
+  .search-box .clear.show{display:block}
+  .filters{display:flex;gap:7px;flex-wrap:wrap}
+  .filter-chip{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.02em;padding:5px 11px;border-radius:999px;background:var(--chip);border:1px solid var(--line);color:var(--ink-2);cursor:pointer;white-space:nowrap;transition:all .12s}
+  .filter-chip:hover{border-color:var(--line-2);color:var(--ink)}
+  .filter-chip.active{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+  .filter-chip .n{opacity:.55;margin-left:5px}
+
+  /* ---- groups + grid ---- */
+  .count-line{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-3);margin:18px 0 6px;letter-spacing:.05em}
+  .group{margin-top:30px}
+  .group-head{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+  .group-head h2{font-family:'Syne',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.01em}
+  .group-head .gline{flex:1;height:1px;background:var(--line)}
+  .group-head .gcount{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-3)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:13px}
+  .card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:17px 18px;cursor:pointer;position:relative;transition:border-color .14s,transform .14s,background .14s;overflow:hidden}
+  .card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .card .cname{font-family:'Syne',sans-serif;font-weight:700;font-size:16.5px;line-height:1.2;margin-bottom:3px;padding-right:14px}
+  .card .caka{font-family:'DM Mono',monospace;font-size:10.5px;color:var(--ink-3);margin-bottom:9px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .card .csum{font-size:13px;color:var(--ink-2);line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .card .cfoot{margin-top:11px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .tag{font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;padding:3px 7px;border-radius:5px;background:var(--accent-soft);color:var(--accent)}
+  .riskdot{font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;padding:3px 7px;border-radius:5px}
+  .riskdot.warn{background:var(--warn-soft);color:var(--warn)}
+  .riskdot.danger{background:var(--danger-soft);color:var(--danger)}
+  .riskdot.compiled{background:var(--bg-4);color:var(--ink-3)}
+  .empty{color:var(--ink-3);font-family:'DM Mono',monospace;font-size:13px;padding:40px 0;text-align:center}
+
+  /* ---- detail panel ---- */
+  .scrim{position:fixed;inset:0;background:rgba(0,0,0,.55);backdrop-filter:blur(2px);z-index:40;opacity:0;pointer-events:none;transition:opacity .2s}
+  .scrim.open{opacity:1;pointer-events:auto}
+  .panel{position:fixed;top:0;right:0;height:100%;width:min(560px,100%);background:var(--bg-2);border-left:1px solid var(--line-2);box-shadow:var(--shadow);z-index:41;transform:translateX(100%);transition:transform .26s cubic-bezier(.22,1,.36,1);display:flex;flex-direction:column;overflow:hidden}
+  .panel.open{transform:translateX(0)}
+  .panel-head{padding:20px 24px 16px;border-bottom:1px solid var(--line);flex:none}
+  .panel-head .ptag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+  .panel-head h3{font-family:'Syne',sans-serif;font-weight:800;font-size:25px;line-height:1.12;letter-spacing:-.01em;padding-right:40px}
+  .panel-head .paka{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-3);margin-top:7px;line-height:1.5}
+  .panel-close{position:absolute;top:18px;right:20px;background:var(--bg-3);border:1px solid var(--line-2);color:var(--ink-2);width:30px;height:30px;border-radius:8px;font-size:17px;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center}
+  .panel-close:hover{color:var(--ink);background:var(--bg-4)}
+  .panel-body{overflow-y:auto;padding:20px 24px 40px;flex:1}
+  .panel-body section{margin-bottom:20px}
+  .panel-body h4{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:7px;display:flex;align-items:center;gap:8px}
+  .panel-body h4::after{content:'';flex:1;height:1px;background:var(--line)}
+  .panel-body p{font-size:14.5px;color:var(--ink);line-height:1.62}
+  .panel-body section.warnbox{background:var(--warn-soft);border-left:3px solid var(--warn);border-radius:8px;padding:13px 15px}
+  .panel-body section.warnbox h4{color:var(--warn)}.panel-body section.warnbox h4::after{display:none}
+  .panel-body section.dangerbox{background:var(--danger-soft);border-left:3px solid var(--danger);border-radius:8px;padding:13px 15px}
+  .panel-body section.dangerbox h4{color:var(--danger)}.panel-body section.dangerbox h4::after{display:none}
+  .syn-row{display:flex;gap:7px;flex-wrap:wrap;margin-top:3px}
+  .syn-chip{font-family:'DM Mono',monospace;font-size:11.5px;padding:5px 10px;border-radius:7px;background:var(--bg-3);border:1px solid var(--line-2);color:var(--ink);cursor:pointer;transition:all .12s}
+  .syn-chip:hover{border-color:var(--accent);color:var(--accent)}
+  .syn-chip.dead{opacity:.4;cursor:default}
+  .src-row{display:flex;flex-direction:column;gap:5px;margin-top:3px}
+  .src-row a{font-family:'DM Mono',monospace;font-size:12px;word-break:break-all}
+  .src-row .compiled{font-family:'DM Mono',monospace;font-size:12px;color:var(--ink-3)}
+  .panel-foot{font-family:'DM Mono',monospace;font-size:10.5px;color:var(--ink-3);padding:14px 24px;border-top:1px solid var(--line);flex:none;line-height:1.5}
+
+  /* ---- page footer ---- */
+  footer.foot{margin-top:60px;border-top:1px solid var(--line);padding-top:24px;font-family:'DM Mono',monospace;font-size:11.5px;color:var(--ink-3);line-height:1.7}
+  footer.foot strong{color:var(--ink-2)}
+  footer.foot a{color:var(--ink-2)}
+
+  @media(max-width:560px){
+    .wrap{padding:0 14px 80px}
+    header.masthead{padding:30px 0 20px}
+    .grid{grid-template-columns:1fr 1fr;gap:10px}
+    .card{padding:14px}
+    .card .csum{-webkit-line-clamp:2}
+    .panel{width:100%;border-left:none}
+    .disclaimer-bar{font-size:11px;padding:8px 14px}
+  }
+  @media(max-width:380px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="disclaimer-bar" id="discBar">
+  <span><strong>Reference only — not medical advice.</strong> Many compounds listed are not approved for human use. Data aggregated from peptide-db.com &amp; peptidedosingprotocols.com. Verify everything with a licensed clinician and the supplier's documentation before use.</span>
+  <button id="discDismiss" type="button">Dismiss</button>
+</div>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="eyebrow">Interactive Reference · Synex / LELE Catalogue</div>
+    <div class="title-row">
+      <div>
+        <h1>Peptide Cheat Sheet<span class="dot">.</span></h1>
+        <p class="lede">Searchable cards for every product on the list — mechanism, dosing, cycle, side effects, stacks and sources. Tap a card for the full breakdown.</p>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button"><span id="themeIcon">☾</span><span id="themeLabel">Dark</span></button>
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="search-box">
+      <input type="search" id="search" placeholder="Search name, alias, category, or use…" autocomplete="off" aria-label="Search peptides">
+      <button class="clear" id="searchClear" type="button" aria-label="Clear search">×</button>
+    </div>
+    <div class="filters" id="filters"></div>
+  </div>
+
+  <div class="count-line" id="countLine"></div>
+  <div id="results"></div>
+
+  <footer class="foot">
+    <p><strong>Peptide Cheat Sheet</strong> · static reference · edit <code>data/peptides.json</code> and push to update.</p>
+    <p>Aggregated &amp; attributed from <a href="https://peptide-db.com" target="_blank" rel="noopener">peptide-db.com</a> and <a href="https://www.peptidedosingprotocols.com" target="_blank" rel="noopener">peptidedosingprotocols.com</a>. Educational / research use only — <strong>not medical advice, not a recommendation to use any substance.</strong> Several items are research chemicals or not approved for human use. Always consult a licensed physician and confirm composition, dose and legality independently.</p>
+  </footer>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<aside class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="panelTitle">
+  <div class="panel-head">
+    <button class="panel-close" id="panelClose" type="button" aria-label="Close">×</button>
+    <div class="ptag" id="panelTag"></div>
+    <h3 id="panelTitle"></h3>
+    <div class="paka" id="panelAka"></div>
+  </div>
+  <div class="panel-body" id="panelBody"></div>
+  <div class="panel-foot">Educational reference — not medical advice. Verify dose, composition and legality with a clinician and the supplier before any use.</div>
+</aside>
+
+<script>
+(function(){
+  "use strict";
+  var DATA = [], BY_ID = {}, CATS = [];
+  var state = { q:"", cat:"all" };
+
+  // ---- theme ----
+  var root = document.documentElement;
+  var savedTheme = localStorage.getItem("pcs-theme");
+  if(savedTheme === "light" || savedTheme === "dark") root.setAttribute("data-theme", savedTheme);
+  function syncThemeBtn(){
+    var t = root.getAttribute("data-theme");
+    document.getElementById("themeIcon").textContent = t === "light" ? "☀" : "☾";
+    document.getElementById("themeLabel").textContent = t === "light" ? "Light" : "Dark";
+  }
+  document.getElementById("themeToggle").addEventListener("click", function(){
+    var next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+    root.setAttribute("data-theme", next);
+    localStorage.setItem("pcs-theme", next);
+    syncThemeBtn();
+  });
+  syncThemeBtn();
+
+  // ---- disclaimer dismiss ----
+  if(localStorage.getItem("pcs-disc") === "1") document.getElementById("discBar").classList.add("hidden");
+  document.getElementById("discDismiss").addEventListener("click", function(){
+    document.getElementById("discBar").classList.add("hidden");
+    localStorage.setItem("pcs-disc","1");
+  });
+
+  // ---- helpers ----
+  function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]; }); }
+  function riskOf(r){
+    var t = ((r.note||"") + " " + (r.sideEffects||"")).toLowerCase();
+    if(/opioid|renal toxicity|serious|severe|not for human|do not use|melanoma|kidney damage/.test(t) || (r.note||"")==="high-risk" || (r.note||"")==="opioid-caution") return "danger";
+    if((r.note||"")==="experimental" || /not approved|preclinical|research chemical|not fda-approved|caution/.test(t)) return "warn";
+    return null;
+  }
+  function isCompiled(r){ return Array.isArray(r.sources) && r.sources.length===1 && r.sources[0]==="compiled"; }
+
+  function matches(r){
+    if(state.cat !== "all" && r.category !== state.cat) return false;
+    if(!state.q) return true;
+    var hay = (r.name+" "+(r.aka||[]).join(" ")+" "+r.category+" "+(r.summary||"")+" "+(r.mechanism||"")).toLowerCase();
+    return state.q.split(/\s+/).every(function(tok){ return hay.indexOf(tok) !== -1; });
+  }
+
+  // ---- render filters ----
+  function renderFilters(){
+    var counts = {}; DATA.forEach(function(r){ counts[r.category]=(counts[r.category]||0)+1; });
+    var el = document.getElementById("filters");
+    var html = '<button class="filter-chip'+(state.cat==="all"?" active":"")+'" data-cat="all">All<span class="n">'+DATA.length+'</span></button>';
+    CATS.forEach(function(c){
+      html += '<button class="filter-chip'+(state.cat===c?" active":"")+'" data-cat="'+esc(c)+'">'+esc(c)+'<span class="n">'+counts[c]+'</span></button>';
+    });
+    el.innerHTML = html;
+    Array.prototype.forEach.call(el.querySelectorAll(".filter-chip"), function(b){
+      b.addEventListener("click", function(){ state.cat = b.getAttribute("data-cat"); renderFilters(); renderResults(); });
+    });
+  }
+
+  // ---- render results ----
+  function cardHTML(r){
+    var risk = riskOf(r);
+    var badge = risk==="danger" ? '<span class="riskdot danger">⚠ High risk</span>' : risk==="warn" ? '<span class="riskdot warn">Research only</span>' : "";
+    if(!badge && isCompiled(r)) badge = '<span class="riskdot compiled">Compiled</span>';
+    var aka = (r.aka&&r.aka.length) ? esc(r.aka.slice(0,2).join(" · ")) : "";
+    return '<div class="card" tabindex="0" role="button" data-id="'+esc(r.id)+'">'
+      + '<div class="cname">'+esc(r.name)+'</div>'
+      + (aka?'<span class="caka">'+aka+'</span>':'<span class="caka">&nbsp;</span>')
+      + '<div class="csum">'+esc(r.summary||"")+'</div>'
+      + '<div class="cfoot"><span class="tag">'+esc(r.category)+'</span>'+badge+'</div>'
+      + '</div>';
+  }
+  function renderResults(){
+    var list = DATA.filter(matches);
+    var rWrap = document.getElementById("results");
+    document.getElementById("countLine").textContent = list.length + (list.length===1?" product":" products") + (state.q?(' matching "'+state.q+'"'):"") + (state.cat!=="all"?(" in "+state.cat):"");
+    if(!list.length){ rWrap.innerHTML = '<div class="empty">Nothing matches. Try a different term or clear the filter.</div>'; return; }
+    var html = "";
+    if(state.q){
+      // flat grid when searching
+      html = '<div class="grid">'+list.map(cardHTML).join("")+'</div>';
+    } else {
+      var cats = state.cat==="all" ? CATS : [state.cat];
+      cats.forEach(function(c){
+        var sub = list.filter(function(r){ return r.category===c; });
+        if(!sub.length) return;
+        html += '<div class="group"><div class="group-head"><h2>'+esc(c)+'</h2><div class="gline"></div><div class="gcount">'+sub.length+'</div></div><div class="grid">'+sub.map(cardHTML).join("")+'</div></div>';
+      });
+    }
+    rWrap.innerHTML = html;
+    Array.prototype.forEach.call(rWrap.querySelectorAll(".card"), function(card){
+      var id = card.getAttribute("data-id");
+      card.addEventListener("click", function(){ openPanel(id); });
+      card.addEventListener("keydown", function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); openPanel(id); } });
+    });
+  }
+
+  // ---- detail panel ----
+  var lastFocus = null;
+  function sectionHTML(label, text, cls){
+    if(!text) return "";
+    return '<section'+(cls?' class="'+cls+'"':'')+'><h4>'+esc(label)+'</h4><p>'+esc(text)+'</p></section>';
+  }
+  function openPanel(id){
+    var r = BY_ID[id]; if(!r) return;
+    if(history.replaceState) history.replaceState(null,"","#"+id);
+    lastFocus = document.activeElement;
+    document.getElementById("panelTag").textContent = r.category;
+    document.getElementById("panelTitle").textContent = r.name;
+    document.getElementById("panelAka").innerHTML = (r.aka&&r.aka.length) ? "Also known as: "+esc(r.aka.join(" · ")) : "";
+    var risk = riskOf(r);
+    var b = "";
+    b += sectionHTML("Overview", r.summary);
+    b += sectionHTML("Mechanism of action", r.mechanism);
+    b += sectionHTML("Typical dose & frequency", r.dosing);
+    b += sectionHTML("Cycle & on/off protocol", r.cycle);
+    b += sectionHTML("Side effects & monitoring", r.sideEffects, risk==="danger"?"dangerbox":risk==="warn"?"warnbox":"");
+    // synergies
+    if(r.synergies && r.synergies.length){
+      var chips = r.synergies.map(function(sid){
+        var t = BY_ID[sid];
+        return t ? '<span class="syn-chip" data-go="'+esc(sid)+'">'+esc(t.name)+'</span>' : '<span class="syn-chip dead">'+esc(sid)+'</span>';
+      }).join("");
+      b += '<section><h4>Synergistic stacks</h4><div class="syn-row">'+chips+'</div></section>';
+    }
+    b += sectionHTML("How it compares", r.comparisons);
+    // sources
+    var srcHTML;
+    if(isCompiled(r)){
+      srcHTML = '<span class="compiled">Compiled from general references — not drawn from a single cited source. Confirm with the supplier\'s COA/label.</span>';
+    } else {
+      srcHTML = (r.sources||[]).map(function(u){ return '<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(u)+'</a>'; }).join("");
+    }
+    b += '<section><h4>Sources</h4><div class="src-row">'+srcHTML+'</div></section>';
+    var body = document.getElementById("panelBody");
+    body.innerHTML = b;
+    body.scrollTop = 0;
+    Array.prototype.forEach.call(body.querySelectorAll(".syn-chip[data-go]"), function(ch){
+      ch.addEventListener("click", function(){ openPanel(ch.getAttribute("data-go")); });
+    });
+    document.getElementById("scrim").classList.add("open");
+    document.getElementById("panel").classList.add("open");
+    document.body.style.overflow = "hidden";
+    document.getElementById("panelClose").focus();
+  }
+  function closePanel(){
+    document.getElementById("scrim").classList.remove("open");
+    document.getElementById("panel").classList.remove("open");
+    document.body.style.overflow = "";
+    if(history.replaceState) history.replaceState(null,"",location.pathname+location.search);
+    if(lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  document.getElementById("panelClose").addEventListener("click", closePanel);
+  document.getElementById("scrim").addEventListener("click", closePanel);
+  document.addEventListener("keydown", function(e){ if(e.key==="Escape" && document.getElementById("panel").classList.contains("open")) closePanel(); });
+
+  // ---- search ----
+  var searchEl = document.getElementById("search"), clearEl = document.getElementById("searchClear");
+  searchEl.addEventListener("input", function(){
+    state.q = searchEl.value.trim().toLowerCase();
+    clearEl.classList.toggle("show", !!searchEl.value);
+    renderResults();
+  });
+  clearEl.addEventListener("click", function(){ searchEl.value=""; state.q=""; clearEl.classList.remove("show"); renderResults(); searchEl.focus(); });
+
+  // ---- boot ----
+  fetch("data/peptides.json", {cache:"no-cache"})
+    .then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); return res.json(); })
+    .then(function(json){
+      DATA = json.slice();
+      // category order = order of first appearance in data
+      DATA.forEach(function(r){ BY_ID[r.id]=r; if(CATS.indexOf(r.category)===-1) CATS.push(r.category); });
+      renderFilters();
+      renderResults();
+      // deep link
+      var h = decodeURIComponent((location.hash||"").replace(/^#/,""));
+      if(h && BY_ID[h]) openPanel(h);
+    })
+    .catch(function(err){
+      document.getElementById("results").innerHTML = '<div class="empty">Could not load data/peptides.json ('+esc(err.message)+').<br>If you opened this file directly, serve it over HTTP instead: <code>python3 -m http.server</code></div>';
+    });
+  window.addEventListener("hashchange", function(){
+    var h = decodeURIComponent((location.hash||"").replace(/^#/,""));
+    if(h && BY_ID[h]) openPanel(h); else if(!h) closePanel();
+  });
+})();
+</script>
+</body>
+</html>

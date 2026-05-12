@@ -1,0 +1,2100 @@
+[
+  {
+    "id": "semaglutide",
+    "name": "Semaglutide",
+    "aka": [
+      "Ozempic",
+      "Wegovy",
+      "GLP-1 RA"
+    ],
+    "category": "GLP-1 & Metabolic",
+    "summary": "A long-acting GLP-1 receptor agonist FDA-approved for type 2 diabetes and chronic weight management, producing roughly 15 percent mean body-weight reduction.",
+    "mechanism": "Mimics native GLP-1, binding GLP-1 receptors to stimulate glucose-dependent insulin secretion, suppress glucagon, slow gastric emptying, and reduce appetite via hypothalamic pathways. A DPP-4-resistant substitution plus a fatty-acid chain that binds albumin extends the half-life to about 7 days, allowing once-weekly dosing. Receptors in multiple organs explain its broad metabolic, cardiovascular, and liver effects.",
+    "dosing": "Subcutaneous, once weekly, titrated 0.25 mg to 2.4 mg over about 16 weeks (0.25 to 0.5 to 1.0 to 1.7 to 2.4 mg); 0.5 to 1 mg weekly typical for diabetes and cardiovascular indications. Oral form runs 3 mg to 25 mg daily.",
+    "cycle": "Ongoing continuous therapy as prescribed; steady state reached after about 4 to 5 weeks of weekly dosing, with no off-period.",
+    "sideEffects": "Mainly gastrointestinal (nausea, vomiting, diarrhea, constipation), worst during titration; gallbladder issues and rare pancreatitis. Carries a boxed warning for thyroid C-cell tumors; contraindicated with personal or family history of medullary thyroid carcinoma or MEN2. Monitor HbA1c, weight, and watch for pancreatitis signs.",
+    "synergies": [
+      "cagrilintide",
+      "tirzepatide",
+      "tesamorelin"
+    ],
+    "comparisons": "Within GLP-1 and metabolic agents, semaglutide is the most established with the broadest approval history and safety data, but produces less weight loss than dual agonist tirzepatide or triple agonist retatrutide. Adding amylin analog cagrilintide (CagriSema) pushes results above semaglutide alone.",
+    "sources": [
+      "https://peptide-db.com/peptides/semaglutide",
+      "https://www.peptidedosingprotocols.com/protocol/semaglutide"
+    ]
+  },
+  {
+    "id": "tirzepatide",
+    "name": "Tirzepatide",
+    "aka": [
+      "Mounjaro",
+      "Zepbound",
+      "GIP/GLP-1"
+    ],
+    "category": "GLP-1 & Metabolic",
+    "summary": "A first-in-class dual GIP/GLP-1 receptor agonist FDA-approved for type 2 diabetes and chronic weight management, with up to roughly 22 percent body-weight reduction in trials.",
+    "mechanism": "Activates both GIP and GLP-1 receptors, producing glucose-dependent insulin stimulation, glucagon suppression, delayed gastric emptying, and central satiety signaling. The added GIP component enhances insulin sensitivity and metabolic effects beyond GLP-1 alone. A fatty-acid moiety gives an approximately 5-day half-life supporting once-weekly dosing.",
+    "dosing": "Subcutaneous, once weekly, titrated in 2.5 mg steps every 4 weeks: 2.5 to 5 to 7.5 to 10 to 12.5 to 15 mg. 2.5 mg is a tolerability dose; 5, 10, and 15 mg are the approved maintenance doses.",
+    "cycle": "Ongoing therapy as prescribed; stay 4 weeks at each titration step (longer if GI effects flare) and continue at the chosen maintenance dose with no off-period.",
+    "sideEffects": "Gastrointestinal effects (nausea, vomiting, diarrhea, constipation), gallbladder problems, rare pancreatitis, and small heart-rate increases. Boxed warning for thyroid C-cell tumors; avoid with personal or family history of medullary thyroid carcinoma or MEN2. Monitor HbA1c, weight, and lipase if symptomatic.",
+    "synergies": [
+      "cagrilintide",
+      "semaglutide",
+      "tesamorelin",
+      "retatrutide"
+    ],
+    "comparisons": "Tirzepatide outperforms the GLP-1-only semaglutide on weight loss and HbA1c, sitting between it and the still-investigational triple agonist retatrutide. Versus dual GLP-1/glucagon agents like survodutide and mazdutide, tirzepatide has the largest approved evidence base.",
+    "sources": [
+      "https://peptide-db.com/peptides/tirzepatide",
+      "https://www.peptidedosingprotocols.com/protocol/tirzepatide"
+    ]
+  },
+  {
+    "id": "retatrutide",
+    "name": "Retatrutide",
+    "aka": [
+      "Triple-G",
+      "GGG agonist"
+    ],
+    "category": "GLP-1 & Metabolic",
+    "summary": "An investigational once-weekly triple GLP-1/GIP/glucagon receptor agonist (LY3437943) that produced the highest weight loss recorded for an obesity drug, about 24 percent at 48 weeks in Phase 2.",
+    "mechanism": "Simultaneously activates GLP-1 receptors for appetite suppression, GIP receptors for insulin sensitivity, and glucagon receptors for increased energy expenditure and hepatic fat oxidation. The added glucagon agonism drives thermogenesis and dramatic liver-fat reduction beyond dual agonists. Half-life is roughly 6 days, enabling weekly dosing.",
+    "dosing": "Subcutaneous, once weekly, climbing every 4 weeks. Phase 3 TRIUMPH schedule: 1 to 2 to 4 to 6 to 9 to 12 mg (4, 9, and 12 mg are target maintenance doses); Phase 2 NEJM schedule: 1 to 2 to 4 to 8 to 12 mg with no 6 mg step. Maximum studied dose 12 mg weekly.",
+    "cycle": "Trial protocols run 48 weeks (Phase 2) to 68 to 72 weeks (Phase 3), 4 weeks per dose step, extending a step by 2 to 4 weeks if GI symptoms persist; intended as continuous therapy, not cycled.",
+    "sideEffects": "Triple agonism means pronounced GI effects (nausea, vomiting, and diarrhea each up to about 25 percent at 12 mg), heart-rate increases especially in the first 24 weeks, and a dysesthesia safety signal. Investigational and not FDA-approved as of 2026; counterfeits circulate. Avoid with medullary thyroid carcinoma history or MEN2; watch for pancreatitis and excessive weight loss.",
+    "synergies": [
+      "tirzepatide",
+      "cagrilintide",
+      "semaglutide"
+    ],
+    "comparisons": "Retatrutide currently leads its category on weight loss, exceeding tirzepatide and semaglutide, at the cost of heavier GI burden and unproven long-term safety. It is one mechanism beyond tirzepatide's dual agonism and is frequently discussed alongside dual GLP-1/glucagon agents survodutide and mazdutide.",
+    "sources": [
+      "https://peptide-db.com/peptides/retatrutide",
+      "https://www.peptidedosingprotocols.com/protocol/retatrutide"
+    ]
+  },
+  {
+    "id": "cagrilintide",
+    "name": "Cagrilintide",
+    "aka": [
+      "Cagri",
+      "amylin analog"
+    ],
+    "category": "GLP-1 & Metabolic",
+    "summary": "A long-acting lipidated amylin analog (AM833) and dual amylin/calcitonin receptor agonist studied for weight management, most notably in the CagriSema combination with semaglutide.",
+    "mechanism": "Activates amylin and calcitonin receptors to enhance satiety, slow gastric emptying, and improve insulin sensitivity and glucose metabolism. Acting on a pathway distinct from GLP-1 makes it complementary to incretin drugs. A lipid side chain gives an approximately 7 to 8 day half-life for once-weekly dosing; it requires acidic pH (about 3.5 to 4.5) on reconstitution to prevent fibril formation.",
+    "dosing": "Subcutaneous, once weekly. Monotherapy titrates from about 0.6 mg up to a studied maximum of 4.5 mg weekly; in CagriSema it titrates with semaglutide 0.25 to 0.5 to 1.0 to 1.7 to 2.4 mg of each over 16 weeks, then 2.4 mg/2.4 mg maintenance.",
+    "cycle": "Continuous long-term weekly therapy; titration steps last about 4 weeks each, held longer if GI effects are not tolerated, with no off-period.",
+    "sideEffects": "Dose-dependent gastrointestinal effects (nausea, vomiting, diarrhea), worst early; anti-cagrilintide antibodies develop in roughly 46 to 73 percent but do not appear to affect efficacy. Investigational and not yet FDA-approved as standalone; not for pregnancy or breastfeeding. Combining with retatrutide compounds GI risk; monitor for pancreatitis and injection-site reactions.",
+    "synergies": [
+      "semaglutide",
+      "tirzepatide",
+      "retatrutide"
+    ],
+    "comparisons": "Cagrilintide is the leading amylin analog and uniquely non-incretin in this category, modest on its own but additive when stacked: CagriSema beats semaglutide alone and rivals tirzepatide. Unlike pramlintide it is long-acting and weekly.",
+    "sources": [
+      "https://peptide-db.com/peptides/cagrilintide",
+      "https://www.peptidedosingprotocols.com/protocol/cagrilintide"
+    ]
+  },
+  {
+    "id": "mazdutide",
+    "name": "Mazdutide",
+    "aka": [
+      "IBI362",
+      "GLP-1/glucagon"
+    ],
+    "category": "GLP-1 & Metabolic",
+    "summary": "An investigational dual GLP-1/glucagon receptor agonist (an oxyntomodulin analog) studied for obesity and type 2 diabetes, with up to roughly 20 percent body-weight loss in Phase 3.",
+    "mechanism": "Dual agonist: GLP-1 activation stimulates insulin, suppresses glucagon, and slows gastric emptying, while glucagon receptor activation increases energy expenditure and thermogenesis, with GLP-1 counteracting glucagon's glucose-raising effect. Fatty-acid conjugation extends the half-life to about 6 to 8 days for once-weekly dosing.",
+    "dosing": "Subcutaneous, once weekly, with titration toward target doses: e.g. 1.5 to 3 mg (3 mg target), up to 3 to 6 to 9 mg (9 mg target); 3 to 4.5 mg weekly typical for mild-to-moderate type 2 diabetes.",
+    "cycle": "Continuous; trials run about 48 to 60-plus weeks for optimal results, titrating up over the first weeks then maintaining, with no off-period.",
+    "sideEffects": "Gastrointestinal effects (nausea, diarrhea, vomiting), increased heart rate (about 5 to 17 bpm), and possible mood changes. Investigational; avoid with medullary thyroid carcinoma history or MEN2, and in pregnancy or breastfeeding. Watch for pancreatitis and gallbladder symptoms; monitor glucose and HbA1c.",
+    "synergies": [
+      "semaglutide",
+      "tirzepatide",
+      "cagrilintide"
+    ],
+    "comparisons": "Mazdutide is a GLP-1/glucagon dual agonist like survodutide; reported trial data suggest superiority over semaglutide on weight and glycemic control, but it has far less approved evidence than tirzepatide and lacks the glucagon-driven thermogenic edge that retatrutide adds GIP on top of.",
+    "sources": [
+      "https://peptide-db.com/peptides/mazdutide"
+    ]
+  },
+  {
+    "id": "survodutide",
+    "name": "Survodutide",
+    "aka": [
+      "BI 456906",
+      "GLP-1/glucagon"
+    ],
+    "category": "GLP-1 & Metabolic",
+    "summary": "An investigational dual GLP-1/glucagon receptor agonist (BI 456906) studied for obesity, MASH, and type 2 diabetes, with about 15 percent mean weight loss at 46 weeks.",
+    "mechanism": "Balanced dual agonism (EC50 roughly 0.52 nM at the glucagon receptor and 0.33 nM at GLP-1): GLP-1 reduces appetite and slows gastric emptying while glucagon receptor activation increases energy expenditure and hepatic fat oxidation, driving strong liver-fat clearance. Fatty-acid acylation supports once-weekly dosing.",
+    "dosing": "Subcutaneous, once weekly. Conservative start 0.6 mg titrated over about 24 weeks at 4-week intervals; standard obesity protocol 3.6 to 6.0 mg weekly; MASH 2.4 to 4.8 mg; type 2 diabetes 0.3 to 2.7 mg weekly.",
+    "cycle": "Continuous weekly therapy with a long graded titration (around 24 weeks) then maintenance; no off-period.",
+    "sideEffects": "High rates of gastrointestinal effects (nausea about 40 to 66 percent, diarrhea 25 to 49 percent, vomiting 15 to 41 percent), small heart-rate increase, and possible tachycardia. Investigational; not for pregnancy or breastfeeding, use contraception during treatment. Watch for pancreatitis and gallbladder symptoms; monitor glucose, especially with insulin or sulfonylureas.",
+    "synergies": [
+      "semaglutide",
+      "tirzepatide",
+      "cagrilintide"
+    ],
+    "comparisons": "Survodutide is a GLP-1/glucagon dual agonist like mazdutide, with notable MASH efficacy; reported data put it ahead of semaglutide on weight in some comparisons but behind tirzepatide's approved track record, and it carries a heavier nausea burden than most GLP-1-only agents.",
+    "sources": [
+      "https://peptide-db.com/peptides/survodutide"
+    ]
+  },
+  {
+    "id": "liraglutide",
+    "name": "Liraglutide",
+    "aka": [
+      "Saxenda",
+      "Victoza"
+    ],
+    "category": "GLP-1 & Metabolic",
+    "summary": "A once-daily GLP-1 receptor agonist FDA-approved for type 2 diabetes (Victoza) and chronic weight management (Saxenda), the first-generation predecessor to semaglutide.",
+    "mechanism": "Binds GLP-1 receptors to increase glucose-dependent insulin secretion, suppress glucagon, slow gastric emptying, and reduce appetite via central pathways. A fatty-acid linker provides albumin binding and an approximately 13-hour half-life, requiring daily rather than weekly injection.",
+    "dosing": "Subcutaneous, once daily. Weight management (Saxenda): titrate 0.6 mg weekly up to 3.0 mg daily. Diabetes (Victoza): 0.6 mg, then 1.2 mg, up to 1.8 mg daily.",
+    "cycle": "Ongoing continuous daily therapy as prescribed; no off-period.",
+    "sideEffects": "Gastrointestinal effects (nausea, vomiting, diarrhea), gallbladder disease, rare pancreatitis, and increased heart rate. Boxed warning for thyroid C-cell tumors; avoid with medullary thyroid carcinoma history or MEN2. Monitor HbA1c and weight; watch for pancreatitis.",
+    "synergies": [
+      "semaglutide",
+      "tirzepatide"
+    ],
+    "comparisons": "Liraglutide produces less weight loss (around 5 to 8 percent) than weekly semaglutide and far less than tirzepatide or retatrutide, and requires daily dosing, so it is now largely superseded within the GLP-1 and metabolic category despite its long safety record.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "cagri-plus-sema-blend",
+    "name": "Cagri+Sema Blend",
+    "aka": [
+      "CagriSema"
+    ],
+    "category": "GLP-1 & Metabolic",
+    "summary": "A fixed combination of the amylin analog cagrilintide and the GLP-1 agonist semaglutide (CagriSema), studied as a once-weekly injection for obesity and type 2 diabetes.",
+    "mechanism": "Pairs two complementary satiety pathways: semaglutide drives GLP-1 receptor agonism (insulin secretion, glucagon suppression, slowed gastric emptying, central appetite reduction) while cagrilintide adds amylin/calcitonin receptor agonism (enhanced satiety, slowed gastric emptying, improved insulin sensitivity). The additive effect yields greater weight loss than either component alone; both are long-acting and lipidated for weekly dosing.",
+    "dosing": "Subcutaneous, once weekly. Co-titrated over 16 weeks at 0.25, 0.5, 1.0, 1.7, then 2.4 mg of each compound, with a 2.4 mg cagrilintide / 2.4 mg semaglutide maintenance dose from week 17. Hold a step longer if GI effects are poorly tolerated.",
+    "cycle": "Continuous long-term weekly therapy; 4 weeks per titration step then ongoing maintenance, no off-period.",
+    "sideEffects": "Dominated by gastrointestinal effects (nausea, vomiting, diarrhea, constipation), which can exceed semaglutide alone given the dual mechanism; gallbladder issues, rare pancreatitis, anti-cagrilintide antibodies. Investigational combination filed with the FDA; avoid with medullary thyroid carcinoma history or MEN2 and in pregnancy. Monitor HbA1c, weight, hydration, and pancreatitis signs.",
+    "synergies": [
+      "semaglutide",
+      "cagrilintide",
+      "tirzepatide"
+    ],
+    "comparisons": "CagriSema beats semaglutide monotherapy on weight loss (about 20 percent versus 15 percent in REDEFINE 1) and competes with tirzepatide, while adding amylin-specific GI tolerability considerations not seen with single-agent GLP-1 therapy.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "reta-plus-cagri-blend",
+    "name": "Reta+Cagri Blend",
+    "aka": [],
+    "category": "GLP-1 & Metabolic",
+    "summary": "An off-label research stack pairing the triple agonist retatrutide with the amylin analog cagrilintide, aiming to combine maximal incretin/glucagon effects with amylin-driven satiety.",
+    "mechanism": "Retatrutide contributes GLP-1 (appetite suppression), GIP (insulin sensitivity), and glucagon (energy expenditure, hepatic fat oxidation) agonism; cagrilintide adds a separate amylin/calcitonin satiety pathway. The combination layers two non-overlapping appetite mechanisms on top of glucagon-mediated thermogenesis, in theory pushing weight loss beyond either alone. Both are weekly, lipidated peptides.",
+    "dosing": "No established protocol exists; this combination is not in formal trials. In practice researchers titrate each component slowly and independently per its own schedule (retatrutide from 1 mg toward up to 12 mg weekly; cagrilintide from low doses toward 2.4 to 4.5 mg weekly), subcutaneous, once weekly. Sources do not report validated combined doses.",
+    "cycle": "No standardized cycle; would follow each component's continuous weekly titration-then-maintenance pattern, with extended steps if GI symptoms appear.",
+    "sideEffects": "Compounded gastrointestinal toxicity is the main concern, since retatrutide already causes nausea, vomiting, and diarrhea up to about 25 percent at top dose and cagrilintide adds its own GI burden; also heart-rate increases, retatrutide's dysesthesia signal, and risk of excessive weight loss. Both components are investigational and unapproved; combining them is experimental and not recommended without specialist supervision. Avoid with medullary thyroid carcinoma history or MEN2 and in pregnancy; monitor weight, HbA1c, hydration, and pancreatitis signs.",
+    "synergies": [
+      "retatrutide",
+      "cagrilintide",
+      "semaglutide"
+    ],
+    "comparisons": "Conceptually the most aggressive weight-loss stack in the category, going beyond CagriSema by swapping semaglutide for the triple agonist retatrutide; potency comes at the cost of stacked GI side effects and a complete absence of combination safety data versus single-agent or approved options like tirzepatide.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "reta-plus-tirz-blend",
+    "name": "Reta+Tirz Blend",
+    "aka": [],
+    "category": "GLP-1 & Metabolic",
+    "summary": "An off-label research stack combining the triple agonist retatrutide with the dual GIP/GLP-1 agonist tirzepatide; mechanistically redundant and primarily seen in informal use rather than clinical practice.",
+    "mechanism": "Both peptides activate GLP-1 and GIP receptors, so the combination largely overlaps; retatrutide adds glucagon receptor agonism for energy expenditure and hepatic fat oxidation, which tirzepatide lacks. Because the receptor targets so heavily coincide, the practical effect is mostly higher combined incretin tone rather than a true additive new pathway. Both are weekly, fatty-acid-modified peptides.",
+    "dosing": "No validated protocol; not studied in trials. If used, each is titrated independently and conservatively per its own schedule (tirzepatide 2.5 mg upward to 15 mg weekly; retatrutide 1 mg upward to 12 mg weekly), subcutaneous, once weekly. Sources report no combined dose figures and the overlap argues against full doses of both.",
+    "cycle": "No standardized cycle; would follow continuous weekly titration-then-maintenance for each, with longer steps if GI symptoms emerge.",
+    "sideEffects": "Markedly amplified gastrointestinal effects (nausea, vomiting, diarrhea, constipation) from doubling up incretin agonism, plus heart-rate increases, retatrutide's dysesthesia signal, and risk of excessive weight loss. Retatrutide is investigational and unapproved; stacking it on tirzepatide is experimental, mechanistically redundant, and not recommended. Avoid with medullary thyroid carcinoma history or MEN2 and in pregnancy; monitor HbA1c, weight, hydration, and pancreatitis signs.",
+    "synergies": [
+      "retatrutide",
+      "tirzepatide",
+      "cagrilintide"
+    ],
+    "comparisons": "Offers little over retatrutide alone (which already covers GLP-1, GIP, and glucagon) while adding the side-effect load of two agents; a complementary stack like retatrutide plus the amylin analog cagrilintide or simply CagriSema is the more rational combination within this category.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "tesamorelin",
+    "name": "Tesamorelin",
+    "aka": [
+      "Egrifta",
+      "GHRH analog"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "summary": "An FDA-approved synthetic GHRH analog (Egrifta) used to reduce excess visceral fat in HIV-associated lipodystrophy, with selective visceral fat targeting and liver-fat reduction.",
+    "mechanism": "Binds pituitary GHRH receptors to stimulate pulsatile endogenous growth hormone release, which in turn raises IGF-1 and drives lipolysis preferentially in visceral adipose tissue while sparing subcutaneous fat. Because it works through the body's own GH pulse rather than supplying exogenous GH, the physiologic feedback loop is largely preserved.",
+    "dosing": "Subcutaneous, once daily, typically in the evening. HIV lipodystrophy (approved): 1.4 mg daily. Reported research uses: about 2 mg daily for visceral fat or NAFLD, and 1 to 2 mg roughly 5 to 7 times weekly for body-composition or anti-aging goals.",
+    "cycle": "Used continuously; benefits accrue over months and reverse on discontinuation. NAFLD protocols reported around 12 months; cognitive-study use about 20 weeks. No fixed on/off pattern in the sources.",
+    "sideEffects": "Injection-site reactions (about 17 percent), arthralgia (about 13 percent), fluid retention, and glucose intolerance. Contraindicated with active malignancy, pituitary disorders, and pregnancy. Monitor IGF-1 (discontinue if more than 2 SD above normal with acromegaly symptoms), HbA1c/fasting glucose, and watch for new masses.",
+    "synergies": [
+      "ipamorelin",
+      "hgh-191aa"
+    ],
+    "comparisons": "Among GH secretagogues, tesamorelin is the only FDA-approved one and has the strongest visceral-fat and liver-fat evidence, but it requires daily injection unlike weekly stacks; it is often paired with a ghrelin-mimetic such as ipamorelin to amplify the GH pulse, whereas plain GHRH fragments like sermorelin are shorter-acting and less potent.",
+    "sources": [
+      "https://peptide-db.com/peptides/tesamorelin",
+      "https://www.peptidedosingprotocols.com/protocol/tesamorelin"
+    ]
+  },
+  {
+    "id": "hgh-191aa",
+    "name": "HGH 191AA",
+    "aka": [
+      "Somatropin",
+      "recombinant hGH"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "summary": "Recombinant human growth hormone (somatropin), a 191-amino-acid polypeptide FDA-approved for pediatric and adult growth hormone deficiency and HIV-associated wasting; widely used off-label for body composition and anti-aging.",
+    "mechanism": "Binds GH receptors on target tissues, triggering JAK2-STAT5 signaling; direct effects include lipolysis, protein synthesis, and metabolic regulation, while indirect effects via hepatic IGF-1 production promote tissue growth and anabolism. Subcutaneous half-life is roughly 3 hours, but biological effects persist far longer through IGF-1.",
+    "dosing": "Subcutaneous, once daily (sometimes split twice daily). Medical GHD: 0.15 to 0.3 mg/day starting, 0.4 to 0.8 mg/day maintenance. Reported off-label use: 1 to 2 IU/day (about 0.33 to 0.67 mg) for wellness, 2 to 4 IU/day for recomposition, and 4 to 8 IU/day for performance (flagged higher-risk). Morning fasted dosing emphasizes fat loss; evening mimics the natural nocturnal pulse.",
+    "cycle": "Medical use is continuous. Off-label users commonly run multi-month blocks (often 3 to 6 months or longer); the sources do not prescribe a standard on/off pattern, and higher doses carry higher risk.",
+    "sideEffects": "Fluid retention, joint pain and stiffness, carpal tunnel syndrome, headaches, and numbness or tingling; higher doses can cause insulin resistance, gynecomastia, and hypothyroid symptoms. Contraindicated in active cancer, acute critical illness, and pregnancy. Monitor IGF-1, fasting glucose/HbA1c, thyroid function, and watch for new masses or vision changes; supraphysiologic dosing for non-medical use is higher-risk.",
+    "synergies": [
+      "tesamorelin",
+      "ipamorelin",
+      "igf-1-lr3"
+    ],
+    "comparisons": "Direct recombinant HGH gives the most potent and predictable GH/IGF-1 elevation in this category, but it bypasses physiologic feedback and carries more side effects than secretagogues like tesamorelin, sermorelin, or ipamorelin, which raise GH only within the body's own pulsatile limits.",
+    "sources": [
+      "https://peptide-db.com/peptides/hgh"
+    ]
+  },
+  {
+    "id": "hgh-fragment-176-191",
+    "name": "HGH Fragment 176-191",
+    "aka": [
+      "AOD-precursor frag",
+      "lipolytic GH frag"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "summary": "A 16-amino-acid C-terminal fragment of human growth hormone corresponding to residues 176-191, used in research as a targeted fat-loss (lipolytic) peptide. AOD-9604 is a modified version with an added N-terminal tyrosine.",
+    "mechanism": "Mimics the lipolytic region of human GH, stimulating fat breakdown and inhibiting lipogenesis through beta-3 adrenergic receptor pathways. It does not bind the growth hormone receptor, so it does not raise IGF-1 or disrupt glucose/insulin metabolism. The fragment selectively targets adipose tissue to promote fat oxidation.",
+    "dosing": "Per peptide-db.com: subcutaneous injection, 250mcg standard or up to 500mcg for enhanced fat loss, dosed twice daily on an empty stomach (morning fasted and pre-bed); a conservative protocol uses 250mcg once daily fasted. Avoid food for at least 30 minutes after injection.",
+    "cycle": "Typically 8-12 weeks continuous, per peptide-db.com.",
+    "sideEffects": "Generally well tolerated; injection-site irritation and mild headache (especially early) are most common. Not FDA approved (research chemical only) and WADA prohibited. Contraindicated in pregnancy/breastfeeding and active or prior malignancy; monitor blood glucose if combined with insulin.",
+    "synergies": [],
+    "comparisons": "Within GH-related fat-loss compounds, HGH Fragment 176-191 is the parent sequence of AOD-9604 and shares its mechanism, so combining the two is redundant. Unlike full HGH or GH secretagogues (sermorelin, ipamorelin, CJC-1295), it does not raise IGF-1 or build muscle, acting purely on lipolysis.",
+    "sources": [
+      "https://peptide-db.com/peptides/hgh-frag-176-191"
+    ]
+  },
+  {
+    "id": "ghrp-2",
+    "name": "GHRP-2",
+    "aka": [
+      "pralmorelin"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "summary": "GHRP-2 (pralmorelin) is a potent synthetic growth hormone-releasing hexapeptide that stimulates the pituitary to release endogenous GH; it was originally developed as a diagnostic agent for GH deficiency.",
+    "mechanism": "Acts as a synthetic ghrelin mimetic, binding the growth hormone secretagogue receptor (GHS-R1a) in the hypothalamus and pituitary, raising cAMP and driving pulsatile GH release without suppressing natural feedback. It works synergistically with GHRH analogs to amplify GH secretion beyond either alone, with mild orexigenic (appetite) effects and a smaller cortisol/prolactin response than GHRP-6.",
+    "dosing": "Per peptide-db.com: subcutaneous injection on an empty stomach, 100-150mcg for GH optimization or 200-300mcg for enhanced results, 2-3x daily; with a GHRH peptide, 100mcg each; a pre-sleep protocol uses 100-200mcg before bed.",
+    "cycle": "Typically 8-12 weeks, per peptide-db.com.",
+    "sideEffects": "Increased appetite (less than GHRP-6), mild water retention, tingling/numbness in extremities, post-injection tiredness, mild headache; cortisol elevation mainly at doses above ~300mcg. Not FDA approved and WADA prohibited; contraindicated in active/prior cancer, pregnancy, pituitary disorders, diabetic retinopathy; monitor blood glucose in diabetics.",
+    "synergies": [
+      "cjc-1295-no-dac",
+      "cjc-1295-dac",
+      "sermorelin",
+      "ipamorelin",
+      "bpc-157"
+    ],
+    "comparisons": "Among GHRPs, GHRP-2 is 2-3x more potent than GHRP-6 at releasing GH but causes far less hunger; it is stronger than ipamorelin but less selective (more prolactin/cortisol). It is typically used alone or stacked with a GHRH analog rather than with other GHRPs.",
+    "sources": [
+      "https://peptide-db.com/peptides/ghrp-2"
+    ]
+  },
+  {
+    "id": "ghrp-6",
+    "name": "GHRP-6",
+    "aka": [],
+    "category": "Growth Hormone & Secretagogues",
+    "summary": "GHRP-6 is one of the first synthetic growth hormone-releasing hexapeptides, stimulating endogenous GH release via the ghrelin receptor; it is best known for its strong appetite-stimulating effect.",
+    "mechanism": "Binds the growth hormone secretagogue receptor (GHS-R1a), the same receptor as ghrelin, triggering a rapid pulse of pituitary GH which then drives hepatic IGF-1 secretion. It also potently stimulates ghrelin release, producing marked hunger, and shows cardioprotective and anti-inflammatory effects in research models.",
+    "dosing": "Per peptide-db.com: subcutaneous injection on an empty stomach, 100mcg for GH optimization or 200-300mcg for enhanced results, 2-3x daily; with a GHRH peptide, 100mcg each; for appetite/bulking, 100-200mcg before meals.",
+    "cycle": "Typically 8-12 weeks, per peptide-db.com.",
+    "sideEffects": "Intense hunger (its hallmark effect), water retention, tingling/numbness, post-injection lethargy, mild headache; carbohydrate intake blunts GH release. Not FDA approved and WADA prohibited; contraindicated in active/prior cancer, pregnancy, pituitary disorders; use with caution in diabetes and monitor blood glucose.",
+    "synergies": [
+      "cjc-1295-no-dac",
+      "sermorelin",
+      "ghrp-2",
+      "ipamorelin",
+      "bpc-157"
+    ],
+    "comparisons": "GHRP-6 is less potent than GHRP-2 or hexarelin for GH release and causes much more appetite stimulation, which makes it favored for bulking but a poor choice for cutting. Compared with ipamorelin it is cruder (more hunger and side effects); like other GHRPs it is best stacked with a GHRH analog rather than another GHRP.",
+    "sources": [
+      "https://peptide-db.com/peptides/ghrp-6"
+    ]
+  },
+  {
+    "id": "sermorelin",
+    "name": "Sermorelin",
+    "aka": [
+      "GHRH 1-29"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "summary": "Sermorelin is a synthetic 29-amino-acid analog of growth hormone-releasing hormone (GHRH 1-29) that stimulates the body's own pulsatile GH production; it was FDA-approved (Geref) for pediatric GH deficiency until the manufacturer discontinued it in 2008 for manufacturing reasons.",
+    "mechanism": "Binds GHRH receptors on pituitary somatotrophs to trigger physiological, pulsatile GH release while preserving the hypothalamic-pituitary axis and somatostatin negative feedback, which gives a natural ceiling on GH levels. Short half-life (~11-12 minutes) means the GH pulse mirrors the body's natural nocturnal surge, so it is dosed nightly.",
+    "dosing": "Per peptide-db.com and peptidedosingprotocols.com: subcutaneous injection, 100-500mcg per dose (commonly 200-300mcg, titrated 100 to 200 to 300 to 400-500mcg), once nightly at bedtime on an empty stomach, 5-7 nights/week; some protocols co-inject 200mcg with a GHRP.",
+    "cycle": "Typically 3-6 months continuous with lab monitoring at baseline, 6 weeks and 12 weeks; some use 5-nights-on/2-off pulse protocols, per the sources.",
+    "sideEffects": "Mild injection-site reactions in roughly 1 in 6 users; less common headache, flushing, dizziness, dysphagia, drowsiness, hives; anti-GRF antibody formation is frequent but usually not clinically limiting, and about 6.5% developed hypothyroidism in trials so thyroid labs (plus IGF-1) are monitored. Not currently FDA-approved; contraindicated in active malignancy, pituitary tumors and pregnancy.",
+    "synergies": [
+      "ipamorelin",
+      "cjc-1295-no-dac",
+      "ghrp-2",
+      "ghrp-6",
+      "tesamorelin"
+    ],
+    "comparisons": "Among GHRH analogs, sermorelin is the shortest-acting (nightly dosing) with the longest historical clinical track record but limited modern adult RCT data; tesamorelin has stronger modern FDA-backed evidence for visceral fat reduction and CJC-1295 DAC offers far longer dosing intervals. It is commonly stacked with a GHRP (e.g., ipamorelin or GHRP-2) for synergistic GH release.",
+    "sources": [
+      "https://peptide-db.com/peptides/sermorelin",
+      "https://www.peptidedosingprotocols.com/protocol/sermorelin"
+    ]
+  },
+  {
+    "id": "ipamorelin",
+    "name": "Ipamorelin",
+    "aka": [
+      "GH secretagogue"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "summary": "Ipamorelin is a selective pentapeptide growth hormone secretagogue (ghrelin mimetic) that triggers clean, pulsatile GH release; it is prized for raising GH without the cortisol, prolactin or strong appetite effects of other GHRPs.",
+    "mechanism": "Binds the GHS-R1a (ghrelin) receptor on the pituitary, producing a short natural GH pulse (peaking ~30-40 minutes post-injection) that drives downstream IGF-1, while leaving cortisol, ACTH and prolactin essentially unchanged even at high doses. Its ~2-hour half-life means dosing is built around clean individual pulses, and bedtime dosing aligns with a natural dip in somatostatin.",
+    "dosing": "Per peptide-db.com and peptidedosingprotocols.com: subcutaneous injection on an empty stomach, 100-300mcg per shot (community protocols titrate 100 to 200 to 200-300mcg), 1-3x daily; 1x at bedtime is the common base protocol, 2-3x daily for performance; GH release plateaus above ~300mcg per shot.",
+    "cycle": "Typically 8-12 weeks on then 4 weeks off (some clinician protocols extend to week 16) to keep the GH receptor responsive, per the sources.",
+    "sideEffects": "Generally mild and short-lived: mild headache, light water retention/bloating, mild appetite increase (less than GHRP-6), tingling in hands or feet early in a cycle; higher doses or longer use can bring joint stiffness, fatigue or carpal-tunnel-type symptoms. Not FDA approved (Phase II for postoperative ileus failed) and WADA prohibited; avoid in active/recent cancer, uncontrolled diabetes, severe heart disease, pregnancy/breastfeeding and adolescents; some practitioners monitor fasting glucose, HbA1c and IGF-1.",
+    "synergies": [
+      "cjc-1295-no-dac",
+      "cjc-1295-dac",
+      "sermorelin",
+      "tesamorelin",
+      "bpc-157"
+    ],
+    "comparisons": "Ipamorelin is the most selective GHRP, with a cleaner hormonal profile and longer half-life (~2h) than GHRP-2 or GHRP-6 (~20-30 min) at similar doses, though slightly less raw GH-releasing potency than GHRP-2 or hexarelin. It is most often paired with a GHRH analog like CJC-1295 (no DAC) or sermorelin rather than stacked with another GHRP.",
+    "sources": [
+      "https://peptide-db.com/peptides/ipamorelin",
+      "https://www.peptidedosingprotocols.com/protocol/ipamorelin"
+    ]
+  },
+  {
+    "id": "cjc-1295-dac",
+    "name": "CJC-1295 DAC",
+    "aka": [
+      "DAC:GRF",
+      "modified GRF w/ DAC"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "summary": "CJC-1295 with DAC is a long-acting GHRH analog engineered with a Drug Affinity Complex that binds serum albumin, extending its half-life to 6-8 days for sustained GH/IGF-1 elevation on a weekly dosing schedule.",
+    "mechanism": "The DAC moiety covalently binds endogenous albumin, prolonging circulation from minutes to days and providing continuous GHRH receptor stimulation on pituitary somatotrophs. This sustains elevated GH and IGF-1 while studies show pulsatile GH secretion is largely preserved; mean GH rose ~46% and IGF-1 ~45% in clinical work, with trough GH increased about 7.5-fold.",
+    "dosing": "Per peptide-db.com: subcutaneous injection, 1mg once weekly (conservative anti-aging) up to 2mg once weekly (standard), or 1mg twice weekly (e.g. Mon/Thu) split dosing; a loading protocol uses 2mg the first week then 1mg weekly.",
+    "cycle": "Typically 8-12 weeks; IGF-1 returns to baseline about 2-3 weeks after stopping, per peptide-db.com.",
+    "sideEffects": "Water retention, joint pain and carpal-tunnel symptoms are common from continuous GH elevation; watch for blood glucose dysregulation and signs of acromegaly (jaw/hand/feet growth) with high doses. Not FDA approved; contraindicated with diabetes history, cancer history and predisposition to sleep apnea. Do not combine with the non-DAC version, other GHRH analogs (tesamorelin), MK-677 or HGH.",
+    "synergies": [
+      "ghrp-2",
+      "ghrp-6",
+      "ipamorelin"
+    ],
+    "comparisons": "Versus CJC-1295 no-DAC, the DAC variant trades natural pulsatility for convenient weekly dosing but carries more side effects (sustained elevation stresses joints and connective tissue) and costs 2-3x more. Versus sermorelin or tesamorelin it is far longer-acting; it is best paired with a pulsatile GHRP rather than another GHRH analog.",
+    "sources": [
+      "https://peptide-db.com/peptides/cjc-1295-dac",
+      "https://www.peptidedosingprotocols.com/protocol/cjc-1295-dac"
+    ]
+  },
+  {
+    "id": "cjc-1295-no-dac",
+    "name": "CJC-1295 no-DAC",
+    "aka": [
+      "Mod-GRF 1-29",
+      "CJC-1295 without DAC"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "summary": "CJC-1295 without DAC (Modified GRF 1-29) is a short-acting GHRH analog with about 4x the receptor affinity of native GHRH, producing pulsatile GH release that resembles natural physiology; it requires multiple daily injections.",
+    "mechanism": "Binds GHRH receptors on pituitary somatotrophs, raising cAMP and triggering physiological GH pulses. The brief 30-minute to ~2-hour half-life (versus 6-8 days for the DAC version) preserves natural pulsatility and avoids receptor desensitization, and it synergizes strongly with GHRP peptides through a complementary receptor pathway.",
+    "dosing": "Per peptide-db.com and peptidedosingprotocols.com: subcutaneous injection on an empty stomach, 100-300mcg per injection (commonly ~100mcg), 2-3x daily (morning, optional post-workout, bedtime); ~100-200mcg once at bedtime for sleep; often co-dosed with a GHRP.",
+    "cycle": "Typically 12-16 weeks, per peptide-db.com.",
+    "sideEffects": "Generally well tolerated at recommended doses; temporary facial flushing/warmth for ~5-10 minutes after injection is common, with persistent joint pain, carpal-tunnel symptoms, water retention/edema, headaches or vision changes being stop signs. Not FDA approved; contraindicated in active cancer, diabetic retinopathy, severe kidney disease and pregnancy/breastfeeding.",
+    "synergies": [
+      "ipamorelin",
+      "ghrp-6",
+      "ghrp-2",
+      "mk-677"
+    ],
+    "comparisons": "Versus CJC-1295 with DAC, the no-DAC version preserves natural pulsatile GH and has fewer side effects but demands 2-3 injections per day instead of one weekly shot. It is the classic GHRH partner for a GHRP stack (e.g. with ipamorelin), and is comparable in role to sermorelin but with higher receptor affinity.",
+    "sources": [
+      "https://peptide-db.com/peptides/cjc-1295",
+      "https://www.peptidedosingprotocols.com/protocol/cjc-1295-no-dac"
+    ]
+  },
+  {
+    "id": "cjc-1295-plus-ipamorelin-blend",
+    "name": "CJC-1295 + Ipamorelin Blend",
+    "aka": [
+      "CJC/Ipa"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "summary": "A popular dual-pathway blend combining CJC-1295 (a GHRH analog) with ipamorelin (a selective GHRP), used in research for GH optimization, recovery, body composition and sleep.",
+    "mechanism": "CJC-1295 activates GHRH receptors on pituitary somatotrophs while ipamorelin activates the GHS-R1a (ghrelin) receptor; the two complementary pathways potentiate each other's cAMP signaling, producing a larger GH pulse than either peptide alone. Ipamorelin uniquely avoids cortisol and prolactin elevation, so the combination preserves a natural pulsatile rhythm with a clean side-effect profile.",
+    "dosing": "Per peptide-db.com: subcutaneous injection, 200mcg of each peptide for general health, 250mcg each for performance, 300mcg each for recovery, once daily (evening preferred, ~30-60 min before bed, fasted); a conservative approach uses 150mcg each 5 days/week. Available as pre-blended vials (commonly a 1:1 ratio) or separate vials.",
+    "cycle": "Typically 8-12 weeks on, per peptide-db.com.",
+    "sideEffects": "Water retention and joint swelling, carpal-tunnel symptoms (numbness/tingling), mild blood glucose elevation and injection-site irritation; stop for persistent joint pain, glucose dysregulation or unusual fatigue/mood changes. Components are not FDA approved as a blend (tesamorelin and ipamorelin individually are investigational/limited approval) and the combination lacks peer-reviewed clinical validation; contraindicated in cancer history, severe diabetes and nerve-compression disorders.",
+    "synergies": [
+      "bpc-157",
+      "mk-677"
+    ],
+    "comparisons": "Compared with running CJC-1295 or ipamorelin alone, the blend gives synergistic GH release through two receptors at once; it is generally cleaner than a CJC-1295 + GHRP-6 or + GHRP-2 stack because ipamorelin does not raise cortisol, prolactin or hunger. Beginners often prefer separate vials over the pre-blend for dose flexibility.",
+    "sources": [
+      "https://peptide-db.com/peptides/cjc-ipa-protocol"
+    ]
+  },
+  {
+    "id": "hexarelin",
+    "name": "Hexarelin",
+    "aka": [
+      "examorelin"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "summary": "Hexarelin (examorelin) is one of the most potent synthetic growth hormone-releasing hexapeptides, stimulating GH via the ghrelin receptor and also showing distinct cardioprotective effects.",
+    "mechanism": "Binds the growth hormone secretagogue receptor (GHS-R1a) in the pituitary and hypothalamus, mimicking ghrelin to drive somatotrophs to release GH, with strong synergy when co-administered with GHRH (GH response greater than the sum of either alone). It has slight dose-dependent effects on prolactin, ACTH and cortisol, and cardioprotective actions mediated through the CD36 receptor and calcium-channel modulation in cardiomyocytes; it is also resistant to proteolytic enzymes.",
+    "dosing": "Per peptide-db.com: subcutaneous or intramuscular injection on an empty stomach, 100mcg for GH optimization or 200mcg for enhanced results, 2-3x daily; with a GHRH peptide, 100mcg each; for cardioprotection, 100-200mcg 1-2x daily.",
+    "cycle": "Typically 8-12 weeks, with cycling advised to prevent desensitization, per peptide-db.com.",
+    "sideEffects": "Increased appetite (less than GHRP-6), water retention, tingling/numbness, post-injection tiredness, mild headache; cortisol/prolactin can rise mildly and dose-dependently. Not FDA approved and WADA prohibited; contraindicated in active/prior cancer, pregnancy and pituitary disorders. Hexarelin is also more prone than other GHRPs to receptor desensitization with continuous use.",
+    "synergies": [
+      "cjc-1295-no-dac",
+      "ghrp-2",
+      "ghrp-6",
+      "ipamorelin"
+    ],
+    "comparisons": "Hexarelin is the strongest GHRP for raw GH release and shows uniquely strong GHRH synergy, but it desensitizes the GHS receptor faster and has slightly more cortisol/prolactin/appetite effects than ipamorelin. It causes less hunger than GHRP-6; like other GHRPs it is best paired with a GHRH analog rather than another GHRP.",
+    "sources": [
+      "https://peptide-db.com/peptides/hexarelin"
+    ]
+  },
+  {
+    "id": "mk-677",
+    "name": "MK-677",
+    "aka": [
+      "ibutamoren",
+      "oral GH secretagogue"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "summary": "MK-677 (ibutamoren) is an orally active, non-peptide ghrelin receptor agonist that raises GH and IGF-1; its >60% oral bioavailability and ~24-hour half-life make it the only convenient once-daily oral GH secretagogue.",
+    "mechanism": "Selectively binds GHS-R1a receptors in the hypothalamus and pituitary, triggering pulsatile GH release while maintaining natural circadian patterns; in trials this produced roughly a 97% increase in 24-hour GH secretion and 40-72% higher IGF-1. Downstream effects include improved REM sleep, increased fat-free mass and nitrogen retention, and increased bone-formation markers.",
+    "dosing": "Per peptide-db.com: oral, start at 12.5mg daily to assess tolerance and increase to 25mg daily, taken once daily at bedtime on an empty stomach.",
+    "cycle": "Typically 8-12 weeks for body composition goals, per peptide-db.com (some longer-term studies ran 8-12 months).",
+    "sideEffects": "Appetite stimulation (>50% of users), water retention (30-40%), lethargy (20-30%), fasting glucose elevation (~5-15 mg/dL) and decreased insulin sensitivity; significant testosterone suppression is unlikely on its own at up to 20mg/day but more likely above that. Not FDA approved and prohibited as a dietary supplement; contraindicated in heart disease/CHF, diabetes or pre-diabetes, active cancer and pregnancy/breastfeeding; monitor blood glucose and liver enzymes.",
+    "synergies": [
+      "cjc-1295-no-dac",
+      "ipamorelin",
+      "ghrp-2",
+      "tb-500",
+      "bpc-157"
+    ],
+    "comparisons": "MK-677 is unique among GH secretagogues for being oral and long-acting (24h), giving sustained baseline GH elevation rather than the discrete pulses of injectable GHRPs; that comes at the cost of more appetite, water retention, lethargy and glucose impact. It pairs well with a GHRH analog or GHRP for combined baseline-plus-pulse coverage but should not be stacked with CJC-1295 DAC or HGH.",
+    "sources": [
+      "https://peptide-db.com/peptides/mk-677"
+    ]
+  },
+  {
+    "id": "ipamorelin-plus-tesamorelin-blend",
+    "name": "Ipamorelin + Tesamorelin Blend",
+    "aka": [
+      "Ipa/Tesa"
+    ],
+    "category": "Growth Hormone & Secretagogues",
+    "summary": "A dual GH-secretagogue blend pairing tesamorelin (a GHRH analog FDA-approved for HIV-associated lipodystrophy) with ipamorelin (a selective GHRP), aimed at synergistic GH release with emphasis on visceral fat loss and recovery.",
+    "mechanism": "Tesamorelin directly stimulates GHRH receptors on pituitary somatotrophs to trigger pulsatile GH synthesis and secretion, while ipamorelin activates the GHS-R1a (ghrelin) receptor to amplify those GH pulses without significantly raising cortisol or prolactin. Engaging both the GHRH and GHRP pathways produces synergistic GH release greater than either component alone, while preserving natural feedback; tesamorelin specifically reduces visceral adipose tissue.",
+    "dosing": "Per peptide-db.com: subcutaneous injection on an empty stomach (evening/before bed preferred, avoid food 2-3h before and 30-60 min after), 200-400mcg total for the standard 5mg/5mg blend, 300-500mcg total for the 10mg/3mg (higher-tesamorelin) blend, once daily; advanced users 200-300mcg per dose twice daily. Common formulations are 5mg/5mg (1:1) or 10mg/3mg.",
+    "cycle": "Typically 8-16 weeks continuous, per peptide-db.com.",
+    "sideEffects": "Injection-site reactions, transient water retention, tingling/numbness in extremities, joint stiffness and increased hunger (the ipamorelin component); stop for severe injection-site reactions, significant edema, glucose dysregulation, severe joint pain or allergic reactions. Tesamorelin alone is FDA-approved (Egrifta) but research blends are not, and ipamorelin remains investigational; the specific combination has no published clinical trials. Contraindicated in active malignancy, diabetic retinopathy, pregnancy/breastfeeding and pituitary disorders.",
+    "synergies": [
+      "bpc-157",
+      "semaglutide"
+    ],
+    "comparisons": "Versus a CJC-1295 + ipamorelin blend, this blend uses tesamorelin's stronger evidence base for visceral fat reduction; versus running tesamorelin alone it adds ipamorelin's clean pulsatile boost. It should not be combined with additional GHRH analogs (CJC-1295), other GHRPs or MK-677, as the dual-pathway design already covers both.",
+    "sources": [
+      "https://peptide-db.com/peptides/tesa-ipa-protocol"
+    ]
+  },
+  {
+    "id": "igf-1-lr3",
+    "name": "IGF-1 LR3",
+    "aka": [
+      "Long R3 IGF-1"
+    ],
+    "category": "IGF & Growth Factors",
+    "summary": "IGF-1 LR3 (Long R3 IGF-1) is a synthetic 83-amino-acid analog of insulin-like growth factor-1 with an N-terminal extension and R3 substitution, used in research for muscle hypertrophy; it has never been approved for human use.",
+    "mechanism": "Acts as a full IGF-1 receptor agonist, activating the PI3K/Akt/mTOR and MAPK/ERK pathways that drive protein synthesis and satellite-cell-mediated muscle hypertrophy and hyperplasia. The N-terminal extension and arginine-3 substitution reduce binding to IGF binding proteins, keeping free circulating peptide elevated for an extended 20-30 hour half-life with roughly 3x the potency of native IGF-1.",
+    "dosing": "Per peptide-db.com and peptidedosingprotocols.com: subcutaneous or intramuscular injection, 20-30mcg daily for beginners (post-workout), 40-60mcg intermediate, 80-100mcg advanced (single dose or split AM/PM), 10-20mcg women; consume 30-60g fast carbohydrate immediately after injection to prevent hypoglycemia and never inject before sleep.",
+    "cycle": "Maximum 4-6 weeks with equal off-time, per peptide-db.com, to limit receptor desensitization and cumulative hypoglycemia risk.",
+    "sideEffects": "Hypoglycemia is the critical risk and can last up to 20-30 hours given the long half-life; also water retention, joint stiffness, muscle soreness and increased workout pumps. Never approved for human use (research chemical only) and WADA prohibited; contraindicated with cancer history or undiagnosed growths (elevated IGF-1 is linked to several cancers) and may cause organ hypertrophy (heart, intestines). Do not combine with HGH or insulin.",
+    "synergies": [
+      "bpc-157",
+      "tb-500",
+      "mk-677",
+      "cjc-1295-no-dac"
+    ],
+    "comparisons": "Among IGF and growth-factor compounds, IGF-1 LR3 is the longest-acting systemic IGF-1 analog, contrasting with IGF-1 DES and MGF/PEG-MGF which act more locally or briefly; its long half-life means more sustained anabolism but a much longer and more dangerous hypoglycemia window. Unlike GH secretagogues that raise IGF-1 indirectly via natural feedback, it floods the IGF-1 receptor directly with no built-in ceiling.",
+    "sources": [
+      "https://peptide-db.com/peptides/igf-1-lr3",
+      "https://www.peptidedosingprotocols.com/protocol/igf-1-lr3"
+    ]
+  },
+  {
+    "id": "igf-1-des",
+    "name": "IGF-1 DES",
+    "aka": [
+      "DES(1-3) IGF-1"
+    ],
+    "category": "IGF & Growth Factors",
+    "summary": "A truncated 67-amino-acid IGF-1 analog missing the first three N-terminal residues, used in research for localized muscle hypertrophy via site-specific post-workout injection.",
+    "mechanism": "It activates the IGF-1 receptor and downstream PI3K/Akt/mTOR and MAPK/ERK signaling, driving protein synthesis, satellite cell proliferation and hyperplasia. Lacking the Gly-Pro-Glu tripeptide, it does not bind IGF binding proteins, so the full dose stays bioactive — roughly 10x the potency of native IGF-1. Its very short 20-30 minute half-life confines activity to the injection site.",
+    "dosing": "Per peptide-db.com, 20-30 mcg (beginner) up to 50 mcg (advanced) injected intramuscularly directly into the trained muscle immediately post-workout; consume fast carbohydrates afterward to offset hypoglycemia.",
+    "cycle": "4-6 weeks maximum, then a break before any further use.",
+    "sideEffects": "Hypoglycemia (must eat carbs after injection), localized swelling/soreness, lightheadedness; risk of disproportionate muscle growth with repeated site use and theoretical cancer-promotion concern. Not approved for human use — research chemical only, WADA-prohibited; contraindicated with cancer history, diabetes, or concurrent insulin.",
+    "synergies": [
+      "hgh-191aa",
+      "igf-1-lr3",
+      "mgf"
+    ],
+    "comparisons": "Versus IGF-1 LR3, DES is far shorter-acting and is chosen specifically for localized rather than systemic effects — the two are not stacked. It is more potent gram-for-gram than native IGF-1 or MGF, but its action is brief and tied to injection timing and site.",
+    "sources": [
+      "https://peptide-db.com/peptides/igf-1-des"
+    ]
+  },
+  {
+    "id": "mgf",
+    "name": "MGF",
+    "aka": [
+      "mechano growth factor",
+      "IGF-1Ec"
+    ],
+    "category": "IGF & Growth Factors",
+    "summary": "Mechano growth factor is a 24-amino-acid C-terminal peptide from the IGF-1Ec splice variant, used in research to activate muscle satellite cells for localized repair after mechanical stress.",
+    "mechanism": "MGF binds its receptor on dormant muscle satellite (stem) cells and stimulates MAPK/ERK signaling, promoting their proliferation and fusion to damaged fibers, plus enhanced protein synthesis. Its E-peptide domain acts distinctly from mature IGF-1. The ~5-7 minute half-life means effects are concentrated at the injection site.",
+    "dosing": "Per peptide-db.com, 100-300 mcg daily, injected intramuscularly into the worked muscle immediately post-workout (some protocols titrate from 100 up to 300 mcg over weeks).",
+    "cycle": "Typically run in blocks of several weeks alongside training cycles; no fixed standardized on/off pattern reported, with breaks between cycles.",
+    "sideEffects": "Injection site soreness and mild fatigue; discontinue for any lumps, unusual tissue changes, persistent headaches, vision changes, or hypoglycemia signs. Contraindicated with any cancer history, uncontrolled diabetes, and pregnancy; not an approved human drug.",
+    "synergies": [
+      "peg-mgf",
+      "bpc-157",
+      "tb-500",
+      "igf-1-lr3"
+    ],
+    "comparisons": "MGF is essentially the same active peptide as PEG-MGF but unpegylated, so it acts only locally and briefly — combining the two is redundant. Unlike IGF-1 LR3, it targets satellite-cell activation rather than sustained systemic IGF signaling.",
+    "sources": [
+      "https://peptide-db.com/peptides/mgf"
+    ]
+  },
+  {
+    "id": "peg-mgf",
+    "name": "PEG-MGF",
+    "aka": [
+      "pegylated MGF"
+    ],
+    "category": "IGF & Growth Factors",
+    "summary": "A PEGylated version of mechano growth factor with an extended half-life, used in research for muscle repair and recovery via systemic or near-injury dosing.",
+    "mechanism": "Like MGF, it activates dormant muscle satellite cells through receptor binding and MAPK/ERK signaling, increasing their proliferation, fusion capacity and protein synthesis. PEGylation slows degradation, so a given dose circulates and acts for far longer than native MGF, allowing less frequent injection.",
+    "dosing": "Per peptide-db.com, 100-200 mcg twice weekly (conservative) up to 200-400 mcg 2-3x weekly, given subcutaneously or intramuscularly near the target muscle, with post-workout timing.",
+    "cycle": "Run in multi-week blocks (benefits reported through weeks 4-8 and persisting several weeks post-cycle); breaks taken between cycles.",
+    "sideEffects": "Injection site soreness and mild fatigue; discontinue for unusual growths/lumps, persistent headaches or vision changes, or hypoglycemia. Watch for water retention and joint pain if combined with GH. Contraindicated with cancer history, uncontrolled diabetes, and pregnancy; not approved for human use.",
+    "synergies": [
+      "bpc-157",
+      "tb-500",
+      "igf-1-lr3",
+      "hgh-191aa"
+    ],
+    "comparisons": "PEG-MGF trades MGF's pinpoint localized action for convenience — far fewer injections at the cost of less site-specificity. Versus IGF-1 LR3 it works on muscle stem cells rather than producing broad systemic IGF activity, and it is often stacked with healing peptides like BPC-157 and TB-500.",
+    "sources": [
+      "https://peptide-db.com/peptides/peg-mgf"
+    ]
+  },
+  {
+    "id": "bpc-157",
+    "name": "BPC-157",
+    "aka": [
+      "Body Protection Compound-157",
+      "pentadecapeptide"
+    ],
+    "category": "Healing & Recovery",
+    "summary": "A synthetic 15-amino-acid peptide derived from a gastric protein, widely researched for tendon, ligament, muscle and gastrointestinal tissue repair.",
+    "mechanism": "BPC-157 promotes angiogenesis (partly via VEGF), enhances collagen synthesis and fibroblast activity, modulates growth factor expression, and modulates nitric oxide pathways for vascular and cytoprotective effects. It accelerates healing of connective tissue, protects gut mucosa, and reduces inflammation, working both locally and systemically. It is unusually stable in gastric juice, supporting oral use for gut-focused research.",
+    "dosing": "Per peptide-db.com and peptidedosingprotocols.com research-planning ranges: ~250 mcg once or twice daily for general/maintenance use, up to ~500 mcg twice daily for acute injury, typically subcutaneous near the injury site (oral/capsule also used for gut work). Direct human dose-finding data is minimal.",
+    "cycle": "Standard 4-6 weeks (review at week 4); extended 6-8 weeks or longer 8-12 weeks for slow-remodeling tissue, with 2-4 week off periods between cycles.",
+    "sideEffects": "Generally well tolerated in preclinical work; possible mild injection site reaction. Theoretical caution with anticoagulants (angiogenesis) and with cancer history. Not FDA-approved; evidence is mostly preclinical, so treat protocols as research-context planning, not medical advice.",
+    "synergies": [
+      "tb-500",
+      "ghrp-6",
+      "ipamorelin",
+      "peg-mgf",
+      "ghk-cu"
+    ],
+    "comparisons": "BPC-157 is the most-discussed healing peptide and is commonly paired with TB-500 in the 'Wolverine stack' — BPC-157 leans toward angiogenesis, collagen and gut protection while TB-500 drives cell migration and systemic repair. It uniquely offers an oral route for gut indications, unlike TB-500.",
+    "sources": [
+      "https://peptide-db.com/peptides/bpc-157",
+      "https://www.peptidedosingprotocols.com/protocol/bpc-157"
+    ]
+  },
+  {
+    "id": "tb-500",
+    "name": "TB-500",
+    "aka": [
+      "thymosin beta-4 fragment",
+      "TB4 frag"
+    ],
+    "category": "Healing & Recovery",
+    "summary": "A synthetic peptide based on the actin-binding region of thymosin beta-4, researched for systemic tissue repair of muscle, tendon, ligament and wounds.",
+    "mechanism": "It acts as an actin-sequestering peptide, regulating cell migration and proliferation, promoting angiogenesis, reducing inflammation and supporting stem-cell differentiation for broad regenerative effects. Most published human clinical work has actually used full-length thymosin beta-4 rather than the TB-500 fragment, so equivalence is assumed, not proven.",
+    "dosing": "Per peptidedosingprotocols.com research-context planning (community-derived, not RCT-validated): a loading phase of ~2-2.5 mg subcutaneous twice weekly (~4-5 mg/week) for weeks 1-6, then a maintenance phase of ~2-2.5 mg once weekly for weeks 7-12; reconstitute 10 mg in 2 mL BAC water (5 mg/mL).",
+    "cycle": "Common research-context cycles run 4-12 weeks (load 4-6 weeks then maintain), followed by a 4-8 week off period; no human cycling RCT exists.",
+    "sideEffects": "Generally well tolerated in available data; mild injection site reactions, possible fatigue. Not FDA-approved, sold for research only, and on the WADA Prohibited List; treat all dose and cycle numbers as research-context planning, not treatment guidance.",
+    "synergies": [
+      "bpc-157",
+      "peg-mgf",
+      "ll-37",
+      "kpv",
+      "ara-290"
+    ],
+    "comparisons": "TB-500 is the more systemic counterpart to BPC-157 and the two are routinely stacked; BPC-157 favors localized angiogenesis and gut protection while TB-500 favors cell migration and whole-body repair. Unlike BPC-157 it has no practical oral route and is dosed far less frequently.",
+    "sources": [
+      "https://peptide-db.com/peptides/tb-500",
+      "https://www.peptidedosingprotocols.com/protocol/tb-500"
+    ]
+  },
+  {
+    "id": "bpc-157-plus-tb-500-blend",
+    "name": "BPC-157 + TB-500 Blend",
+    "aka": [
+      "Wolverine stack",
+      "BPC/TB"
+    ],
+    "category": "Healing & Recovery",
+    "summary": "A fixed combination of BPC-157 and TB-500 (the 'Wolverine stack'), used in research for synergistic soft-tissue, joint and wound healing.",
+    "mechanism": "BPC-157 increases actin production, modulates nitric oxide and promotes angiogenesis and collagen synthesis; TB-500 sequesters actin to drive cell migration and reduce inflammation. Together they aim to recruit fibroblasts and immune cells to injury sites through complementary pathways; one cited study reported ~87.5% improvement in knee-pain patients with a BPC-157/Tβ4 combination.",
+    "dosing": "Per peptide-db.com: BPC-157 ~250 mcg twice daily plus TB-500 ~2 mg twice weekly for general recovery, up to BPC-157 ~500 mcg twice daily plus TB-500 ~2.5 mg twice weekly near the injury site for intensive recovery; maintenance ~250 mcg BPC-157 daily plus ~2 mg TB-500 weekly. Reconstitute each peptide separately and do not mix in one syringe unless a pre-made blend.",
+    "cycle": "Typically 4-8 weeks with benefits reported building through week 8 and persisting afterward; an off period before repeating, mirroring the individual peptides' cycles.",
+    "sideEffects": "Mild injection site reactions; monitor for bleeding if used with anticoagulants and avoid with cancer history (angiogenesis concern) or alongside chemotherapy. Neither component is FDA-approved and TB-500 is WADA-banned — research-context use only.",
+    "synergies": [
+      "hgh-191aa",
+      "cjc-1295-plus-ipamorelin-blend",
+      "peg-mgf",
+      "ghk-cu"
+    ],
+    "comparisons": "Compared to either peptide alone, the blend trades dosing flexibility for convenience and claimed additive healing; some practitioners prefer separate vials so BPC-157 (daily) and TB-500 (weekly) can be timed and titrated independently. Within Healing & Recovery it is the default 'do everything' combo versus single-purpose agents like KPV (anti-inflammatory) or GHK-Cu (skin/collagen).",
+    "sources": [
+      "https://peptide-db.com/peptides/wolverine-stack"
+    ]
+  },
+  {
+    "id": "ara-290",
+    "name": "ARA-290",
+    "aka": [
+      "cibinetide",
+      "ARA290"
+    ],
+    "category": "Healing & Recovery",
+    "summary": "An engineered 11-amino-acid peptide derived from erythropoietin (cibinetide) that delivers tissue-protective and nerve-regenerative effects without stimulating red blood cells; holds FDA Orphan Drug status.",
+    "mechanism": "ARA-290 activates the Innate Repair Receptor — the EPO receptor / beta-common receptor complex — triggering tissue-protective and anti-inflammatory signaling (reducing TNF-alpha, IL-6, IL-12) and promoting peripheral nerve fiber regeneration and angiogenesis via VEGF, without the erythropoietic effect of EPO so there is no polycythemia or thrombotic risk.",
+    "dosing": "Per peptide-db.com (reflecting Phase 2 trial dosing): typically 4 mg once daily subcutaneously for neuropathy, with a studied range of 1-8 mg daily SubQ; an acute-intervention pattern of 2 mg three times weekly IV is also noted.",
+    "cycle": "Trial regimens ran ~28 days continuously; benefits reported peaking by weeks 4-6 and persisting for months via a 'molecular switch' effect, with re-dosing courses as needed.",
+    "sideEffects": "Excellent safety profile in clinical trials with no serious drug-related events; light-sensitive formulation. Contraindicated with recent anti-TNF biologics (6-month washout), EPO use (2-month washout), pregnancy, and BMI over 34.",
+    "synergies": [
+      "bpc-157",
+      "tb-500",
+      "kpv",
+      "ll-37"
+    ],
+    "comparisons": "ARA-290 is the neuropathy/nerve-repair specialist of the healing category — distinct from BPC-157 and TB-500 (broad soft-tissue repair) and from KPV/LL-37 (anti-inflammatory/antimicrobial). It is essentially a safer, non-erythropoietic alternative to EPO for tissue protection.",
+    "sources": [
+      "https://peptide-db.com/peptides/ara-290"
+    ]
+  },
+  {
+    "id": "kpv",
+    "name": "KPV",
+    "aka": [
+      "lys-pro-val",
+      "alpha-MSH frag"
+    ],
+    "category": "Healing & Recovery",
+    "summary": "A tripeptide (lysine-proline-valine) fragment of alpha-MSH with anti-inflammatory and antimicrobial activity but no pigmentation effect, researched for gut, autoimmune and skin inflammation.",
+    "mechanism": "KPV enters cells and inhibits inflammatory signaling at the nuclear level, particularly NF-kB, lowering pro-inflammatory cytokines (TNF-alpha, IL-6) without the immunosuppression of steroids. It uses PepT1 transporters — concentrated in inflamed gut tissue — which is why it can work orally, and it does not engage melanocortin receptors so there is no tanning effect.",
+    "dosing": "Per peptide-db.com and peptidedosingprotocols.com: 200-300 mcg once daily for general anti-inflammatory use, ~250 mcg twice daily during active inflammation, up to 500 mcg daily (or 500 mcg twice daily short-term) for autoimmune/acute flares; routes include subcutaneous, oral, and topical. SubQ protocols often start at 200 mcg/day and titrate ~100 mcg/week to a 400-500 mcg maintenance window.",
+    "cycle": "Commonly run 8-12 weeks (e.g., initiation weeks 1-2, titration weeks 3-4, maintenance weeks 5-12); acute flares dosed higher for ~1 week then reduced.",
+    "sideEffects": "Minimal to none reported; does not cause immunosuppression or pigmentation. Discontinue for signs of infection (rare), severe injection site reactions, paradoxical inflammation, or allergy. Limited data in pregnancy/breastfeeding; not FDA-approved for any indication.",
+    "synergies": [
+      "bpc-157",
+      "tb-500",
+      "ll-37",
+      "thymosin-alpha-1",
+      "ghk-cu"
+    ],
+    "comparisons": "KPV is the targeted anti-inflammatory of the healing category — narrower than the structural-repair focus of BPC-157/TB-500 and, unlike Melanotan peptides it shares an alpha-MSH lineage with, it carries no tanning or melanocortin side effects. It is often added to gut-healing stacks alongside BPC-157.",
+    "sources": [
+      "https://peptide-db.com/peptides/kpv",
+      "https://www.peptidedosingprotocols.com/protocol/kpv"
+    ]
+  },
+  {
+    "id": "vip",
+    "name": "VIP",
+    "aka": [
+      "vasoactive intestinal peptide"
+    ],
+    "category": "Healing & Recovery",
+    "summary": "A 28-amino-acid neuropeptide of the glucagon/secretin family with potent vasodilatory, anti-inflammatory and immunomodulatory effects, researched for pulmonary hypertension, CIRS/chronic inflammation, and autoimmune conditions.",
+    "mechanism": "VIP binds VPAC1 and VPAC2 G-protein-coupled receptors, activating adenylyl cyclase and raising cAMP/PKA, which phosphorylates CREB and other transcription factors. It produces nitric-oxide-mediated vasodilation, bronchodilation, smooth-muscle relaxation, anti-inflammatory Th1/Th2 rebalancing, glucose-dependent insulin secretion, and gut-barrier regulation. Its extremely short ~1-2 minute plasma half-life limits bioavailability.",
+    "dosing": "Per peptide-db.com: ~50-100 mcg once or twice daily (general use) up to 100-200 mcg per dose (research protocols), given subcutaneously, intravenously, or intranasally; must be used promptly after reconstitution due to instability.",
+    "cycle": "No fixed cycle; given on an ongoing/regular basis with cumulative effects on inflammation over days to weeks (frequent dosing required given the short half-life).",
+    "sideEffects": "Vasodilation (flushing, warmth), hypotension, increased heart rate, headache, possible diarrhea. Discontinue for severe hypotension, arrhythmia, severe diarrhea, or allergic reaction. Contraindicated with severe hypotension, VIPoma, severe cardiac conditions, and pregnancy.",
+    "synergies": [
+      "thymosin-alpha-1",
+      "bpc-157",
+      "ll-37",
+      "kpv"
+    ],
+    "comparisons": "Within Healing & Recovery, VIP is a systemic immunomodulator/vasodilator rather than a structural-repair peptide like BPC-157 or TB-500; it overlaps with KPV on anti-inflammatory action but adds cardiopulmonary effects. Its impractically short half-life is its main limitation versus more stable analogs.",
+    "sources": [
+      "https://peptide-db.com/peptides/vip"
+    ]
+  },
+  {
+    "id": "ll-37",
+    "name": "LL-37",
+    "aka": [
+      "cathelicidin",
+      "cap-18"
+    ],
+    "category": "Healing & Recovery",
+    "summary": "The human cathelicidin antimicrobial peptide, a 37-amino-acid cationic peptide from hCAP18, researched for chronic wound healing and broad-spectrum antimicrobial defense including drug-resistant bacteria.",
+    "mechanism": "LL-37 disrupts microbial membranes for direct broad-spectrum killing of bacteria, viruses and fungi (including MRSA biofilms), and promotes wound healing by enhancing keratinocyte migration, angiogenesis and collagen synthesis while modulating innate immune responses. Used topically it has minimal systemic absorption.",
+    "dosing": "Per peptide-db.com: topical 0.5 mg/mL (standard) to 1.6 mg/mL (intensive) gel/cream applied to the wound daily to twice weekly; injectable use ~100-150 mcg once daily subcutaneously.",
+    "cycle": "Typically 2-8 weeks depending on wound-healing progress, adjusted by clinical response.",
+    "sideEffects": "Generally well tolerated; mild injection site reactions or local irritation. Discontinue for spreading inflammation, allergic reaction, persistent flu-like symptoms, signs of wound infection, or worsening healing. Contraindicated with peptide hypersensitivity and non-sterile wound environments; pre-mixed liquid formulations are unstable. Not an approved drug.",
+    "synergies": [
+      "bpc-157",
+      "tb-500",
+      "kpv",
+      "thymosin-alpha-1"
+    ],
+    "comparisons": "LL-37 is the antimicrobial/wound-bed specialist of the healing category — it pairs with BPC-157 and TB-500 (which drive tissue regeneration) and synergizes with conventional antibiotics, whereas KPV and ARA-290 act mainly on inflammation and nerve repair rather than infection control.",
+    "sources": [
+      "https://peptide-db.com/peptides/ll-37"
+    ]
+  },
+  {
+    "id": "b7-33",
+    "name": "B7-33",
+    "aka": [
+      "relaxin analog"
+    ],
+    "category": "Healing & Recovery",
+    "summary": "A single-chain peptide analog of the relaxin-2 B-chain that selectively activates the relaxin receptor RXFP1, researched for anti-fibrotic, vasodilatory and cardioprotective effects.",
+    "mechanism": "B7-33 selectively activates RXFP1, inhibiting fibroblast-to-myofibroblast differentiation and collagen deposition, increasing matrix-metalloproteinase activity to remodel extracellular matrix, enhancing nitric-oxide-mediated vasodilation, and reducing inflammatory cytokines. It shows biased agonism — preferentially engaging pERK1/2 while activating cAMP less than native relaxin-2 — and its simple single-chain design replaces relaxin-2's complex two-chain disulfide structure.",
+    "dosing": "Per peptide-db.com (extrapolated entirely from preclinical animal data, never validated in humans): ~100-250 mcg once daily subcutaneously for anti-fibrotic/cardiovascular support.",
+    "cycle": "No established human cycle; preclinical timelines show vasodilatory onset in weeks 1-2 and measurable anti-fibrotic changes by weeks 4-8, so multi-week courses are implied.",
+    "sideEffects": "Injection site reactions and possible transient hypotension (dizziness, lightheadedness). No human safety data exists — all protocols are preclinical extrapolations; teratogenic and contraindicated in pregnancy, in pre-existing hypotension, and with potent antihypertensives without medical supervision. Treat as experimental.",
+    "synergies": [
+      "bpc-157"
+    ],
+    "comparisons": "B7-33 is the niche anti-fibrotic of the healing category, acting through the relaxin/RXFP1 axis rather than the angiogenesis and cell-migration pathways of BPC-157 and TB-500; it is far less characterized than those peptides, with no human data, and is mainly of interest for organ fibrosis and cardiac remodeling.",
+    "sources": [
+      "https://peptide-db.com/peptides/b7-33"
+    ]
+  },
+  {
+    "id": "glow70",
+    "name": "GLOW70 (BBG70)",
+    "aka": [
+      "BPC+TB500+GHK-Cu blend",
+      "Glow protocol"
+    ],
+    "category": "Healing & Recovery",
+    "summary": "A fixed-ratio three-peptide blend of BPC-157, TB-500 and GHK-Cu (typically ~10 mg BPC-157 / ~10 mg TB-500 / ~50 mg GHK-Cu per vial) marketed for skin rejuvenation and combined tissue regeneration.",
+    "mechanism": "Each component contributes a distinct action: BPC-157 provides angiogenesis, collagen synthesis and anti-inflammatory effects; TB-500 sequesters actin to drive cell migration and reduce inflammation; GHK-Cu, a copper tripeptide, modulates thousands of genes to stimulate collagen, elastin and glycosaminoglycan synthesis and tissue remodeling. The blend aims for additive regenerative and cosmetic effects, though no study has examined the three together.",
+    "dosing": "Per peptide-db.com: dose per the formulation's instructions (one common label is ~10 mg BPC-157, ~10 mg TB-500, ~50 mg GHK-Cu per dose), given once daily subcutaneously to the abdomen, outer thigh, or upper arm.",
+    "cycle": "Typically 8-12 weeks, with visible skin changes reported from weeks 2-4 and peak effects by weeks 8-12; a break before repeating.",
+    "sideEffects": "Injection site reactions and temporary blue-green discoloration from GHK-Cu; main concern is fixed ratios overdelivering one component — especially copper, where 50 mg of GHK-Cu may far exceed the 1-3 mg injectable range, risking copper toxicity (nausea, jaundice). Do not combine with standalone GHK-Cu or BPC-157. Experimental combination — no peer-reviewed studies of the blend; not an approved product.",
+    "synergies": [
+      "nad-plus",
+      "ghk-cu",
+      "bpc-157",
+      "tb-500"
+    ],
+    "comparisons": "GLOW70 trades the dosing precision of buying BPC-157, TB-500 and GHK-Cu separately for one-injection convenience; for cosmetic skin goals it overlaps GHK-Cu's territory while adding the soft-tissue repair of the Wolverine-stack peptides, but its fixed copper load makes individual peptides the safer choice for serious users.",
+    "sources": [
+      "https://peptide-db.com/peptides/glow-protocol"
+    ]
+  },
+  {
+    "id": "glow50",
+    "name": "GLOW50",
+    "aka": [
+      "Glow blend 50"
+    ],
+    "category": "Healing & Recovery",
+    "summary": "GLOW50 is a compounded three-peptide regenerative blend combining BPC-157, TB-500 and GHK-Cu, marketed for accelerated soft-tissue healing, recovery and skin quality.",
+    "mechanism": "BPC-157 upregulates growth factors and angiogenesis to promote tendon, ligament and gut repair. TB-500 (a thymosin beta-4 fragment) promotes actin-driven cell migration, blood vessel formation and reduced inflammation. GHK-Cu, a copper tripeptide, modulates gene expression toward tissue remodeling and collagen synthesis. The blend is positioned as multi-pathway healing in a single injection, though the specific combination has no clinical trials.",
+    "dosing": "No source-backed protocol exists for this exact ratio; compounded GLOW-type blends are typically dosed subcutaneously at roughly 200-500 mcg total blend once daily, mirroring the related GLOW70 protocol.",
+    "cycle": "Commonly run 4-6 weeks on, then 2-4 weeks off.",
+    "sideEffects": "Generally well tolerated; main reports are injection-site reactions and variable individual response. No long-term human safety data for the combination; copper accumulation is a theoretical concern with extended GHK-Cu use. Experimental compounded product, not approved for human use.",
+    "synergies": [
+      "bpc-157",
+      "tb-500",
+      "ghk-cu",
+      "kpv",
+      "glow70"
+    ],
+    "comparisons": "GLOW50 is essentially a lower-strength GLOW/GLOW70-style blend; it overlaps heavily with the BPC-157 + TB-500 blend (Wolverine stack) but adds GHK-Cu for skin and remodeling effects. KLOW is the same family plus KPV for stronger anti-inflammatory action. Choosing a blend trades dosing flexibility of single peptides for single-injection convenience.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "klow",
+    "name": "KLOW (BBKG80)",
+    "aka": [
+      "KPV+BPC+TB500+GHK-Cu blend",
+      "Klow protocol"
+    ],
+    "category": "Healing & Recovery",
+    "summary": "KLOW is a fixed-ratio four-peptide regenerative blend (GHK-Cu, TB-500, BPC-157, KPV) that builds on the GLOW protocol by adding KPV for enhanced anti-inflammatory action; a standard vial holds 80 mg (50 mg GHK-Cu, 10 mg TB-500, 10 mg BPC-157, 10 mg KPV).",
+    "mechanism": "Each component contributes a distinct pathway: GHK-Cu modulates gene expression for tissue repair and collagen, TB-500 enhances cellular migration and wound healing, BPC-157 upregulates growth factors for tissue regeneration, and KPV inhibits the NF-kB inflammatory pathway. The combination is proposed to give synergistic multi-pathway repair with better injection-site tolerability than GLOW.",
+    "dosing": "Per peptide-db.com: 200-500 mcg total blend subcutaneously once daily (conservative start ~200 mcg in the evening), rotating between abdomen, thighs and upper arms.",
+    "cycle": "4-6 weeks on, 2-4 weeks off between cycles.",
+    "sideEffects": "Injection-site reactions are common even with KPV; individual responses vary widely. Discontinue for severe site reactions, infection or allergic reactions. The specific four-peptide formulation has no clinical trials despite individual component research; combining with GLOW causes double-dosing, and components affect GH and clotting pathways so anticoagulant or GH-therapy users need supervision.",
+    "synergies": [
+      "bpc-157",
+      "tb-500",
+      "ghk-cu",
+      "kpv",
+      "glow70"
+    ],
+    "comparisons": "KLOW is GLOW (GHK-Cu + TB-500 + BPC-157) plus KPV, so it offers the strongest anti-inflammatory profile of the healing-blend family and is claimed to sting less than GLOW. Versus the BPC-157 + TB-500 blend it adds copper-peptide skin benefits and KPV; versus running the four peptides separately you lose dose-tuning flexibility but gain a single daily shot.",
+    "sources": [
+      "https://peptide-db.com/peptides/klow-protocol"
+    ]
+  },
+  {
+    "id": "aod-9604",
+    "name": "AOD-9604",
+    "aka": [
+      "anti-obesity drug 9604",
+      "HGH frag 176-191 analog"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "summary": "AOD-9604 is a synthetic ~16-amino-acid C-terminal fragment of human growth hormone (positions 177-191 with an added tyrosine) studied as a fat-loss agent that promotes lipolysis without the muscle, blood-sugar or IGF-1 effects of full GH.",
+    "mechanism": "It stimulates lipolysis and inhibits lipogenesis, reportedly via upregulation of beta-3 adrenergic receptor activity in adipose tissue, without binding the GH receptor. It does not raise IGF-1, does not impair glucose metabolism and does not induce insulin resistance. Separate animal work has also explored cartilage repair, especially when combined with hyaluronic acid in osteoarthritis models.",
+    "dosing": "Per the sources: subcutaneous injection ~250-500 mcg once daily in the morning on an empty stomach (peptide-db.com lists 250-300 mcg standard, 400-500 mcg enhanced); peptidedosingprotocols.com summarizes published trial arms as roughly 300 mcg/day for the first 4 weeks then 500 mcg/day, noting no published human PK study has characterized the subcutaneous route.",
+    "cycle": "Typically 8-12 weeks (Phase 2 trial arms ran 12-24 weeks); community planning often uses 8-16 weeks with review every 4 weeks.",
+    "sideEffects": "Generally mild; higher oral/IV doses (around 1 mg/day) were linked to more headache, diarrhea and GI effects. Not FDA-approved for any therapeutic use and listed on the WADA Prohibited List; FDA reviewed it against compounding inclusion in December 2024. No specific lab monitoring is mandated, but glucose and lipids are reasonable to track.",
+    "synergies": [
+      "hgh-fragment-176-191",
+      "cjc-1295-no-dac",
+      "ipamorelin",
+      "tesamorelin",
+      "l-carnitine"
+    ],
+    "comparisons": "AOD-9604 is the stabilized, drug-development version of HGH Fragment 176-191 and is marketed as a metabolically safer alternative to full hGH because it does not raise IGF-1 or affect glucose. It is far weaker for weight loss than GLP-1 drugs like semaglutide or tirzepatide and Phase 2b trials failed their primary endpoint, so it is best viewed as a mild lipolytic adjunct rather than a primary fat-loss therapy.",
+    "sources": [
+      "https://peptide-db.com/peptides/aod-9604",
+      "https://www.peptidedosingprotocols.com/protocol/aod-9604"
+    ]
+  },
+  {
+    "id": "adipotide",
+    "name": "Adipotide",
+    "aka": [
+      "FTPP",
+      "prohibitin-TP01"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "summary": "Adipotide (Prohibitin-TP01) is an experimental chimeric peptidomimetic that targets the blood supply of white fat to trigger fat loss; development was halted after Phase 1 due to kidney toxicity.",
+    "mechanism": "A CKGGRAKDC homing ligand binds prohibitin/annexin A2 on white adipose tissue endothelium; the linked pro-apoptotic D-(KLAKLAK)2 motif is internalized and disrupts mitochondrial membranes, causing localized endothelial apoptosis, capillary regression and adipocyte death. This peripheral, non-CNS mechanism produces fat loss without primarily suppressing appetite.",
+    "dosing": "Per peptide-db.com: research replication of the obese-primate work used ~0.43 mg/kg subcutaneously once daily, with dose-finding tiers of roughly 0.10-0.75 mg/kg/day; there is no validated human dose.",
+    "cycle": "Studies used short courses of about 28 days; no established safe human cycle exists.",
+    "sideEffects": "SERIOUS RISK: Adipotide caused dose-dependent proximal renal tubule injury (nephrotoxicity) in primate trials, which ended its clinical development; the map flags it as high-risk. Reported effects include creatinine elevation, electrolyte shifts and dehydration; partial fat rebound occurs after discontinuation. It is not approved for human use and should be regarded as experimental and potentially dangerous; avoid combining with any other nephrotoxic agents and monitor renal function, electrolytes and volume status.",
+    "synergies": [],
+    "comparisons": "Unlike GLP-1 drugs (semaglutide, tirzepatide) or lipolytics like AOD-9604 that act on appetite or fat metabolism, adipotide physically destroys fat-tissue vasculature, giving rapid fat loss in animals but at an unacceptable kidney-safety cost. Within the fat-loss category it is the highest-risk, least clinically viable option and has no current legitimate human use.",
+    "sources": [
+      "https://peptide-db.com/peptides/adipotide"
+    ]
+  },
+  {
+    "id": "5-amino-1mq",
+    "name": "5-Amino-1MQ",
+    "aka": [
+      "5-amino-1-methylquinolinium",
+      "NNMT inhibitor"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "summary": "5-Amino-1MQ is a small-molecule (not a true peptide) NNMT inhibitor used in metabolic and longevity protocols to raise cellular NAD+ and improve mitochondrial function, with claimed effects on body composition and insulin sensitivity.",
+    "mechanism": "It inhibits the enzyme nicotinamide N-methyltransferase (NNMT), reducing methylation/degradation of nicotinamide and thereby raising cellular NAD+ levels. Higher NAD+ supports sirtuin activity, mitochondrial biogenesis and efficiency, DNA repair, and metabolic flexibility, which in preclinical models translates to increased metabolic rate, better fat oxidation and improved insulin sensitivity.",
+    "dosing": "Per peptide-db.com: most commonly oral, 25 mg (conservative) up to 100 mg once daily with food (50-75 mg typical maintenance, or 50 mg twice daily split); an injectable subcutaneous route of roughly 150-500 mcg once daily is also described.",
+    "cycle": "Typically 8-12 weeks of continuous daily use.",
+    "sideEffects": "Generally well tolerated; mild GI upset is the main issue and is reduced by taking it with food. Human safety data are limited (preclinical-stage compound). Use caution alongside metformin or other metabolic agents and with blood thinners given sparse interaction data; reasonable to monitor glucose and metabolic markers.",
+    "synergies": [
+      "nad-plus",
+      "mots-c",
+      "ss-31"
+    ],
+    "comparisons": "5-Amino-1MQ is positioned as a convenient oral NAD+-boosting metabolic tool alongside NMN/NR precursors and mitochondrial peptides like MOTS-c and SS-31, but it works by preventing NAD+ breakdown rather than supplying substrate. It is far milder than GLP-1 drugs for weight loss and should be seen as a metabolic-optimization adjunct rather than a standalone fat-loss therapy.",
+    "sources": [
+      "https://peptide-db.com/peptides/5-amino-1mq"
+    ]
+  },
+  {
+    "id": "slu-pp-332",
+    "name": "SLU-PP-332",
+    "aka": [
+      "ERR agonist",
+      "exercise mimetic"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "summary": "SLU-PP-332 is a synthetic small-molecule pan-ERR (estrogen-related receptor) agonist, often called an exercise mimetic, that activates the aerobic gene program in muscle and other tissues; it is preclinical-only with no human trial data.",
+    "mechanism": "It binds and activates ERR-alpha (most potently), ERR-beta and ERR-gamma, nuclear receptors that sit upstream of mitochondrial biogenesis, oxidative phosphorylation, the TCA cycle and fatty acid beta-oxidation. Working with the coactivator PGC-1-alpha, it increases mitochondrial density (about 1.8-fold in models), boosts resting energy expenditure and fat oxidation, improves insulin sensitivity and reduces hepatic steatosis, mimicking endurance-training adaptations without exercise.",
+    "dosing": "Per the sources: no human dose is established. Published mouse studies used ~25-50 mg/kg via intraperitoneal injection (commonly twice daily, or a single dose ~1 hour pre-exercise); research-grade product is also sold as 50 mg oral tablets and 5-10 mg injectable vials, with community oral protocols typically once daily but never clinically validated.",
+    "cycle": "No human protocols exist; animal extended-treatment studies ran roughly 4-8 weeks of twice-daily dosing.",
+    "sideEffects": "Not tested in humans, so the safety profile is unknown; it is not FDA-approved and has no clinical program as of 2026. Theoretical concerns follow from broad ERR activation across heart, muscle, liver and brown fat; treat as experimental and unvalidated.",
+    "synergies": [
+      "aicar",
+      "mots-c",
+      "5-amino-1mq",
+      "l-carnitine"
+    ],
+    "comparisons": "SLU-PP-332 is in the exercise-mimetic class alongside AICAR (AMPK activator) and overlaps conceptually with mitochondrial peptides like MOTS-c and AOD-9604, but it acts at the transcriptional level via ERR receptors rather than on AMPK or fat-mobilization directly. It shows the most striking preclinical fat-loss and endurance data of that group yet has the least human evidence, so it ranks high on promise and high on uncertainty.",
+    "sources": [
+      "https://peptide-db.com/peptides/slu-pp-332",
+      "https://www.peptidedosingprotocols.com/protocol/slu-pp-332"
+    ]
+  },
+  {
+    "id": "aicar",
+    "name": "AICAR",
+    "aka": [
+      "acadesine",
+      "AMPK activator"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "summary": "AICAR (acadesine) is a cell-permeable nucleoside analog that activates AMP-activated protein kinase (AMPK); originally studied for cardiac ischemia protection, it gained interest as an exercise mimetic for its metabolic effects.",
+    "mechanism": "Inside cells AICAR is phosphorylated to ZMP, an AMP mimetic that activates AMPK, the master regulator of cellular energy homeostasis. This switches on exercise-like metabolic pathways: increased insulin-independent glucose uptake in some tissues, enhanced fatty acid oxidation, and over time stimulation of mitochondrial biogenesis. Animal studies showed increased running endurance, but human data are limited.",
+    "dosing": "Per peptide-db.com: subcutaneous injection once daily, typically 1-3 mg/day standard, titrating from 1 mg up to 3 mg over about 4 weeks, with advanced use of 3-5 mg/day for 8-12 weeks.",
+    "cycle": "Roughly 8-12 weeks.",
+    "sideEffects": "Reported issues include injection-site reactions, mild fatigue during adaptation and possible hypoglycemia; discontinue for severe hypoglycemia symptoms or signs of lactic acidosis. Human safety data are limited and it is on the WADA Prohibited List; combining with metformin or other AMPK-active agents may be additive on glucose, so monitor blood sugar.",
+    "synergies": [
+      "slu-pp-332",
+      "mots-c",
+      "l-carnitine"
+    ],
+    "comparisons": "AICAR is the prototypical AMPK-driven exercise mimetic; SLU-PP-332 reaches similar endpoints through ERR transcription factors and SR-9009 through Rev-ErbA, and these are often discussed as a complementary trio. Compared with proven fat-loss drugs it is weak and poorly studied in humans, making it a niche, experimental metabolic agent rather than a mainstream fat-loss tool.",
+    "sources": [
+      "https://peptide-db.com/peptides/aicar"
+    ]
+  },
+  {
+    "id": "l-carnitine",
+    "name": "L-Carnitine (injectable)",
+    "aka": [
+      "levocarnitine"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "summary": "Injectable L-carnitine (levocarnitine) is an FDA-approved amino-acid derivative that shuttles long-chain fatty acids into mitochondria for energy; the injectable form bypasses the poor absorption of oral supplements and is used for fat metabolism, recovery and clinical carnitine deficiency.",
+    "mechanism": "L-carnitine acts as a carrier that transports long-chain fatty acids across the inner mitochondrial membrane via the carnitine palmitoyltransferase (CPT) shuttle, the rate-limiting step in fatty acid beta-oxidation. Greater fatty acid delivery supports ATP generation from fat, especially during exercise, and may aid recovery and glycogen sparing.",
+    "dosing": "Per peptide-db.com: subcutaneous or intramuscular injection, typically 50-100 mg/day (standard) up to 100-200 mg/day (advanced) once daily, or 100-200 mg taken 30-60 minutes pre-workout; injectable bioavailability greatly exceeds the ~15-20% of oral.",
+    "cycle": "About 8-16 weeks, and it can be used continuously.",
+    "sideEffects": "Generally well tolerated; possible injection-site reactions, mild nausea and a fishy body odor at higher doses. May interact with thyroid hormones and potentiate anticoagulants such as warfarin, so monitor thyroid levels and INR if relevant; it is the standard FDA-approved treatment for primary and secondary carnitine deficiency.",
+    "synergies": [
+      "lipo-c",
+      "super-shred",
+      "aod-9604",
+      "aicar"
+    ],
+    "comparisons": "Unlike experimental lipolytics (AOD-9604, adipotide) or exercise mimetics (AICAR, SLU-PP-332), injectable L-carnitine is a well-established, FDA-approved compound with a benign safety profile, but its fat-loss effect is modest and largely dependent on training and a caloric deficit. It is frequently a component of lipotropic blends like Lipo-C and Super Shred rather than a powerful standalone agent.",
+    "sources": [
+      "https://peptide-db.com/peptides/l-carnitine"
+    ]
+  },
+  {
+    "id": "lipo-b",
+    "name": "Lipo-B (LC120)",
+    "aka": [
+      "MIC+B12 lipotropic"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "summary": "Lipo-B is a compounded lipotropic injection combining the MIC complex (methionine, inositol, choline) with vitamin B12 (typically cyanocobalamin), marketed as a fat-metabolism and energy support adjunct to diet and exercise.",
+    "mechanism": "Methionine and choline are lipotropic agents that help mobilize and metabolize fat in the liver and support phospholipid and bile production; inositol assists fat transport and insulin signaling; vitamin B12 supports red blood cell formation, nerve function and energy metabolism, and is often the perceived energizing component. Together they are claimed to support hepatic fat clearance, though robust controlled weight-loss evidence is lacking.",
+    "dosing": "No clinical-trial dosing exists for the proprietary blend; in practice Lipo-B is given as a weekly intramuscular injection (commonly 1 mL into the deltoid or gluteal muscle), sometimes up to twice weekly, alongside a reduced-calorie diet.",
+    "cycle": "Typically run weekly on an ongoing basis while pursuing weight loss, with no formal on/off requirement; many clinics use 8-12 week courses then reassess.",
+    "sideEffects": "Generally well tolerated; possible injection-site soreness, transient nausea, urinary urgency and mild GI upset; B12 injections rarely cause flushing or allergic reaction. It is a compounded product without FDA approval for weight loss and lacks strong efficacy evidence; no specific lab monitoring is required, though checking B12 status is reasonable with chronic use.",
+    "synergies": [
+      "mic-plus-b",
+      "lipo-c",
+      "super-shred",
+      "l-carnitine"
+    ],
+    "comparisons": "Lipo-B is essentially MIC plus B12, so it sits between a plain MIC injection and the more loaded blends like Lipo-C (adds L-carnitine) or Super Shred (multi-ingredient); all are mild metabolic/energy adjuncts and none approach the efficacy of GLP-1 drugs. Choice among the lipotropic blends comes down to which add-ons (carnitine, extra B vitamins, amino acids) a clinic includes.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "lipo-c",
+    "name": "Lipo-C (LC526)",
+    "aka": [
+      "MIC + L-carnitine lipotropic"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "summary": "Lipo-C is a compounded lipotropic injection pairing the MIC complex (methionine, inositol, choline) with L-carnitine, and usually B vitamins, intended to support fat metabolism, fat transport into mitochondria and exercise energy.",
+    "mechanism": "Methionine and choline act as lipotropics aiding hepatic fat mobilization and phospholipid/bile synthesis; inositol supports fat transport and insulin signaling; L-carnitine shuttles long-chain fatty acids into mitochondria for beta-oxidation; added B vitamins (often B12 and B-complex) support energy metabolism. The combination is marketed to enhance fat utilization more than MIC alone, though controlled efficacy data are limited.",
+    "dosing": "No trial-based dosing for the proprietary blend; clinically administered as an intramuscular injection (typically ~1 mL) once or twice weekly alongside a calorie-controlled diet and exercise.",
+    "cycle": "Generally given weekly on an ongoing basis while losing weight; no mandatory on/off cycle, with periodic reassessment (often every 8-12 weeks).",
+    "sideEffects": "Usually mild: injection-site discomfort, transient nausea, urinary urgency, mild GI upset; rare flushing or allergic reactions from the B12/B-complex component. Compounded, not FDA-approved for weight loss, with weak efficacy evidence; no specific monitoring labs are required.",
+    "synergies": [
+      "lipo-b",
+      "mic-plus-b",
+      "super-shred",
+      "l-carnitine"
+    ],
+    "comparisons": "Lipo-C is the L-carnitine-enriched member of the lipotropic family, a step up in ingredients from Lipo-B (MIC + B12) and roughly comparable to other carnitine-containing blends like Super Shred. As with all MIC injections it is a modest adjunct to lifestyle change and far less effective than pharmacologic weight-loss agents.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "super-shred",
+    "name": "Super Shred (LC553)",
+    "aka": [
+      "multi-lipotropic blend"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "summary": "Super Shred is a compounded multi-ingredient lipotropic injection built on the MIC complex (methionine, inositol, choline) with added L-carnitine, B vitamins and often supporting amino acids, marketed as an enhanced fat-loss and energy formula.",
+    "mechanism": "It combines the standard lipotropic actions of methionine and choline (hepatic fat mobilization, phospholipid and bile synthesis) and inositol (fat transport, insulin signaling) with L-carnitine for mitochondrial fatty acid uptake and B vitamins for energy metabolism; some versions add amino acids aimed at supporting metabolic rate. The premise is broader metabolic support than simpler MIC blends, but evidence for meaningful added fat loss is weak.",
+    "dosing": "No clinical-trial dosing for the proprietary mix; typically given as an intramuscular injection (around 1 mL) once or twice weekly with a reduced-calorie diet and exercise.",
+    "cycle": "Usually weekly on an ongoing basis during a weight-loss phase; no formal on/off cycle, reassessed periodically.",
+    "sideEffects": "Generally mild: injection-site soreness, transient nausea, urinary urgency, GI upset; occasional flushing or allergic reaction from the vitamin components. Compounded and not FDA-approved for weight loss; efficacy data are limited and it should be seen as an adjunct, not a primary therapy. No mandatory monitoring labs.",
+    "synergies": [
+      "lipo-b",
+      "lipo-c",
+      "mic-plus-b",
+      "l-carnitine"
+    ],
+    "comparisons": "Super Shred is the most loaded of the common lipotropic blends, adding carnitine, extra B vitamins and amino acids on top of MIC, where Lipo-B is MIC + B12 and Lipo-C is MIC + carnitine. Despite the longer ingredient list its real-world effect remains modest and far below GLP-1 medications; the differences between these blends are largely formulation marketing.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "mic-plus-b",
+    "name": "MIC+B (LC216)",
+    "aka": [
+      "methionine-inositol-choline + B12"
+    ],
+    "category": "Fat Loss & Lipolytics",
+    "summary": "MIC+B is the classic lipotropic injection: methionine, inositol and choline (the MIC complex) combined with vitamin B12, used as a metabolic and energy support adjunct during weight-loss programs.",
+    "mechanism": "Methionine and choline are lipotropic compounds that assist mobilization and breakdown of fat in the liver and support phospholipid and bile synthesis; inositol aids intracellular fat transport and insulin signaling; vitamin B12 supports red cell production, neurological function and energy metabolism and is the component most associated with the perceived energy boost. The blend is positioned to help the liver process fat, though high-quality weight-loss efficacy data are lacking.",
+    "dosing": "No trial-based dosing for the proprietary blend; typically administered as a weekly intramuscular injection (commonly ~1 mL in the deltoid or gluteal muscle), occasionally twice weekly, alongside a calorie-restricted diet.",
+    "cycle": "Generally given weekly on an ongoing basis during a weight-loss phase; no required on/off cycle, with periodic reassessment.",
+    "sideEffects": "Usually mild: injection-site discomfort, transient nausea, urinary urgency, mild GI upset; rare flushing or allergic reaction to the B12 component. It is a compounded product not FDA-approved for weight loss with weak efficacy evidence; no specific monitoring labs are required, though B12 status can be checked with long-term use.",
+    "synergies": [
+      "lipo-b",
+      "lipo-c",
+      "super-shred",
+      "l-carnitine"
+    ],
+    "comparisons": "MIC+B is the baseline lipotropic injection; Lipo-B is essentially the same MIC + B12 formula, while Lipo-C and Super Shred add L-carnitine and other ingredients. All are mild adjuncts to diet and exercise and none rival pharmacologic weight-loss agents, so MIC+B is the simplest, cheapest entry point in this category.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "hcg",
+    "name": "HCG",
+    "aka": [
+      "human chorionic gonadotropin"
+    ],
+    "category": "Hormonal & Fertility",
+    "summary": "HCG is a placental glycoprotein hormone that acts as an LH-receptor agonist, FDA-approved for hypogonadotropic hypogonadism, cryptorchidism and ovulation induction, and widely used to maintain testicular function during TRT.",
+    "mechanism": "HCG binds LH receptors on testicular Leydig cells, stimulating intratesticular testosterone and estrogen biosynthesis with a 24-36 hour half-life and peak levels 6-12 hours post-injection. In women it triggers final follicular maturation and ovulation. Because testes also express aromatase, the rise in intratesticular testosterone can elevate estrogen.",
+    "dosing": "Per peptide-db: 250-500 IU every other day (low TRT adjunct), 500-1000 IU twice weekly (standard TRT adjunct), 1500-2000 IU 2-3x weekly IM for monotherapy or fertility, 5000-10,000 IU single IM/SubQ ovulation trigger, and 1000-1500 IU EOD for 2-3 weeks for PCT; routes SubQ or IM.",
+    "cycle": "Ongoing alongside TRT, or 3-6 month courses for fertility protocols; pediatric cryptorchidism dosed 2-3x weekly for 3-4 weeks.",
+    "sideEffects": "Gynecomastia and breast tenderness from increased estrogen, headaches, irritability and mood swings; in fertility use, risk of OHSS. Monitor estradiol, testosterone and (in women) follicle response by ultrasound. Potential anti-HCG antibody formation with long-term use.",
+    "synergies": [
+      "gonadorelin",
+      "kisspeptin-10",
+      "hmg"
+    ],
+    "comparisons": "Within hormonal/fertility agents, HCG directly mimics LH with a long half-life and is simpler to dose than pulsatile gonadorelin, while gonadorelin and kisspeptin act upstream for more physiological HPG-axis restoration. HMG supplies both FSH and LH and is used alongside HCG for spermatogenesis induction.",
+    "sources": [
+      "https://peptide-db.com/peptides/hcg"
+    ]
+  },
+  {
+    "id": "hmg",
+    "name": "HMG",
+    "aka": [
+      "human menopausal gonadotropin",
+      "menotropin"
+    ],
+    "category": "Hormonal & Fertility",
+    "summary": "HMG is a purified gonadotropin preparation from postmenopausal urine containing FSH and LH in roughly a 1:1 ratio, FDA-approved for ovulation induction, IVF stimulation and male infertility.",
+    "mechanism": "The FSH component stimulates growth and maturation of ovarian follicles (and spermatogenesis in men) while the LH component supports follicular development, steroidogenesis and testicular testosterone production. Highly purified HP-hMG has enhanced FSH-receptor activity with reduced inactive proteins; FSH component half-life is roughly 39-54 hours.",
+    "dosing": "Per peptide-db: 75-150 IU daily IM or SubQ for ovulation induction, 150-300 IU daily for 7-12 days for IVF stimulation, and 75-150 IU 2-3x weekly IM/SubQ for male fertility; dosing is individualized to follicular response and estradiol levels.",
+    "cycle": "7-12 day stimulation phase per IVF/ovulation cycle starting around cycle day 2-3, with HCG trigger when follicles mature; male fertility courses run months.",
+    "sideEffects": "Injection-site reactions, abdominal discomfort, ovarian enlargement, mood changes and headache; main serious risk is ovarian hyperstimulation syndrome (OHSS), monitored by ultrasound follicle counts and serum estradiol. The LH content may give a lower OHSS rate than FSH-only protocols.",
+    "synergies": [
+      "hcg",
+      "gonadorelin"
+    ],
+    "comparisons": "Compared with recombinant FSH, HMG adds LH activity to better mimic natural physiology, is roughly 40-60% cheaper, and may improve fertilization rates with comparable pregnancy outcomes. It is typically paired with an HCG trigger and is interchangeable with recombinant gonadotropins in most settings.",
+    "sources": [
+      "https://peptide-db.com/peptides/hmg"
+    ]
+  },
+  {
+    "id": "kisspeptin-10",
+    "name": "Kisspeptin-10",
+    "aka": [
+      "metastin frag",
+      "KISS1"
+    ],
+    "category": "Hormonal & Fertility",
+    "summary": "Kisspeptin-10 is a 10-amino-acid fragment of the KISS1 gene product that activates GPR54/KISS1R receptors to drive GnRH release; studied for hypogonadotropic hypogonadism, fertility/IVF triggering and sexual function. Not FDA-approved.",
+    "mechanism": "It binds GPR54/KISS1R receptors on hypothalamic GnRH neurons, triggering pulsatile GnRH release that stimulates pituitary LH/FSH secretion and downstream gonadal steroidogenesis. Half-life is about 4 minutes for KP-10 (about 28-32 minutes for KP-54), and continuous exposure causes receptor desensitization (tachyphylaxis), so it must be pulsed.",
+    "dosing": "Per peptidedosingprotocols and peptide-db: kisspeptin-10 commonly 50-100 mcg once daily SC (low pulse), 100-200 mcg once daily SC (standard), or 100 mcg twice daily SC; kisspeptin-54 trial doses are weight-based (about 1.6-12.8 nmol/kg single SC bolus for IVF triggering, 6.4 nmol/kg twice weekly for amenorrhea). NEVER daily long-term — desensitization within days.",
+    "cycle": "Short pulse cycles of 2-4 weeks with 2-4 weeks off (community standard cycle 4-6 weeks on / 4 weeks off); or single diagnostic/IVF-trigger dose.",
+    "sideEffects": "Minimal acute side effects; occasional injection-site reactions, headache or transient visual disturbance. Avoid in pregnancy/breastfeeding and use caution with cardiovascular disease. Daily dosing causes receptor desensitization and loss of effect. Research-use only, not FDA-approved.",
+    "synergies": [
+      "hcg",
+      "gonadorelin",
+      "pt-141"
+    ],
+    "comparisons": "As an IVF oocyte-maturation trigger, kisspeptin causes far less moderate/severe OHSS than HCG because it stimulates the body's own LH surge rather than replacing it; like gonadorelin it acts upstream of the pituitary but at the kisspeptin receptor rather than the GnRH receptor, and both demand pulsatile dosing unlike the long-acting HCG.",
+    "sources": [
+      "https://peptide-db.com/peptides/kisspeptin",
+      "https://www.peptidedosingprotocols.com/protocol/kisspeptin"
+    ]
+  },
+  {
+    "id": "gonadorelin",
+    "name": "Gonadorelin",
+    "aka": [
+      "GnRH",
+      "LHRH"
+    ],
+    "category": "Hormonal & Fertility",
+    "summary": "Gonadorelin is synthetic gonadotropin-releasing hormone (GnRH), a 10-amino-acid peptide used diagnostically and, via pulsatile dosing, therapeutically to stimulate pituitary LH/FSH release for fertility and TRT support.",
+    "mechanism": "It agonizes GnRH receptors on the anterior pituitary; when delivered in pulses mimicking natural secretion (every 90-120 min) it triggers LH and FSH release and downstream gonadal steroidogenesis, but continuous exposure paradoxically desensitizes and downregulates the receptor, suppressing gonadotropins. Half-life is only 2-4 minutes.",
+    "dosing": "Per peptide-db: 100 mcg single SubQ/IV injection for diagnostic testing, 50-100 mcg 2-3x weekly SubQ for fertility support, 5-20 mcg per pulse every 90-120 min via SubQ pump for pulsatile therapy, and 100-200 mcg 2-3x weekly SubQ as a TRT adjunct.",
+    "cycle": "Varies by use: single-dose for diagnostics, ongoing for fertility therapy, continuous for TRT support, 2-3 week courses for post-cycle therapy.",
+    "sideEffects": "Injection-site reactions, headache, flushing, nausea and abdominal discomfort. Misjudged dosing frequency (continuous instead of pulsatile) causes receptor desensitization and gonadotropin suppression. Monitor LH/FSH and testosterone response.",
+    "synergies": [
+      "hcg",
+      "kisspeptin-10",
+      "hmg"
+    ],
+    "comparisons": "Compared with HCG for maintaining testicular function on TRT, gonadorelin restores the HPG axis more physiologically by driving endogenous LH/FSH but requires impractical pulsatile dosing, whereas HCG directly mimics LH with a 24-36 hour half-life and is far simpler to administer. Kisspeptin acts one step upstream of gonadorelin.",
+    "sources": [
+      "https://peptide-db.com/peptides/gonadorelin"
+    ]
+  },
+  {
+    "id": "oxytocin",
+    "name": "Oxytocin",
+    "aka": [
+      "pitocin"
+    ],
+    "category": "Hormonal & Fertility",
+    "summary": "Oxytocin is a nine-amino-acid neuropeptide hormone, FDA-approved (IV/IM) for labor induction and postpartum hemorrhage, and investigated via intranasal/subcutaneous routes for social cognition, anxiety, PTSD, autism and sexual function.",
+    "mechanism": "It binds oxytocin receptors on uterine smooth muscle, driving calcium influx, myometrial contraction and prostaglandin release. Centrally it modulates GABAergic, serotonergic and dopaminergic signaling, reduces amygdala reactivity and dampens HPA-axis cortisol output; it also cross-reacts with vasopressin receptors at higher doses. Plasma half-life is 3-6 minutes (about 20 minutes central after intranasal).",
+    "dosing": "Per sources: obstetric labor induction 0.5-2 mU/min IV titrated; postpartum hemorrhage 10 units IM or 10-40 units in IV solution. Investigational routes (peptide-db / peptidedosingprotocols): intranasal 10-72 IU (about 17-120 mcg), commonly 24 IU once per session 30-45 min before activity or 1-2x daily for chronic protocols; subcutaneous 100-500 mcg daily titrated from 100 mcg.",
+    "cycle": "Obstetric use is acute/single-event; behavioral protocols run roughly 4-12 weeks of daily dosing, or as-needed (max one dose per 24 hours for sexual-function use).",
+    "sideEffects": "Mild headache, nasal irritation (intranasal), nausea/vomiting and transient blood-pressure changes; obstetric IV use risks uterine hyperstimulation and fetal distress, and water intoxication (confusion, seizures, edema) can occur. Alcohol suppresses oxytocin effects. FDA-approved only for obstetric use; intranasal/SubQ uses are investigational.",
+    "synergies": [
+      "pt-141",
+      "kisspeptin-10"
+    ],
+    "comparisons": "The FDA-approved obstetric injection is high-dose IV with immediate onset and tight titration, whereas investigational intranasal/SubQ oxytocin uses much lower doses for neuromodulation with mixed efficacy across indications; for sexual-function research it is sometimes paired with PT-141, which works through a separate melanocortin pathway.",
+    "sources": [
+      "https://peptide-db.com/peptides/oxytocin",
+      "https://www.peptidedosingprotocols.com/protocol/oxytocin"
+    ]
+  },
+  {
+    "id": "pt-141",
+    "name": "PT-141",
+    "aka": [
+      "bremelanotide",
+      "Vyleesi"
+    ],
+    "category": "Sexual Health",
+    "summary": "PT-141 (bremelanotide) is a cyclic melanocortin-receptor agonist, FDA-approved as Vyleesi for premenopausal women with hypoactive sexual desire disorder and used off-label for male erectile dysfunction; it works centrally rather than on blood flow.",
+    "mechanism": "It selectively activates melanocortin MC3R/MC4R receptors in the CNS (medial preoptic area of the hypothalamus), increasing dopamine release and triggering sexual arousal pathways independent of peripheral vascular mechanisms. Onset is within about 45 minutes with effects lasting 6-12 hours; half-life is about 2.7 hours.",
+    "dosing": "Per sources: FDA-approved Vyleesi dose 1.75 mg subcutaneously at least 45 minutes before sexual activity, no more than one dose per 24 hours and no more than 8 doses per month; men commonly use 1-2 mg SubQ, with a 0.5 mg test dose for tolerance. Investigational intranasal arms studied 7.5-20 mg; compounded nasal sprays cite about 1-2 mg per actuation.",
+    "cycle": "Used on-demand before sexual activity rather than in cycles; capped at 1 dose/24 h and 8 doses/month under the Vyleesi label.",
+    "sideEffects": "Nausea (about 40%), flushing (about 20%), headache (about 11%) and transient blood-pressure elevation; contraindicated with nitrates and cautioned with antihypertensives due to additive hypotension risk, and skin/gum hyperpigmentation can occur with repeated dosing. Pre-treating with an antiemetic is commonly recommended.",
+    "synergies": [
+      "oxytocin",
+      "melanotan-2"
+    ],
+    "comparisons": "Unlike PDE5 inhibitors (sildenafil/tadalafil) that act peripherally on blood flow, PT-141 acts centrally on desire and arousal and works in PDE5-resistant cases; it shares melanocortin ancestry with Melanotan 2 but is MC3R/MC4R-preferring with far less tanning/mole risk, and it has a cleaner, FDA-approved profile than off-label oxytocin for sexual function.",
+    "sources": [
+      "https://peptide-db.com/peptides/pt-141",
+      "https://www.peptidedosingprotocols.com/protocol/bremelanotide-pt-141"
+    ]
+  },
+  {
+    "id": "melanotan-2",
+    "name": "Melanotan 2",
+    "aka": [
+      "MT-2",
+      "melanotan-II"
+    ],
+    "category": "Cosmetic & Skin",
+    "summary": "Melanotan 2 is a synthetic non-selective alpha-MSH analog used for UV-free tanning and sexual enhancement; it is not approved for human use anywhere and is sold only as a research compound.",
+    "mechanism": "It binds melanocortin receptors broadly — MC1R drives melanin production for tanning, MC4R affects sexual arousal and appetite, with MC3R/MC5R also engaged — producing several effects (and side effects) at once. Plasma half-life is about 1-2 hours, but pigmentary and behavioral effects last 24-48+ hours because they depend on slower biological changes.",
+    "dosing": "Per sources: a loading phase of about 100-250 mcg daily SubQ escalating to 500-1000 mcg daily over 4-6 weeks as nausea tolerance allows, then maintenance of 250-1000 mcg 1-2x weekly; a 'pre-tan only' variant starts at 50-75 mcg on tanning days only, increasing 25 mcg every 3 sessions. ED-trial context used about 0.025 mg/kg (roughly 1.75 mg at 70 kg).",
+    "cycle": "Typical cycles 4-8 weeks of loading then weekly maintenance, with 4-6+ weeks off; many frameworks pause in winter and re-load before sun exposure.",
+    "sideEffects": "Nausea and facial flushing (worst in the first 1-2 weeks), fatigue, yawning, appetite suppression and spontaneous erections; serious concerns include priapism, rhabdomyolysis at overdose levels, and — most importantly — darkening of existing moles, new naevi and case reports of melanoma, so it is contraindicated with personal/family history of melanoma or many atypical moles. Baseline dermatology skin exam and serial mole photography are essential; not FDA-approved.",
+    "synergies": [
+      "pt-141",
+      "melanotan-1"
+    ],
+    "comparisons": "Within cosmetic/skin agents, Melanotan 2 is the non-selective heavyweight — strong tanning and sexual effects but dose-limiting nausea and the highest mole/melanoma risk — versus MC1R-preferring afamelanotide (Melanotan 1), which has a milder side-effect profile and an FDA-approved implant form, and MC3R/MC4R-preferring PT-141, which is approved for sexual desire with minimal tanning.",
+    "sources": [
+      "https://peptide-db.com/peptides/melanotan-ii",
+      "https://www.peptidedosingprotocols.com/protocol/melanotan-ii"
+    ]
+  },
+  {
+    "id": "melanotan-1",
+    "name": "Melanotan 1",
+    "aka": [
+      "MT-1",
+      "afamelanotide",
+      "Scenesse"
+    ],
+    "category": "Cosmetic & Skin",
+    "summary": "Melanotan 1 (afamelanotide) is an MC1R-preferring alpha-MSH analog, FDA-approved as the SCENESSE subcutaneous implant for erythropoietic protoporphyria and used in research-grade injectable form for tanning and photoprotection.",
+    "mechanism": "It selectively activates MC1R receptors to stimulate eumelanin synthesis, increasing skin pigmentation and photoprotection; its short (~30 minute) half-life in injectable form requires multiple daily doses for sustained effect, while the approved version is a slow-release implant.",
+    "dosing": "Per peptide-db: research-grade injectable loading of 0.25-0.5 mg 1-2x daily SubQ for 1-2 weeks, then maintenance of 0.25-0.5 mg 2-3x weekly SubQ; the FDA-approved form is a 16 mg SCENESSE implant. UV exposure cuts the required UV dose roughly in half.",
+    "cycle": "2-4 week loading phase then ongoing maintenance as needed (implant dosed periodically per the SCENESSE label).",
+    "sideEffects": "Mild nausea, facial flushing, reduced appetite and increased mole/freckle pigmentation; mole changes are less common than with Melanotan 2 because of reduced MC3R/MC4R activation, but skin self-examination is still important. Discontinue for severe persistent vomiting or rapidly changing moles. Off-label injectable use is unapproved.",
+    "synergies": [
+      "melanotan-2"
+    ],
+    "comparisons": "Compared with Melanotan 2, MT-1 is MC1R-selective so it gives tanning/photoprotection with a milder side-effect profile and lower mole/melanoma risk, and unlike MT-2 it has an FDA-approved implant form; it lacks the strong sexual/appetite effects of MT-2 and the central sexual-arousal action of PT-141.",
+    "sources": [
+      "https://peptide-db.com/peptides/melanotan-i"
+    ]
+  },
+  {
+    "id": "ghk-cu",
+    "name": "GHK-Cu",
+    "aka": [
+      "copper peptide GHK",
+      "copper tripeptide-1"
+    ],
+    "category": "Cosmetic & Skin",
+    "summary": "GHK-Cu (glycyl-L-histidyl-L-lysine copper) is a small copper-binding tripeptide used topically and by subcutaneous injection for skin regeneration, anti-aging and wound healing; the topical (cosmetic Copper Tripeptide-1) route has the strongest human evidence.",
+    "mechanism": "It penetrates skin, activates fibroblasts, and stimulates collagen and elastin synthesis while modulating matrix metalloproteinases, supports angiogenesis and antioxidant defense, and broadly shifts gene expression toward patterns associated with younger tissue. Half-life is about 0.5-2 hours; plasma levels decline with age.",
+    "dosing": "Per sources: topical formulations of about 0.5-3% applied once or twice daily for 8-12+ weeks; injectable (research-use, community-derived) about 1-2 mg per day SubQ for 4-8 week cycles, e.g. starting around 1 mg/day. Topical use is the better-evidenced route.",
+    "cycle": "Topical 8-12+ weeks ongoing; injectable cycles 4-8 weeks with 2-4 week off-periods between cycles.",
+    "sideEffects": "Topical: mild local redness, tingling or dryness, more common above ~4% and worse when layered with strong retinoids or low-pH acids; injectable: local redness, mild swelling, transient warmth or a faint blue-tinted bruise. Theoretical concerns about copper accumulation and ECM imbalance; avoid in pregnancy/breastfeeding, active cancer, Wilson's disease/copper disorders and copper allergy. Not an FDA-approved drug.",
+    "synergies": [
+      "bpc-157",
+      "tb-500",
+      "ahk-cu",
+      "glow70",
+      "klow"
+    ],
+    "comparisons": "Within cosmetic/skin peptides, GHK-Cu is the best-studied copper peptide for skin (collagen density, fine lines, laxity) versus AHK-Cu, a related copper tripeptide aimed more at hair follicles; it is the active in the GLOW/KLOW community blends (with BPC-157, TB-500, and in KLOW kisspeptin-10) but those fixed-ratio stacks lack their own trials.",
+    "sources": [
+      "https://peptide-db.com/peptides/ghk-cu",
+      "https://www.peptidedosingprotocols.com/protocol/ghk-cu"
+    ]
+  },
+  {
+    "id": "ahk-cu",
+    "name": "AHK-Cu",
+    "aka": [
+      "copper tripeptide AHK"
+    ],
+    "category": "Cosmetic & Skin",
+    "summary": "AHK-Cu (alanyl-histidyl-lysine copper, Copper Tripeptide-3) is a copper tripeptide used in topical formulations primarily to stimulate hair growth via dermal papilla cells, with secondary skin-regeneration effects.",
+    "mechanism": "It delivers copper to scalp dermal papilla cells, stimulating follicle elongation and cell proliferation, raising the anti-apoptotic Bcl-2/Bax ratio, upregulating VEGF for blood flow, reducing TGF-beta1 (which counters DHT-driven miniaturization) and boosting SOD antioxidant activity; it also activates fibroblasts and collagen synthesis in skin. Plasma half-life is not established.",
+    "dosing": "Per peptide-db: topical 0.5-1% solution or serum applied once or twice daily to the scalp; combined hair protocols use about 0.3-0.5% AHK-Cu with minoxidil; skin use about 0.3-1% in serum/cream, with formulation pH kept around 5.5-7.0.",
+    "cycle": "At least 12-24 weeks of consistent use for hair-growth effects, then ongoing for maintenance.",
+    "sideEffects": "Generally well tolerated topically; rare scalp irritation (patch test advised), mild redness on sensitive skin, possible early shedding. Discontinue for persistent irritation, allergic reaction, or signs of copper sensitivity (metallic taste, nausea). Avoid combining with extra oral copper. Cosmetic ingredient, not an FDA-approved drug.",
+    "synergies": [
+      "ghk-cu",
+      "bpc-157",
+      "hyaluronic-acid"
+    ],
+    "comparisons": "AHK-Cu is the hair-focused counterpart to GHK-Cu, which has stronger evidence for skin anti-aging endpoints; in hair-loss stacks it complements minoxidil (vasodilation/potassium channels) and 5-alpha-reductase inhibitors (DHT blockade) through a distinct dermal-papilla-stimulating mechanism, and it is more limited than GHK-Cu in documented human data.",
+    "sources": [
+      "https://peptide-db.com/peptides/ahk-cu"
+    ]
+  },
+  {
+    "id": "glutathione",
+    "name": "Glutathione (injectable)",
+    "aka": [
+      "GSH",
+      "reduced glutathione"
+    ],
+    "category": "Cosmetic & Skin",
+    "summary": "Glutathione is the body's master antioxidant tripeptide (glutamate-cysteine-glycine); injectable forms are used for antioxidant/detox support and, popularly, for skin brightening, with research interest also in neurological and immune health.",
+    "mechanism": "It is the primary intracellular antioxidant, directly neutralizing reactive oxygen species and serving as a cofactor for glutathione peroxidase, recycling other antioxidants (e.g. regenerating oxidized vitamin C), conjugating heavy metals and xenobiotics for elimination, protecting mitochondria and maintaining redox balance; the cysteine thiol group provides the activity. It also modulates melanin synthesis, the basis of its skin-lightening effect. IV half-life is about 10-14 minutes.",
+    "dosing": "Per peptide-db: 100-200 mg 2-3x weekly SubQ for general wellness, 200-600 mg 2-3x weekly SubQ or IV for intensive therapy, 600-1000 mg weekly IV for detoxification, and up to 1400 mg 2-3x weekly IV in Parkinson's research; injectable is favored over oral for bioavailability.",
+    "cycle": "Typically 8-12 week courses.",
+    "sideEffects": "Injection-site reactions, mild nausea (more with higher doses) and abdominal cramping; IV use has been associated with rare but serious allergic reactions including anaphylaxis (and Stevens-Johnson-type reactions reported with skin-lightening use). Use the reduced (GSH) form, not oxidized (GSSG). Not an FDA-approved drug for these uses.",
+    "synergies": [
+      "nad-plus",
+      "ss-31",
+      "bpc-157"
+    ],
+    "comparisons": "Among cosmetic/skin agents, glutathione is a systemic antioxidant that lightens skin tone via melanin modulation rather than a topical collagen-stimulating peptide like GHK-Cu or a hair peptide like AHK-Cu; it pairs well with vitamin C and is often stacked with NAD+ in longevity protocols, but its skin-lightening efficacy is variable and IV use carries more safety concerns than oral.",
+    "sources": [
+      "https://peptide-db.com/peptides/glutathione"
+    ]
+  },
+  {
+    "id": "hyaluronic-acid",
+    "name": "Hyaluronic Acid (injectable)",
+    "aka": [
+      "HA",
+      "sodium hyaluronate"
+    ],
+    "category": "Cosmetic & Skin",
+    "summary": "Injectable hyaluronic acid (sodium hyaluronate) is a naturally occurring glycosaminoglycan used as a dermal filler for soft-tissue volumizing and wrinkle correction and as an intra-articular viscosupplement for osteoarthritis.",
+    "mechanism": "HA is a large, highly hydrophilic polysaccharide that binds water to provide tissue volume, hydration and viscoelasticity; cross-linked dermal-filler forms physically lift and contour tissue while stimulating some collagen response, and intra-articular HA restores synovial fluid viscoelasticity, lubricating and cushioning the joint and modestly dampening inflammation. It is gradually degraded by hyaluronidase over months.",
+    "dosing": "Dermal fillers are injected to effect into the dermis/subcutis (typically a fraction of a mL up to a few mL per treatment area) by a trained injector, with touch-ups as the product resorbs over roughly 6-18 months depending on the product; intra-articular OA viscosupplementation is typically a single injection or a course of 1-5 weekly injections per joint per cycle.",
+    "cycle": "Not cycled in the peptide sense; dermal-filler results last about 6-18 months before repeat treatment, and intra-articular courses are repeated roughly every 6 months as needed.",
+    "sideEffects": "Injection-site swelling, bruising, redness, tenderness and lumps/nodules; uncommon but serious risks of dermal filler include vascular occlusion causing skin necrosis or (rarely) blindness, infection, biofilm and delayed inflammatory nodules — hyaluronidase can dissolve HA filler in emergencies. Intra-articular HA can cause transient joint pain or effusion. Generally regarded as low-risk when injected by qualified practitioners.",
+    "synergies": [
+      "ghk-cu",
+      "ahk-cu"
+    ],
+    "comparisons": "As a filler, HA is the reversible, predictable workhorse versus longer-lasting biostimulatory or permanent fillers, and it is often used as a delivery base for topical copper peptides like GHK-Cu and AHK-Cu; as a joint viscosupplement it offers a slower-onset, longer-duration alternative to intra-articular corticosteroids.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "snap-8",
+    "name": "SNAP-8",
+    "aka": [
+      "acetyl octapeptide-3",
+      "argireline peptide"
+    ],
+    "category": "Cosmetic & Skin",
+    "summary": "SNAP-8 (acetyl octapeptide-3) is a synthetic octapeptide used topically as a needle-free 'Botox alternative' that softens dynamic expression lines around the eyes and forehead.",
+    "mechanism": "It mimics the N-terminal of the SNAP-25 protein and competitively inhibits formation of the SNARE complex, which is required for vesicle docking and acetylcholine release at the neuromuscular junction. Reduced acetylcholine release means less repetitive micro-contraction of facial muscles, so dynamic wrinkles deepen more slowly. Reported inhibition efficiency is around 43% at therapeutic concentrations, with clinical data showing up to 63% reduction in wrinkle depth over 28 days.",
+    "dosing": "Per peptide-db.com: topical use at 3-10% concentration in a serum or cream applied twice daily (morning and evening); injectable form roughly 0.33-1 mg. Eye-area and preventive use at the lower 3-5% end, intensive wrinkle treatment at 5-10%.",
+    "cycle": "Continuous daily use; effects are maintained only while applied, so there is no on/off cycling for the topical product.",
+    "sideEffects": "Generally well tolerated topically; possible mild local irritation, redness, or dryness at the application site. No systemic effects expected from cosmetic use. It is a cosmetic-grade ingredient, not an approved drug; injectable use is experimental and not validated.",
+    "synergies": [
+      "matrixyl",
+      "ghk-cu",
+      "ahk-cu",
+      "hyaluronic-acid"
+    ],
+    "comparisons": "Within topical anti-wrinkle peptides, SNAP-8 is an extended, slightly more potent analog of argireline (acetyl hexapeptide-8) and targets the same neuromuscular pathway, whereas Matrixyl works by signalling collagen synthesis rather than relaxing muscle. SNAP-8 is best for dynamic expression lines; copper peptides like GHK-Cu and Matrixyl are better for overall firmness, texture, and static lines, and the two mechanisms are often combined in one routine.",
+    "sources": [
+      "https://peptide-db.com/peptides/snap-8"
+    ]
+  },
+  {
+    "id": "matrixyl",
+    "name": "Matrixyl",
+    "aka": [
+      "palmitoyl pentapeptide-4",
+      "Matrixyl 3000"
+    ],
+    "category": "Cosmetic & Skin",
+    "summary": "Matrixyl is a palmitoylated matrikine peptide (palmitoyl pentapeptide-4, often blended as Matrixyl 3000) used topically to stimulate collagen and reduce fine lines and skin laxity.",
+    "mechanism": "The pentapeptide fragment is a matrikine that signals fibroblasts to upregulate synthesis of collagen I, III and IV, fibronectin, hyaluronic acid and glycosaminoglycans, effectively mimicking the wound-healing repair signal without injury. The palmitoyl tail improves lipophilicity so the peptide penetrates the stratum corneum. Matrixyl 3000 pairs it with palmitoyl tripeptide-1 for a broader matrikine effect, gradually thickening the dermal matrix and smoothing the skin surface.",
+    "dosing": "No source dump available; compiled. Typical cosmetic use is 3-8% of the branded solution incorporated into a serum or moisturizer, applied once or twice daily.",
+    "cycle": "Continuous daily use; benefits accrue over 4-12 weeks and are maintained only with ongoing application.",
+    "sideEffects": "Very low irritation potential; occasional mild redness or stinging in sensitive users. No systemic absorption or monitoring required. This is a cosmetic ingredient, not a drug; effect sizes are modest compared with retinoids.",
+    "synergies": [
+      "snap-8",
+      "ghk-cu",
+      "ahk-cu",
+      "hyaluronic-acid"
+    ],
+    "comparisons": "Among topical anti-wrinkle peptides, Matrixyl is a collagen-stimulating signal peptide, unlike SNAP-8 and argireline which are neuromuscular relaxers, and unlike GHK-Cu which combines collagen signalling with copper-driven antioxidant and remodelling effects. It is gentler than retinoids with a smaller effect on photoaging, and is frequently layered with copper peptides and SNAP-8 since the mechanisms are complementary.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "lemon-bottle",
+    "name": "Lemon Bottle",
+    "aka": [
+      "lipolysis solution",
+      "fat dissolving"
+    ],
+    "category": "Cosmetic & Skin",
+    "summary": "Lemon Bottle is a Korean injectable lipolysis ('fat dissolving') solution marketed for small localized fat deposits such as the chin, jawline, and stubborn body pockets.",
+    "mechanism": "It is a cocktail rather than a single peptide; the headline actives are riboflavin (vitamin B2), bromelain, and lecithin/phosphatidylcholine-type emulsifiers. The lecithin component is intended to emulsify and disrupt adipocyte membranes so the released triglycerides are cleared, while riboflavin and bromelain are promoted as supporting metabolism and reducing inflammation. The exact formulation is proprietary and not standardized, and rigorous clinical evidence is limited.",
+    "dosing": "No source dump available; compiled. Practitioners typically inject small aliquots (on the order of 0.2-0.5 mL per point) across a treatment grid in the target area, repeated every 2-4 weeks for 2-4 sessions; no validated standardized dose exists.",
+    "cycle": "Course of roughly 2-4 sessions spaced 2-4 weeks apart, then assess; not a continuously cycled product.",
+    "sideEffects": "Expect swelling, bruising, tenderness, warmth, and firmness at injection sites for days to weeks; risk of nodules, prolonged inflammation, infection, skin necrosis, and uneven fat loss. It is not FDA-approved, formulations are unregulated and have been linked to adverse-event warnings in several countries, so it should be considered experimental and higher-risk than approved deoxycholic-acid products.",
+    "synergies": [],
+    "comparisons": "Compared with the FDA-approved injectable lipolytic deoxycholic acid (Kybella), Lemon Bottle is cheaper and marketed as less painful, but lacks the controlled-trial evidence and regulatory clearance behind it; versus the lipotropic injectables in this category (lipo-B, MIC) it is intended for direct local fat reduction rather than systemic metabolic support, and versus CoolSculpting-type devices it is a chemical rather than physical approach with a less predictable safety profile.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "selank",
+    "name": "Selank",
+    "aka": [
+      "TP-7",
+      "tuftsin analog"
+    ],
+    "category": "Cognitive & Mood",
+    "summary": "Selank is a synthetic heptapeptide analog of the immune peptide tuftsin (also called TP-7), developed in Russia and studied for anxiety relief with mild focus support and without sedation, tolerance, or withdrawal.",
+    "mechanism": "It works largely through allosteric modulation of GABA-A receptors plus optimization of serotonin and dopamine signalling, and it inhibits enkephalin degradation, prolonging endogenous opioid/enkephalin tone. It also regulates IL-6 and other cytokines (an echo of tuftsin's immune role) and upregulates hippocampal BDNF (about a 30% increase), which is thought to support stress resilience and neuroprotection.",
+    "dosing": "Per peptidedosingprotocols.com: subcutaneous 250-500 mcg per day, or intranasal 600-2,700 mcg per day split into 2-3 sprays; pick one route per cycle. peptide-db.com reports 250-500 mcg per dose, 1-2x daily.",
+    "cycle": "SubQ: 4 weeks on, 4 weeks off (some use a 5-on/2-off weekly pattern); intranasal: 14-21 days on followed by 1-3 weeks off. peptide-db lists 2-8 weeks on.",
+    "sideEffects": "Generally mild: nasal irritation or congestion with the spray, occasional headache, fatigue, or transient blood-pressure changes; no tolerance or withdrawal reported. Approved in Russia for anxiety disorders/neurasthenia but not FDA-approved, so it is not for unsupervised human use; no specific lab monitoring is established.",
+    "synergies": [
+      "semax",
+      "adamax",
+      "dsip",
+      "mk-677"
+    ],
+    "comparisons": "Within cognitive/mood peptides, Selank is the anxiolytic counterpart to Semax's more stimulating, attention-and-memory profile, and the two are often run together; unlike benzodiazepines it provides calm without sedation, amnesia, or dependence, and unlike SSRIs it has a rapid onset. Its evidence base is largely Russian clinical use rather than Western trials.",
+    "sources": [
+      "https://peptide-db.com/peptides/selank",
+      "https://www.peptidedosingprotocols.com/protocol/selank"
+    ]
+  },
+  {
+    "id": "semax",
+    "name": "Semax",
+    "aka": [
+      "ACTH 4-10 analog",
+      "heptapeptide"
+    ],
+    "category": "Cognitive & Mood",
+    "summary": "Semax is a synthetic heptapeptide (Met-Glu-His-Phe-Pro-Gly-Pro) derived from ACTH fragment 4-10 with a stabilizing Pro-Gly-Pro tail, developed in Russia for stroke recovery and used in research for cognitive enhancement, focus, and neuroprotection.",
+    "mechanism": "It rapidly raises BDNF and NGF levels and modulates dopaminergic and serotonergic systems; the Pro-Gly-Pro tail slows enzymatic breakdown, extending the functional window of the bare ACTH fragment. Given intranasally it reaches the CNS directly via olfactory epithelium and trigeminal nerve transport, achieving roughly 0.093% brain penetration versus about 0.01% by IV, largely bypassing the blood-brain barrier.",
+    "dosing": "Per peptide-db.com: 300-600 mcg per dose (up to 1000 mcg for intensive use), 1-2x daily, morning preferred for the cognitive boost. peptidedosingprotocols.com notes intranasal solution is the most-studied format with daily dosing often split morning/afternoon to avoid late-day stimulation; injectable math assumes 20 mg lyophilized vials reconstituted before subcutaneous use.",
+    "cycle": "Roughly 2-4 weeks on followed by a break; Russian clinical references describe courses of several weeks rather than continuous indefinite use.",
+    "sideEffects": "Usually mild: nasal irritation, headache, overstimulation, irritability, or trouble sleeping if dosed late; rare blood-pressure or mood changes. Not FDA-approved (removed from FDA's 503A Category 2 list in April 2026 with a PCAC review scheduled July 2026); not authorized for human use, and no specific monitoring labs are established.",
+    "synergies": [
+      "selank",
+      "adamax",
+      "cerebrolysin",
+      "pinealon"
+    ],
+    "comparisons": "Among cognitive peptides, Semax is the prototypical stimulating nootropic, more focus- and memory-oriented than the calming Selank and shorter-acting than Adamax (its adamantane-modified successor with an 8-10 h half-life). It overlaps with Cerebrolysin in raising neurotrophic factors but is a single small peptide self-administered intranasally rather than a clinic-administered IV protein mixture.",
+    "sources": [
+      "https://peptide-db.com/peptides/semax",
+      "https://www.peptidedosingprotocols.com/protocol/semax"
+    ]
+  },
+  {
+    "id": "cerebrolysin",
+    "name": "Cerebrolysin",
+    "aka": [
+      "FPF-1070",
+      "neuropeptide preparation"
+    ],
+    "category": "Cognitive & Mood",
+    "summary": "Cerebrolysin is a standardized neuropeptide preparation of low-molecular-weight peptides and amino acids purified from porcine brain, used clinically in 50+ countries for stroke, traumatic brain injury, vascular dementia, and Alzheimer's disease.",
+    "mechanism": "Given IV or IM, it delivers a mixture of neurotrophic peptides and amino acids that mimic the actions of endogenous neurotrophic factors (BDNF, GDNF, NGF, CNTF-like activity), promoting neuronal survival, synaptic plasticity, neurogenesis, and protection against excitotoxic and oxidative injury. Components are short-lived (e.g., BDNF-like activity ~10 minutes), so it is dosed as repeated courses rather than relying on accumulation.",
+    "dosing": "Per peptide-db.com: 10-50 mL per day depending on indication; small-volume use up to 10 mL IV slow push or up to 5 mL IM over ~3 minutes; acute stroke 20-50 mL/day IV (diluted to at least 100 mL) for 10-21 days; TBI 20-50 mL/day IV for 7-30 days; Alzheimer's 10-30 mL 5 days/week for 4 weeks.",
+    "cycle": "Course-based: 7-30 days for acute stroke/TBI, 4-week courses (often repeated) for dementia, frequently 5 days per week for chronic indications.",
+    "sideEffects": "Generally well tolerated; possible injection-site reactions, dizziness, headache, agitation, sweating, flu-like symptoms, and rare hypersensitivity (avoid in severe renal impairment, epilepsy, or status epilepticus). Approved in many countries but not FDA-approved in the US; should be administered by a clinician with monitoring of renal function and seizure history.",
+    "synergies": [
+      "semax",
+      "selank",
+      "pinealon",
+      "humanin"
+    ],
+    "comparisons": "Compared with the small synthetic neuropeptides in this category (Semax, Selank, Adamax, Pinealon), Cerebrolysin is a clinically established multi-peptide protein mixture given by infusion under supervision with a far larger trial record (stroke, TBI, dementia), whereas the others are single research peptides usually self-administered intranasally or subcutaneously. Its effect sizes are modest and somewhat debated, but its safety and regulatory standing are stronger.",
+    "sources": [
+      "https://peptide-db.com/peptides/cerebrolysin"
+    ]
+  },
+  {
+    "id": "adamax",
+    "name": "Adamax",
+    "aka": [
+      "N-acetyl semax amidate analog"
+    ],
+    "category": "Cognitive & Mood",
+    "summary": "Adamax is a next-generation Semax derivative carrying N-terminal acetylation and a C-terminal adamantane group for greater stability and blood-brain-barrier penetration, researched for cognitive enhancement, neuroplasticity, and neuroprotection.",
+    "mechanism": "The adamantane modification boosts lipophilicity so the peptide crosses the BBB more readily, and the acetyl/amidation guards against enzymatic degradation, giving an 8-10 hour half-life. Once central, it upregulates BDNF and increases TrkB receptor sensitivity, modulates dopamine, norepinephrine and serotonin, stabilizes microtubules through ADNP-derived mechanisms, and provides antioxidant and anti-inflammatory neuroprotection.",
+    "dosing": "Per peptide-db.com: 200-300 mcg, once daily, or twice daily for enhanced neuroprotection.",
+    "cycle": "2-4 weeks per cycle.",
+    "sideEffects": "Reported as mild and similar to Semax: overstimulation, headache, irritability, or insomnia if dosed late; data are very limited (about 4 studies). It is an experimental research compound, not approved for human use, with no established monitoring labs.",
+    "synergies": [
+      "semax",
+      "selank",
+      "cerebrolysin",
+      "pinealon"
+    ],
+    "comparisons": "Adamax is essentially an extended-duration, higher-penetration upgrade of Semax, trading Semax's short half-life and intranasal-only practicality for once-daily subcutaneous dosing; it is more stimulating and BDNF-focused than the anxiolytic Selank, and far less clinically validated than Cerebrolysin. It sits at the more experimental end of the cognitive-peptide spectrum.",
+    "sources": [
+      "https://peptide-db.com/peptides/adamax"
+    ]
+  },
+  {
+    "id": "pinealon",
+    "name": "Pinealon",
+    "aka": [
+      "Cytogen tripeptide",
+      "EDR peptide"
+    ],
+    "category": "Cognitive & Mood",
+    "summary": "Pinealon is a synthetic Russian-developed tripeptide (Glu-Asp-Arg, the EDR peptide) studied for neuroprotection, cognitive enhancement, traumatic brain injury recovery, and age-related cognitive decline.",
+    "mechanism": "As a short bioregulator peptide it penetrates cell and nuclear membranes and interacts directly with DNA, binding histone H1.3 and modulating gene expression, with activation of MAPK/ERK signalling. Downstream effects include caspase-3 suppression, reduced reactive oxygen species, protection against glutamate excitotoxicity, increased serotonergic activity, and improved NMDA-receptor-dependent spatial learning.",
+    "dosing": "Per peptide-db.com: injectable 5 mg daily for neuroprotection, or 100-300 mcg daily (or every other day) subcutaneously for cognitive enhancement; oral 0.2 mg twice daily on an empty stomach (morning and afternoon).",
+    "cycle": "20 days per cycle; for anti-aging use, 20-day courses repeated 2-3 times per year.",
+    "sideEffects": "Reported as very well tolerated with an excellent safety profile over decades of Russian use; occasional injection-site reaction. It remains an experimental, non-FDA-approved research peptide; no specific monitoring labs are defined.",
+    "synergies": [
+      "epithalon",
+      "semax",
+      "selank",
+      "cerebrolysin",
+      "cartalax"
+    ],
+    "comparisons": "Among cognitive peptides, Pinealon is a Khavinson-style short bioregulator acting at the gene-expression level, similar in concept to Epitalon and Cartalax, rather than a neurotransmitter-modulating nootropic like Semax/Selank; it is gentler and non-stimulating but has a thin Western evidence base and is often stacked with Epitalon for combined neuroprotective and telomere-related effects.",
+    "sources": [
+      "https://peptide-db.com/peptides/pinealon"
+    ]
+  },
+  {
+    "id": "dsip",
+    "name": "DSIP",
+    "aka": [
+      "delta sleep-inducing peptide"
+    ],
+    "category": "Sleep",
+    "summary": "DSIP (delta sleep-inducing peptide) is a nine-amino-acid peptide first isolated from sleeping rabbits in the 1970s, studied for promoting deep slow-wave sleep, reducing stress, and modulating pain without classic sedative effects.",
+    "mechanism": "It modulates several neurotransmitter systems, enhancing GABAergic tone, interacting with NMDA receptors, and modulating the endogenous opioid system, and it regulates the hypothalamic-pituitary-adrenal axis, lowering cortisol-driven stress responses. The net effect described is more delta-wave (slow-wave) sleep, shorter sleep latency, and fewer nocturnal awakenings without forcing sedation; its half-life is very short (~15 minutes in vitro), so it is dosed shortly before sleep.",
+    "dosing": "Per peptidedosingprotocols.com: published 1980s human trials used 25 nmol/kg intravenously for short courses of about 4-7 nights; modern community research planning is subcutaneous at much lower, tolerability-based doses, typically a single evening dose 1-3 hours before sleep. peptide-db.com reports 100-300 mcg once daily.",
+    "cycle": "Short cycles only, around 5-10 days, then a break.",
+    "sideEffects": "Reported as mild: occasional headache, dizziness, transient grogginess, or mild GI upset; no tolerance or dependence reported. Not FDA-approved and currently on the FDA Category 2 do-not-compound list (PCAC review scheduled July 2026), so it is not for unsupervised human use; no specific monitoring labs are established.",
+    "synergies": [
+      "melatonin",
+      "mk-677",
+      "epithalon",
+      "selank"
+    ],
+    "comparisons": "In the sleep category, DSIP is positioned as a non-sedating sleep-architecture modulator, contrasting with melatonin which shifts circadian timing rather than deepening slow-wave sleep, and with GH secretagogues like MK-677 whose sleep effect is a side benefit. Evidence is older and thin, and its regulatory status (Category 2) is the most restrictive of the common sleep aids.",
+    "sources": [
+      "https://peptide-db.com/peptides/dsip",
+      "https://www.peptidedosingprotocols.com/protocol/dsip"
+    ]
+  },
+  {
+    "id": "melatonin",
+    "name": "Melatonin (injectable)",
+    "aka": [
+      "N-acetyl-5-methoxytryptamine"
+    ],
+    "category": "Sleep",
+    "summary": "Melatonin is the pineal sleep hormone (N-acetyl-5-methoxytryptamine); the injectable form delivers it parenterally to reinforce circadian timing, ease sleep onset, and is also explored for its antioxidant properties.",
+    "mechanism": "Endogenous melatonin is released by the pineal gland in darkness and acts on MT1 and MT2 receptors in the suprachiasmatic nucleus to signal 'biological night,' shifting the sleep-wake phase, lowering core temperature, and promoting sleep onset. It is also a direct free-radical scavenger and modulates immune and HPA-axis activity. Injection bypasses first-pass metabolism, giving higher and more predictable systemic levels than oral dosing.",
+    "dosing": "No source dump available; compiled. Oral research/clinical doses are typically 0.3-5 mg taken 30-60 minutes before bed; injectable use mirrors low single-digit milligram doses given in the evening, though there is no standardized parenteral protocol.",
+    "cycle": "Used as needed or nightly during periods of disrupted sleep or jet lag; no formal on/off cycle, though continuous high-dose use is generally avoided.",
+    "sideEffects": "Common: daytime drowsiness, vivid dreams, headache, dizziness; injection adds local site reactions. May lower blood pressure, interact with anticoagulants, sedatives, and immunosuppressants, and affect glucose tolerance at high doses. The injectable form is not an FDA-approved drug in the US; supervise use and review interacting medications rather than relying on lab monitoring.",
+    "synergies": [
+      "dsip",
+      "epithalon",
+      "mk-677"
+    ],
+    "comparisons": "Within the sleep category, melatonin is the only true circadian hormone and is best for phase-shifting (jet lag, delayed sleep phase) rather than for deepening sleep, which is where DSIP is positioned; it is far better characterized and safer than DSIP, and unlike GH secretagogues used at night it has no effect on growth-hormone output. The injectable route offers little advantage over oral for routine sleep use.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "thymosin-alpha-1",
+    "name": "Thymosin Alpha-1",
+    "aka": [
+      "Ta1",
+      "Zadaxin"
+    ],
+    "category": "Immune & Thymic",
+    "summary": "Thymosin Alpha-1 (TA1, sold as Zadaxin/thymalfasin) is a naturally occurring 28-amino-acid thymic peptide that trains and coordinates antiviral and antitumor immune cells; the synthetic form is approved in 35+ countries for chronic hepatitis B and C and as a cancer immune adjunct.",
+    "mechanism": "TA1 activates Toll-like receptor pathways (notably TLR2/TLR9) on dendritic cells and monocytes, promotes maturation and differentiation of T cells, stimulates NK-cell activity, boosts antigen presentation and Th1 cytokine output, and at the same time dampens excessive pro-inflammatory cytokines (reductions on the order of 40-60% reported). Given subcutaneously it reaches roughly 90-95% bioavailability with a peak at about 2 hours and a ~2 hour half-life.",
+    "dosing": "Per peptidedosingprotocols.com and peptide-db.com: the standard validated schedule is 1.6 mg subcutaneously twice weekly, 3-4 days apart, the dose used across the chronic hepatitis B/C trials and most cancer-adjunct, sepsis, and immune-support studies; a body-weight-adjusted protocol exists for adults under 40 kg.",
+    "cycle": "Continuous twice-weekly dosing for 6-12 months in therapeutic (hepatitis) protocols; shorter courses in acute settings.",
+    "sideEffects": "Exceptionally well tolerated, with <1% serious adverse events across 11,000+ studied patients; mild injection-site reactions, transient fatigue, or muscle aches are the main complaints. Not FDA-approved in the US (under 503A bulk-substance review) though approved abroad; clinicians typically watch the underlying condition (e.g., hepatitis labs, immune status) rather than TA1-specific markers.",
+    "synergies": [
+      "thymalin",
+      "bpc-157",
+      "ll-37",
+      "kpv",
+      "vip"
+    ],
+    "comparisons": "Among immune/thymic peptides, TA1 is by far the best-validated, with international drug approval and large RCTs, whereas Thymalin is an older calf-thymus extract (a peptide mixture rather than a defined molecule) backed mainly by Russian geroprotection studies; TA1 is also more immune-specific than Thymosin Beta-4 (tissue repair) and is the go-to when antiviral or anti-cancer immune support is the goal.",
+    "sources": [
+      "https://peptide-db.com/peptides/thymosin-alpha-1",
+      "https://www.peptidedosingprotocols.com/protocol/thymosin-alpha-1"
+    ]
+  },
+  {
+    "id": "thymalin",
+    "name": "Thymalin",
+    "aka": [
+      "thymus polypeptide extract"
+    ],
+    "category": "Immune & Thymic",
+    "summary": "Thymalin is a peptide bioregulator extracted from calf thymus gland, developed in the Soviet Union in the 1970s, used to restore and modulate immune function with reported geroprotective (anti-aging) and tissue-regenerative effects.",
+    "mechanism": "It contains a mixture of short thymic peptides (e.g., KE, EW, EDP) that bind double-stranded DNA and histone proteins to regulate gene expression. Functionally it stimulates differentiation and activity of T-lymphocytes (especially CD4+ and CD8+), helps normalize cytokine balance, enhances antigen response, and stimulates stem-cell differentiation; it is also reported to influence gerontogene activity and immune-protein synthesis, with effects that persist for weeks after a short course.",
+    "dosing": "Per peptide-db.com: 10 mg per injection, intramuscular or subcutaneous, daily for 5-10 days, then a break.",
+    "cycle": "Short 5-10 day cycles; often repeated periodically and frequently combined with other bioregulators such as Epitalon/Epithalamin, with long-term studies running courses over several years.",
+    "sideEffects": "Reported as well tolerated even in elderly populations, with the source noting essentially no side effects; possible mild injection-site reaction. It is an experimental, non-FDA-approved peptide extract whose strong claims (large mortality reductions) rest mainly on older Russian clinical studies; no specific monitoring labs are defined, though immune markers (CD4+, CD8+, NK cells) are tracked in studies.",
+    "synergies": [
+      "thymosin-alpha-1",
+      "epithalon",
+      "ll-37",
+      "kpv",
+      "bpc-157"
+    ],
+    "comparisons": "Versus Thymosin Alpha-1, Thymalin is an older, undefined multi-peptide thymus extract rather than a single approved molecule, and its evidence is largely Soviet/Russian geroprotection research rather than international RCTs; it overlaps with TA1 in promoting T-cell restoration but is positioned more as an anti-aging bioregulator (commonly paired with Epitalon) than as a targeted antiviral immune therapy.",
+    "sources": [
+      "https://peptide-db.com/peptides/thymalin"
+    ]
+  },
+  {
+    "id": "foxo4-dri",
+    "name": "FOXO4-DRI",
+    "aka": [
+      "FOXO4 D-retro-inverso",
+      "senolytic peptide"
+    ],
+    "category": "Longevity & Bioregulators",
+    "summary": "FOXO4-DRI is a D-retro-inverso senolytic peptide designed to selectively eliminate senescent 'zombie' cells that accumulate with age and impair tissue function. Headline use is experimental anti-aging and tissue rejuvenation.",
+    "mechanism": "It competes with endogenous FOXO4 for binding to p53, disrupting the protective FOXO4-p53 interaction that keeps senescent cells alive. This excludes p53 from the nucleus and triggers cell-intrinsic apoptosis. The mechanism is relatively selective because the FOXO4-p53 interaction is a specific vulnerability of senescent cells while FOXO4 is minimally expressed in healthy tissue. The D-retro-inverso modification reverses the amino acids to increase potency and proteolytic stability.",
+    "dosing": "Per peptide-db.com: ~25-33 mg per injection, based on the original 2017 mouse study of 5 mg/kg IP (translating to roughly 25 mg for a 60 kg subject), given as 3 doses total on alternate days; self-experimenters report SubQ or IV. No established human dosing.",
+    "cycle": "Per the source, one treatment cycle is 6 days total (Day 1, 3, 5), repeated only periodically.",
+    "sideEffects": "Limited human data; generally tolerated in animal studies but this is a high-risk, experimental compound not approved for human use. Stop for allergic reactions or unexpected symptoms; theoretical concerns about off-target apoptosis and acute toxicity mean it should be regarded as research-only.",
+    "synergies": [
+      "humanin",
+      "epithalon",
+      "nad-plus"
+    ],
+    "comparisons": "Within longevity bioregulators, FOXO4-DRI is far more aggressive than gentle Khavinson peptides like epithalon, cartalax or vesugen, which work via epigenetic modulation rather than killing cells. It overlaps in goal with NAD+ and mitochondrial peptides (humanin, MOTS-c, SS-31) but is the only true senolytic in the set, carrying a correspondingly higher risk profile.",
+    "sources": [
+      "https://peptide-db.com/peptides/foxo4-dri"
+    ]
+  },
+  {
+    "id": "epithalon",
+    "name": "Epithalon",
+    "aka": [
+      "Epitalon",
+      "epithalamin tetrapeptide",
+      "AEDG"
+    ],
+    "category": "Longevity & Bioregulators",
+    "summary": "Epithalon (Epitalon, AEDG) is a synthetic pineal tetrapeptide developed by Vladimir Khavinson, studied as a telomerase activator and anti-aging bioregulator. Headline use is cellular rejuvenation and restoration of melatonin/circadian rhythm.",
+    "mechanism": "It activates telomerase at extremely low concentrations (10^-17 to 10^-15 M) to help maintain telomere length, stimulates melatonin production from the pineal gland, and modulates gene expression through epigenetic mechanisms. Animal work links it to neurogenesis support, immune/thymus regeneration and lifespan extension.",
+    "dosing": "Per peptide-db.com: 100-500 mcg per injection SubQ once daily for 10-20 consecutive days (conservative 100 mcg, standard 200-500 mcg, Russian clinical equivalent ~300 mcg); a published human study used 0.5 mg/day sublingually for 20 days.",
+    "cycle": "10-20 day cycles with roughly 4-6 month breaks between cycles, repeated periodically.",
+    "sideEffects": "Generally well tolerated with minimal reported side effects; not an approved drug, so treat as experimental. Avoid in pregnancy/breastfeeding and active cancer (theoretical telomerase/proliferation concern); discontinue for allergic reactions.",
+    "synergies": [
+      "vesugen",
+      "cartalax",
+      "thymalin",
+      "dsip"
+    ],
+    "comparisons": "Epithalon is the most-studied of the Khavinson short-peptide bioregulators (alongside cartalax for cartilage and vesugen for vasculature), with a unique telomerase/melatonin angle the others lack. Compared with NAD+ or mitochondrial peptides in the category it acts on telomere and pineal biology rather than energy metabolism, and is far gentler than the senolytic FOXO4-DRI.",
+    "sources": [
+      "https://peptide-db.com/peptides/epitalon"
+    ]
+  },
+  {
+    "id": "humanin",
+    "name": "Humanin",
+    "aka": [
+      "HN",
+      "mitochondrial-derived peptide"
+    ],
+    "category": "Longevity & Bioregulators",
+    "summary": "Humanin (HN) was the first mitochondria-derived peptide discovered, a 24-amino-acid peptide encoded from the mitochondrial 16S rRNA region with neuroprotective, cytoprotective and anti-apoptotic properties. Headline research use is neuroprotection and mitochondrial/metabolic healthspan; most studies use the more potent analog HNG.",
+    "mechanism": "Humanin signals through cell-surface receptors including FPRL1 and CNTFR, activating PI3K/AKT survival pathways. It blocks pro-apoptotic proteins such as Bax, reduces beta-amyloid toxicity in neurons, protects against oxidative stress and promotes mitochondrial biogenesis. Levels decline with age but remain high in long-lived species and in offspring of centenarians.",
+    "dosing": "Per peptide-db.com: 1-5 mg per injection for native humanin, or 0.5-2 mg for the HNG analog, given 2-3 times weekly, SubQ (animal studies often use IP). peptidedosingprotocols.com notes there is no published human trial and that nearly all animal protocols use HNG, not native humanin, by the subcutaneous route.",
+    "cycle": "Roughly 8-12 weeks of use for sustained mitochondrial support, per peptide-db.com.",
+    "sideEffects": "Limited human data; described as generally well tolerated in animal studies but it is an experimental, non-approved research peptide. No standard monitoring labs established; discontinue for allergic reactions or unexpected symptoms.",
+    "synergies": [
+      "mots-c",
+      "ss-31",
+      "nad-plus",
+      "epithalon"
+    ],
+    "comparisons": "Humanin is one of three mitochondrial-derived peptides in the category alongside MOTS-c (metabolic/AMPK focus) and SS-31 (cardiolipin focus); humanin leans neuroprotective and anti-apoptotic. It is commonly co-studied with NAD+ for broad mitochondrial support and is far lower-risk than the senolytic FOXO4-DRI.",
+    "sources": [
+      "https://peptide-db.com/peptides/humanin",
+      "https://www.peptidedosingprotocols.com/protocol/humanin"
+    ]
+  },
+  {
+    "id": "mots-c",
+    "name": "MOTS-c",
+    "aka": [
+      "mitochondrial ORF of 12S rRNA-c"
+    ],
+    "category": "Longevity & Bioregulators",
+    "summary": "MOTS-c is a 16-amino-acid mitochondrial-derived peptide that acts as a mitohormone, best known for activating AMPK and improving insulin sensitivity and metabolic flexibility. Headline use is metabolic support, exercise performance and anti-aging.",
+    "mechanism": "MOTS-c inhibits the folate cycle, which raises AICAR and activates AMPK, the cell's key energy-sensing switch. Under metabolic stress it translocates to the nucleus and binds stress-response transcription factors (NRF2, ATF1/ATF7) to regulate metabolic and adaptive genes. It enhances mitochondrial biogenesis via PGC-1alpha and promotes fatty acid oxidation; exercise sharply increases endogenous skeletal-muscle MOTS-c.",
+    "dosing": "Per peptide-db.com: start ~5 mg daily SubQ, increasing to 10-15 mg based on goal — metabolic health 5-10 mg once daily, anti-aging 15 mg 3x weekly, exercise performance 10-15 mg pre-workout; morning/pre-exercise timing favored. peptidedosingprotocols.com describes the same subcutaneous, animal-study-derived structure.",
+    "cycle": "Roughly 4-12 weeks depending on goal, per peptide-db.com.",
+    "sideEffects": "Generally well tolerated in research; an experimental, non-approved peptide. Useful markers to watch given its metabolic action are fasting glucose and HbA1c/insulin sensitivity; discontinue for allergic reactions or unexpected symptoms.",
+    "synergies": [
+      "ss-31",
+      "humanin",
+      "nad-plus",
+      "5-amino-1mq"
+    ],
+    "comparisons": "Among the mitochondrial-derived peptides MOTS-c is the metabolic/AMPK specialist, versus humanin (neuroprotection) and SS-31 (cardiolipin protection). It overlaps functionally with NAD+ and AMPK-adjacent fat-loss compounds like 5-Amino-1MQ and AICAR, but is gentler and more rejuvenation-oriented than the senolytic FOXO4-DRI.",
+    "sources": [
+      "https://peptide-db.com/peptides/mots-c",
+      "https://www.peptidedosingprotocols.com/protocol/mots-c"
+    ]
+  },
+  {
+    "id": "ss-31",
+    "name": "SS-31",
+    "aka": [
+      "elamipretide",
+      "MTP-131",
+      "Bendavia"
+    ],
+    "category": "Longevity & Bioregulators",
+    "summary": "SS-31 (elamipretide) is an aromatic-cationic tetrapeptide that concentrates in the inner mitochondrial membrane and binds cardiolipin to protect mitochondrial structure and energy output. It is the active ingredient in FDA-approved Forzinity for Barth syndrome and is studied for mitochondrial disease, cardioprotection and anti-aging.",
+    "mechanism": "SS-31 selectively binds cardiolipin, the phospholipid scaffold that organizes the electron transport chain, preventing cardiolipin peroxidation and stabilizing cristae structure under stress. This improves ATP production, reduces mitochondrial reactive oxygen species and protects against ischemia-reperfusion injury.",
+    "dosing": "Per peptide-db.com: 5-10 mg once daily SubQ for general mitochondrial support, 10-20 mg pre-workout for athletic use, up to 40 mg once daily SubQ or IV in clinical protocols, and 0.25 mg/kg/hr continuous IV infusion for acute cardioprotection. peptidedosingprotocols.com notes the FDA-approved Forzinity product is 280 mg/3.5 mL (80 mg/mL) dosed per Barth-syndrome labeling, distinct from research-context dosing.",
+    "cycle": "Roughly 4-12 weeks for therapeutic protocols, per peptide-db.com; light-sensitive and used in dark/amber vials.",
+    "sideEffects": "Strong safety profile in clinical trials; main reported issue is injection-site reactions. As elamipretide it is now an approved drug for Barth syndrome but research-context use is off-label; protect from light and monitor injection sites.",
+    "synergies": [
+      "nad-plus",
+      "mots-c",
+      "humanin",
+      "ghk-cu"
+    ],
+    "comparisons": "SS-31 is the cardiolipin/structure-focused member of the mitochondrial peptide trio, complementing MOTS-c (AMPK/metabolism) and humanin (neuroprotection), and is uniquely the only one with FDA approval. It pairs naturally with NAD+ for energy support and is far better characterized and lower-risk than the senolytic FOXO4-DRI.",
+    "sources": [
+      "https://peptide-db.com/peptides/ss-31",
+      "https://www.peptidedosingprotocols.com/protocol/ss-31"
+    ]
+  },
+  {
+    "id": "cartalax",
+    "name": "Cartalax",
+    "aka": [
+      "Cartilax",
+      "AED peptide bioregulator"
+    ],
+    "category": "Longevity & Bioregulators",
+    "summary": "Cartalax is a synthetic AED tripeptide bioregulator developed by Vladimir Khavinson to support cartilage, connective tissue and fibroblast function. Headline use is joint health, cartilage maintenance and connective-tissue anti-aging.",
+    "mechanism": "Cartalax modulates cell proliferation (raising Ki-67 expression in young and aged fibroblasts) while suppressing apoptosis, enhances collagen synthesis, inhibits matrix-degrading MMP-9, and reduces senescence markers to help preserve the extracellular matrix. Like other short Khavinson peptides its effects are thought to persist via epigenetic changes despite a minutes-long half-life.",
+    "dosing": "Per peptide-db.com: 100-200 mcg orally (1-2 capsules) 1-2 times daily with meals, or roughly 700-1400 mcg in injectable form once daily.",
+    "cycle": "Roughly 1-3 months per cycle depending on application, repeated periodically.",
+    "sideEffects": "No side effects reported in Russian clinical use when taken properly; rare digestive upset. Not an approved drug, so experimental; avoid in pregnancy/breastfeeding and active cancer (theoretical proliferation risk); discontinue for allergic reactions or no benefit after 3 months.",
+    "synergies": [
+      "epithalon",
+      "vesugen",
+      "bpc-157",
+      "tb-500"
+    ],
+    "comparisons": "Cartalax is the cartilage/connective-tissue specialist among the Khavinson bioregulators (epithalon = pineal/telomere, vesugen = vascular), and unlike them is often run alongside healing peptides like BPC-157 and TB-500. It is far gentler than the senolytic FOXO4-DRI and is not a systemic metabolic agent like NAD+ or the mitochondrial peptides.",
+    "sources": [
+      "https://peptide-db.com/peptides/cartalax"
+    ]
+  },
+  {
+    "id": "vesugen",
+    "name": "Vesugen",
+    "aka": [
+      "KED tripeptide bioregulator"
+    ],
+    "category": "Longevity & Bioregulators",
+    "summary": "Vesugen is a Khavinson KED tripeptide bioregulator (lysine-glutamic acid-aspartic acid) developed at St. Petersburg's Institute of Bioregulation and Gerontology, targeting the vascular system. Headline use is protecting blood vessels from age-related decline.",
+    "mechanism": "Vesugen works via epigenetic regulation, interacting with DNA promoter regions and notably affecting Ki-67 (cell division) and sirtuin 1 (SIRT1) levels, a calorie-restriction-mimetic anti-aging protein. It limits atherosclerosis development, reduces endothelial dysfunction, enhances mesenchymal stem cell proliferation and may reverse the senescence-associated secretory phenotype (SASP).",
+    "dosing": "Per peptide-db.com: 10-20 mg per day as oral capsules (or ~10 mg injectable), daily for 10-20 consecutive days; maintenance ~10 mg in 2-3 cycles per year.",
+    "cycle": "Standard 10-20 day cycle, repeated 2-3 times per year; effects said to persist post-cycle via epigenetic changes.",
+    "sideEffects": "Generally well tolerated with minimal reported side effects; experimental, not an approved drug. Avoid in active cardiovascular emergencies, known hypersensitivity, and pregnancy/breastfeeding; discontinue for allergic reactions or unusual cardiovascular symptoms.",
+    "synergies": [
+      "epithalon",
+      "cartalax",
+      "thymalin",
+      "pinealon"
+    ],
+    "comparisons": "Vesugen is the vascular-system Khavinson bioregulator, complementary to epithalon (pineal/telomere) and cartalax (cartilage) and frequently combined with them in comprehensive bioregulator protocols. It is a gentle epigenetic agent rather than a metabolic powerhouse like NAD+ or a senolytic like FOXO4-DRI.",
+    "sources": [
+      "https://peptide-db.com/peptides/vesugen"
+    ]
+  },
+  {
+    "id": "nad-plus",
+    "name": "NAD+",
+    "aka": [
+      "nicotinamide adenine dinucleotide"
+    ],
+    "category": "Longevity & Bioregulators",
+    "summary": "NAD+ is an essential cellular coenzyme central to energy production, DNA repair and sirtuin signaling whose levels fall with age; it is supplemented (or its precursors NMN/NR are taken) for energy, cognition and longevity. It is not a peptide but is grouped with peptide protocols for its injectable research-use format.",
+    "mechanism": "Direct administration raises intracellular NAD+ available for ATP synthesis, for PARP-mediated DNA repair, and for sirtuin-driven longevity pathways, while supporting mitochondrial function and metabolic homeostasis. Oral NMN and NR work indirectly as biosynthetic precursors that the body converts to NAD+.",
+    "dosing": "Per peptide-db.com: IV 250-1000 mg 1-2x weekly; IM/SubQ 100-500 mg 2-3x weekly; intranasal 25-50 mg 1-2x daily; oral NMN/NR precursors 100-500 mg daily. peptidedosingprotocols.com gives the same route-by-route structure (SubQ, IV, IM, oral NMN/NR, intranasal/sublingual, pre-mixed pens).",
+    "cycle": "Roughly 4-12 weeks; IV therapy requires medical supervision.",
+    "sideEffects": "Mild flushing during IV infusion and temporary nausea are common; fast infusion worsens flushing/cramping. Avoid alcohol during treatment (it depletes NAD+); IV use needs medical supervision; stop for severe injection-site reactions, persistent GI distress or allergic reactions.",
+    "synergies": [
+      "ss-31",
+      "mots-c",
+      "humanin",
+      "bpc-157",
+      "tb-500"
+    ],
+    "comparisons": "Unlike the peptide bioregulators in this category, NAD+ is a coenzyme with broad, well-publicized energy/longevity effects and many delivery routes including oral precursors. It is commonly stacked with mitochondrial peptides (SS-31, MOTS-c, humanin) for additive energetic support and with healing peptides like BPC-157/TB-500 for recovery; far broader-acting and lower-risk than the senolytic FOXO4-DRI.",
+    "sources": [
+      "https://peptide-db.com/peptides/nad-plus",
+      "https://www.peptidedosingprotocols.com/protocol/nad-plus"
+    ]
+  },
+  {
+    "id": "pnc-27",
+    "name": "PNC-27",
+    "aka": [
+      "p53-derived anticancer peptide"
+    ],
+    "category": "Longevity & Bioregulators",
+    "summary": "PNC-27 is an experimental chimeric anti-cancer peptide combining an HDM-2 (MDM2) binding domain from p53 (residues 12-26) with a cell-penetrating domain, designed in 2000 at SUNY Downstate. It selectively kills cancer cells in preclinical models and is not approved for human use.",
+    "mechanism": "PNC-27's p53 segment binds membrane-bound HDM-2 (MDM2) that cancer cells uniquely express on their surface, inducing transmembrane pore formation and rapid tumor-cell necrosis (not apoptosis); it also enters cells and disrupts mitochondrial membranes. Normal cells lack surface HDM-2 and are reportedly spared, and the effect does not require functional p53 in the target cell.",
+    "dosing": "Not established — peptide-db.com lists preclinical research only, with doses variable by study and routes limited to intraperitoneal or direct tumor injection in animal models; no approved human dosing exists.",
+    "cycle": "Not established — no human clinical trials; protocols vary by research study.",
+    "sideEffects": "Limited data, primarily preclinical; explicitly not approved for human use and should be treated as an experimental research peptide only. Cancers without membrane HDM-2 may not respond; no human safety or monitoring data exist.",
+    "synergies": [],
+    "comparisons": "PNC-27 sits oddly within the longevity/bioregulator group as a cancer-cell-killing peptide; it shares a 'selective lethality' concept with the senolytic FOXO4-DRI (FOXO4-DRI clears senescent cells, PNC-27 lyses HDM-2-positive tumor cells) but targets a different cell population. Unlike NAD+ or the Khavinson peptides it has no healthspan or general anti-aging use and is purely investigational.",
+    "sources": [
+      "https://peptide-db.com/peptides/pnc-27"
+    ]
+  },
+  {
+    "id": "follistatin-344",
+    "name": "Follistatin 344",
+    "aka": [
+      "FS344",
+      "myostatin antagonist"
+    ],
+    "category": "Myostatin & Anabolic",
+    "summary": "Follistatin 344 (FS344) is an isoform of the natural follistatin protein/gene that acts as a potent myostatin antagonist, studied (largely as gene therapy or recombinant protein) to drive skeletal muscle growth and counter muscle wasting. It is experimental and not approved for human use.",
+    "mechanism": "Follistatin binds and neutralizes myostatin (GDF-8) and related TGF-beta superfamily ligands such as activin A, preventing them from activating ActRIIB and downstream Smad2/3 signaling. Removing this brake on muscle protein synthesis and satellite-cell proliferation produces marked hypertrophy; the FS344 isoform has lower heparin/cell-surface affinity than FS315/FS288, affecting its circulating behavior.",
+    "dosing": "No established human dosing; research has used AAV-delivered follistatin gene therapy (single intramuscular vector dose) in dystrophy/inclusion-body-myositis trials, and animal work with recombinant follistatin protein. Treat any black-market injectable 'follistatin' dosing as unvalidated.",
+    "cycle": "Not defined for protein use; gene-therapy approaches are conceptually single-administration with durable expression. No legitimate cycling protocol exists.",
+    "sideEffects": "Experimental and not approved; theoretical concerns include excessive/uneven muscle growth, tendon strain, effects on reproductive tissue (follistatin influences FSH and ovarian/testicular biology), and unknown long-term safety of forced systemic expression. No standard monitoring labs are established; regard as research-only.",
+    "synergies": [
+      "ace-031"
+    ],
+    "comparisons": "Within the myostatin/anabolic group, follistatin neutralizes myostatin by directly binding the ligand, whereas ACE-031 traps it with a soluble ActRIIB-Fc decoy receptor — conceptually synergistic but unstudied in combination, and ACE-031 has more human trial data (and a known vascular side-effect signal) than follistatin gene therapy. Both are far more aggressive and less characterized than mainstream anabolics.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "ace-031",
+    "name": "ACE-031",
+    "aka": [
+      "ramatercept",
+      "ActRIIB-Fc"
+    ],
+    "category": "Myostatin & Anabolic",
+    "summary": "ACE-031 (ramatercept) is a soluble activin type IIB receptor fused to an IgG1 Fc domain that acts as a myostatin decoy receptor to promote muscle growth. Originally developed by Acceleron for Duchenne muscular dystrophy, it reached Phase 2 before development was halted over vascular side effects; it is experimental and not commercially available.",
+    "mechanism": "ACE-031 mimics the extracellular domain of ActRIIB and acts as a ligand trap, intercepting myostatin (GDF-8), activin A, activin B and GDF-11 before they bind cell-surface receptors and activate Smad2/3 signaling. Blocking this pathway releases the natural brake on muscle protein synthesis and satellite-cell proliferation, producing rapid hypertrophy; the Fc fusion extends half-life via FcRn recycling and gives bivalent binding.",
+    "dosing": "Per peptide-db.com (clinical research doses only): 0.1-3 mg/kg as a single IV infusion in healthy-volunteer Phase 1, and 0.5-2.5 mg/kg IV or SubQ every 2 weeks in the Phase 2 DMD trial; not commercially available and never approved.",
+    "cycle": "Clinical trials used roughly 4-12 week treatment periods with dosing every 2 weeks; effects diminish over several weeks after the drug clears (half-life ~12-15 days).",
+    "sideEffects": "Experimental and not approved. Phase 2 was stopped due to vascular adverse events — nosebleeds (epistaxis), gum bleeding and telangiectasia (dilated small vessels); monitor for bleeding events and skin vascular changes. Bone mineral density and body composition changes were also seen.",
+    "synergies": [
+      "follistatin-344"
+    ],
+    "comparisons": "ACE-031 is the receptor-decoy approach to myostatin inhibition, contrasting with follistatin's direct ligand-binding approach; it has the most human data in the category but also the clearest safety stop-signal (vascular bleeding). Conceptually synergistic with follistatin but unstudied in combination, and both are far more potent and riskier than conventional anabolic agents.",
+    "sources": [
+      "https://peptide-db.com/peptides/ace-031"
+    ]
+  },
+  {
+    "id": "dermorphin",
+    "name": "Dermorphin",
+    "aka": [
+      "[D-Ala2]-dermorphin",
+      "mu-opioid heptapeptide"
+    ],
+    "category": "Other / Analgesic",
+    "summary": "Dermorphin ([D-Ala2]-dermorphin) is a naturally occurring heptapeptide from Phyllomedusa frog skin and an extremely potent mu-opioid receptor agonist — by weight far stronger than morphine. WARNING: it is an opioid agonist with serious risk of respiratory depression, sedation, dependence and overdose; it is not approved or appropriate for human use, and is notorious as an illicit doping agent ('frog juice') in horse racing.",
+    "mechanism": "Dermorphin selectively activates mu-opioid receptors with high affinity; the D-alanine at position 2 resists peptidase cleavage, giving unusual metabolic stability for a peptide. Mu-opioid agonism produces analgesia, euphoria, sedation and — critically — dose-dependent respiratory depression, the mechanism behind opioid overdose deaths, along with tolerance and physical dependence on repeated exposure.",
+    "dosing": "No legitimate human dosing exists; not for human use. Animal/illicit reports describe small microgram-range injections producing profound opioid effects, but any use carries opioid-overdose and addiction risk and should be regarded as unsafe and, in many jurisdictions, illegal.",
+    "cycle": "No safe cycle — repeated dosing causes rapid tolerance and physical dependence; there is no sanctioned protocol.",
+    "sideEffects": "Respiratory depression (potentially fatal), profound sedation, miosis, nausea, constipation, euphoria, tolerance, physical dependence and withdrawal — the full opioid risk profile. It is not approved for human use; treat as a high-risk controlled-substance-class compound, not a research analgesic.",
+    "synergies": [],
+    "comparisons": "Unlike the other entries in this group, dermorphin is a true opioid narcotic rather than a benign analgesic adjunct; it has no recovery, longevity or metabolic role. Compared with morphine it is dramatically more potent per milligram, which makes accidental overdose easier, and unlike clinical opioids it has no medical oversight, formulation standards or naloxone-paired safety framework.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "bacteriostatic-water",
+    "name": "Bacteriostatic Water",
+    "aka": [
+      "bac water",
+      "0.9% benzyl alcohol water"
+    ],
+    "category": "Solvents & Ancillaries",
+    "summary": "Sterile water containing 0.9% benzyl alcohol as a preservative, used as the standard diluent for reconstituting lyophilized peptides in multi-dose vials.",
+    "mechanism": "The benzyl alcohol acts as a bacteriostatic agent, inhibiting microbial growth so a reconstituted vial can be entered multiple times over a period of days to weeks. Chemically it is otherwise inert water that dissolves the lyophilized powder into an injectable solution. The mild preservative is what distinguishes it from plain sterile water and makes it suitable for repeated draws.",
+    "dosing": "Drawn into a syringe and injected slowly down the inside wall of the peptide vial; typical reconstitution volumes are 1-3 mL per vial depending on the desired concentration. Once reconstituted, vials are generally refrigerated and used within about 28 days.",
+    "cycle": "n/a",
+    "sideEffects": "Benzyl alcohol is contraindicated in neonates and should be avoided in large volumes during pregnancy. Some people report mild stinging at the injection site. Not for intrathecal use. Composition is well established but this entry is compiled from general references.",
+    "synergies": [
+      "bpc-157",
+      "tb-500",
+      "semaglutide"
+    ],
+    "comparisons": "Versus sterile water for injection, bac water adds a preservative so a vial can be used repeatedly rather than once; versus 0.6% acetic acid, bac water is a neutral diluent for peptides that are already water-soluble, whereas acetic acid is reserved for poorly-soluble peptides that need an acidic solvent to fully dissolve.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "sterile-water-for-injection",
+    "name": "Sterile Water for Injection",
+    "aka": [
+      "WFI",
+      "sterile water"
+    ],
+    "category": "Solvents & Ancillaries",
+    "summary": "Preservative-free sterile water intended for single-use reconstitution or dilution of injectable drugs and peptides.",
+    "mechanism": "It is purified, sterilized, pyrogen-free water with no additives; it serves purely as a solvent to dissolve lyophilized powder or to dilute a concentrated solution. Because it contains no preservative, a vial reconstituted with it is meant to be used immediately or discarded. It is also used as a vehicle for compounding and as a final-stage rinse in sterile preparation.",
+    "dosing": "Added to the peptide vial in volumes typically of 1-3 mL to achieve the target concentration; the reconstituted product should ideally be used the same day or within a short window if refrigerated.",
+    "cycle": "n/a",
+    "sideEffects": "Generally very safe, but injecting large volumes of plain water without electrolytes can theoretically cause hemolysis or electrolyte disturbance; it is meant for dilution, not bolus IV infusion on its own. Single-use only once opened. Compiled from general references.",
+    "synergies": [
+      "hcg",
+      "hgh-191aa",
+      "glutathione"
+    ],
+    "comparisons": "Versus bacteriostatic water, it lacks the 0.9% benzyl alcohol preservative, so it is preferred for single-dose use or for patients sensitive to benzyl alcohol but not suitable for multi-dose vials; versus 0.6% acetic acid, it is a neutral solvent that will not fully dissolve certain hard-to-solubilize peptides.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "acetic-acid",
+    "name": "Acetic Acid (0.6%)",
+    "aka": [
+      "dilute acetic acid reconstitution solvent"
+    ],
+    "category": "Solvents & Ancillaries",
+    "summary": "A dilute (around 0.6%) acetic acid solution used as an acidic solvent to dissolve peptides that are poorly soluble in plain or bacteriostatic water, such as some BPC-157 or Tesamorelin preparations.",
+    "mechanism": "Lowering the pH increases the solubility of certain peptides by protonating side chains and disrupting aggregation, allowing the lyophilized powder to go fully into solution where neutral water leaves it cloudy or undissolved. The acid concentration is kept low so the resulting solution is only mildly acidic and tolerable for subcutaneous injection. It otherwise acts as an inert aqueous vehicle once the peptide is dissolved.",
+    "dosing": "Used in the same way as other diluents, drawn into a syringe and added to the vial in roughly 1-3 mL volumes; often only a fraction of acetic acid solution is needed, with the remainder topped up with bacteriostatic water. Many users only reach for it when standard diluents fail to clear the powder.",
+    "cycle": "n/a",
+    "sideEffects": "Can cause more stinging or burning at the injection site than neutral diluents due to the acidity; using too concentrated a solution risks irritation or tissue damage. Not a preservative, so any vial reconstituted with it alone should be treated as single-use unless preservative is added. Compiled from general references.",
+    "synergies": [
+      "bpc-157",
+      "tesamorelin",
+      "tb-500"
+    ],
+    "comparisons": "Versus bacteriostatic and sterile water, acetic acid is the specialist option used only for peptides that will not dissolve in neutral solvents; it offers no preservative benefit and is generally less comfortable to inject, so it is not a default diluent.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "vitamin-b12",
+    "name": "Vitamin B12 (injectable)",
+    "aka": [
+      "cyanocobalamin",
+      "methylcobalamin",
+      "hydroxocobalamin"
+    ],
+    "category": "Solvents & Ancillaries",
+    "summary": "Injectable forms of vitamin B12 (cobalamin) used to correct deficiency and, in wellness settings, given as energy or recovery shots and as a component of lipotropic injection blends.",
+    "mechanism": "Cobalamin is an essential cofactor for methionine synthase and methylmalonyl-CoA mutase, supporting DNA synthesis, red blood cell formation, myelin maintenance, and homocysteine metabolism. Injected B12 bypasses gastrointestinal absorption, which is useful in pernicious anemia or malabsorption. Methylcobalamin and hydroxocobalamin are more active or longer-retained forms than the synthetic cyanocobalamin commonly used in clinics.",
+    "dosing": "Typical IM doses range from about 1000 mcg given weekly to monthly for deficiency, with wellness clinics often using similar 1000 mcg shots; in lipotropic blends it is combined with compounds like methionine, inositol, choline, and L-carnitine in small IM volumes.",
+    "cycle": "n/a or relevant note: can be used on an ongoing schedule for documented deficiency under medical supervision.",
+    "sideEffects": "Generally very well tolerated; injection-site pain, mild diarrhea, or transient itching can occur, and rare hypersensitivity reactions are reported. High-dose unmonitored use is mostly wasteful rather than harmful since excess is excreted. Compiled from general references.",
+    "synergies": [
+      "lipo-b",
+      "mic-plus-b",
+      "l-carnitine"
+    ],
+    "comparisons": "Versus the true solvents in this category, B12 is an active nutrient rather than a vehicle; among its own forms, cyanocobalamin is cheapest and most common, methylcobalamin is a ready-to-use active form favored for neurological support, and hydroxocobalamin is retained longer in the body and used for cyanide poisoning.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "hhb-blend",
+    "name": "HHB Blend",
+    "aka": [
+      "Synex proprietary HHB blend"
+    ],
+    "category": "Other / Analgesic",
+    "summary": "A proprietary multi-peptide blend marketed by Synex/LELE-style suppliers; the exact composition is supplier-defined and not publicly documented.",
+    "mechanism": "As a proprietary blend, its mechanism cannot be stated precisely because the constituent peptides and their ratios are not published. Blends in this general space typically combine recovery, anti-inflammatory, or performance peptides intended to act on tissue repair and systemic resilience. Any mechanistic claim should be treated as marketing until verified against the supplier's certificate of analysis.",
+    "dosing": "No standardized dosing exists publicly; users are directed to follow the dosing and reconstitution instructions on the specific supplier's label or COA. Treat any third-party protocol with caution.",
+    "cycle": "n/a — no established cycling guidance; defer to supplier documentation.",
+    "sideEffects": "Composition is not publicly verified, so the side-effect and interaction profile is unknown; risks depend entirely on the undisclosed ingredients and their purity. Confirm contents, sterility, and dosing with the supplier's COA before use. Compiled from general references.",
+    "synergies": [],
+    "comparisons": "Unlike single named peptides, HHB cannot be meaningfully compared on mechanism or potency because its formula is undisclosed; the only sound comparison is that named, well-characterized peptides offer transparency that proprietary blends like this do not.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "shb-blend",
+    "name": "SHB Blend",
+    "aka": [
+      "Synex proprietary SHB blend"
+    ],
+    "category": "Other / Analgesic",
+    "summary": "A proprietary multi-peptide blend sold by Synex/LELE-style suppliers; the exact composition is supplier-defined and not publicly documented.",
+    "mechanism": "Because the component peptides and ratios are not disclosed, no reliable mechanism can be described. Products in this category are generally promoted for recovery, anti-inflammatory, or wellness effects via combinations of repair and signaling peptides. Any stated mechanism should be confirmed against the supplier's certificate of analysis rather than taken at face value.",
+    "dosing": "There is no public standardized dose; rely on the dosing, concentration, and reconstitution instructions provided on the supplier's label or COA, and be skeptical of unofficial protocols.",
+    "cycle": "n/a — no established cycling guidance; defer to supplier documentation.",
+    "sideEffects": "Composition is not publicly verified, so the safety, side-effect, and drug-interaction profile is unknown and depends on the undisclosed ingredients and their quality. Verify contents, sterility, and dosing with the supplier's COA before use. Compiled from general references.",
+    "synergies": [],
+    "comparisons": "SHB cannot be benchmarked against named peptides on efficacy or safety because its formula is hidden; the meaningful contrast is that transparent single-agent peptides allow informed dosing whereas this proprietary blend does not.",
+    "sources": [
+      "compiled"
+    ]
+  },
+  {
+    "id": "atm-15-blend",
+    "name": "ATM-15 Blend",
+    "aka": [
+      "Synex proprietary ATM-15 blend"
+    ],
+    "category": "Other / Analgesic",
+    "summary": "A proprietary multi-peptide blend offered by Synex/LELE-style suppliers; the exact composition is supplier-defined and not publicly documented.",
+    "mechanism": "With the constituent peptides and their proportions undisclosed, its mechanism of action cannot be stated with confidence. Such blends are typically marketed around recovery, tissue repair, anti-inflammatory, or general wellness pathways using a mix of signaling peptides. Treat any specific mechanistic claim as unverified until checked against the supplier's certificate of analysis.",
+    "dosing": "No publicly standardized dosing is available; follow the dosing and reconstitution guidance on the specific supplier's label or COA and approach third-party protocols cautiously.",
+    "cycle": "n/a — no established cycling guidance; defer to supplier documentation.",
+    "sideEffects": "Composition is not publicly verified, so its side-effect and interaction profile is unknown and hinges on the undisclosed ingredients and their purity. Confirm exact contents, sterility, and dosing with the supplier's COA before any use. Compiled from general references.",
+    "synergies": [],
+    "comparisons": "ATM-15 cannot be compared on potency or safety with characterized peptides because its formula is proprietary; the only firm comparison is that named, documented peptides provide the transparency this blend lacks.",
+    "sources": [
+      "compiled"
+    ]
+  }
+]

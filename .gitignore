@@ -1,0 +1,4 @@
+.netlify/
+.DS_Store
+scripts/raw/
+node_modules/
