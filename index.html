@@ -54,6 +54,12 @@
   .theme-toggle{flex:none;background:var(--bg-3);border:1px solid var(--line-2);color:var(--ink-2);border-radius:999px;padding:8px 16px;font-family:'DM Mono',monospace;font-size:12px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:background .15s}
   .theme-toggle:hover{background:var(--bg-4);color:var(--ink)}
 
+  /* ---- view tabs ---- */
+  .view-tabs{display:flex;gap:6px;margin-bottom:18px;border-bottom:1px solid var(--line);padding-bottom:0}
+  .view-tab{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:10px 18px;background:transparent;border:none;border-bottom:2px solid transparent;color:var(--ink-3);cursor:pointer;transition:color .14s,border-color .14s;margin-bottom:-1px}
+  .view-tab:hover{color:var(--ink-2)}
+  .view-tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+
   /* ---- controls ---- */
   .controls{position:sticky;top:0;z-index:30;background:var(--bg);padding:16px 0 14px;margin-bottom:8px;border-bottom:1px solid var(--line)}
   .search-box{position:relative;margin-bottom:12px}
@@ -62,11 +68,53 @@
   .search-box::before{content:'⌕';position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--ink-3);font-size:18px}
   .search-box .clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--ink-3);font-size:18px;cursor:pointer;display:none;padding:4px 8px}
   .search-box .clear.show{display:block}
+  .filters-wrap{position:relative}
   .filters{display:flex;gap:7px;flex-wrap:wrap}
   .filter-chip{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.02em;padding:5px 11px;border-radius:999px;background:var(--chip);border:1px solid var(--line);color:var(--ink-2);cursor:pointer;white-space:nowrap;transition:all .12s}
   .filter-chip:hover{border-color:var(--line-2);color:var(--ink)}
   .filter-chip.active{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
   .filter-chip .n{opacity:.55;margin-left:5px}
+  .more-filters{display:none;margin-top:8px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.05em;background:transparent;border:1px solid var(--line-2);color:var(--ink-2);border-radius:999px;padding:5px 13px;cursor:pointer;transition:color .12s,border-color .12s}
+  .more-filters:hover{color:var(--ink);border-color:var(--ink-3)}
+  .more-filters .caret{display:inline-block;margin-right:5px;transition:transform .18s}
+  .filters-wrap.open .more-filters .caret{transform:rotate(180deg)}
+
+  /* ---- protocols ---- */
+  .proto-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:13px;margin-top:6px}
+  .proto-card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:20px 20px 18px;cursor:pointer;position:relative;transition:border-color .14s,transform .14s;display:flex;flex-direction:column;gap:10px}
+  .proto-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .proto-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .proto-card .ptag-small{font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+  .proto-card .pname{font-family:'Syne',sans-serif;font-weight:700;font-size:18px;line-height:1.2;letter-spacing:-.01em}
+  .proto-card .pdesc{font-size:13px;color:var(--ink-2);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .proto-card .pmeta{font-family:'DM Mono',monospace;font-size:10.5px;color:var(--ink-3);letter-spacing:.04em;margin-top:auto}
+
+  .proto-detail{margin-top:6px}
+  .proto-back{font-family:'DM Mono',monospace;font-size:12px;background:transparent;border:1px solid var(--line-2);color:var(--ink-2);padding:7px 14px 7px 11px;border-radius:8px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;margin-bottom:20px;transition:color .14s,border-color .14s}
+  .proto-back:hover{color:var(--ink);border-color:var(--ink-3)}
+  .proto-detail .phead{padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:24px}
+  .proto-detail .phead .ptag-small{margin-bottom:8px}
+  .proto-detail .phead h2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,36px);line-height:1.1;letter-spacing:-.015em;margin-bottom:12px}
+  .proto-detail .phead p{color:var(--ink-2);font-size:15px;line-height:1.62;max-width:680px}
+  .proto-section{margin-bottom:22px}
+  .proto-section h3{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+  .proto-section h3::after{content:'';flex:1;height:1px;background:var(--line)}
+  .proto-section p{font-size:14.5px;color:var(--ink);line-height:1.62}
+  .proto-section.synergybox{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:8px;padding:14px 16px}
+  .proto-section.synergybox h3{color:var(--accent)}
+  .proto-section.synergybox h3::after{display:none}
+  .compound-list{display:flex;flex-direction:column;gap:8px}
+  .compound-row{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer;display:flex;flex-direction:column;gap:3px;text-align:left;transition:border-color .14s,background .14s;font-family:inherit;color:inherit;width:100%}
+  .compound-row:hover{border-color:var(--accent);background:var(--bg-3)}
+  .compound-row:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .compound-row.missing{cursor:default;opacity:.55}
+  .compound-row.missing:hover{border-color:var(--line);background:var(--bg-2)}
+  .compound-row .cr-name{font-family:'Syne',sans-serif;font-weight:600;font-size:15px;color:var(--ink)}
+  .compound-row .cr-role{font-size:13px;color:var(--ink-2);line-height:1.5}
+  .variants-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+  .variant-card{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:13px 15px}
+  .variant-card .vlabel{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+  .variant-card p{font-size:13.5px;color:var(--ink);line-height:1.55}
 
   /* ---- groups + grid ---- */
   .count-line{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-3);margin:18px 0 6px;letter-spacing:.05em}
@@ -124,6 +172,13 @@
   footer.foot strong{color:var(--ink-2)}
   footer.foot a{color:var(--ink-2)}
 
+  @media(max-width:768px){
+    .controls{position:static}
+    .filters{max-height:34px;overflow:hidden;transition:max-height .2s ease}
+    .filters-wrap.open .filters{max-height:none}
+    .more-filters{display:inline-flex;align-items:center}
+    .proto-grid{grid-template-columns:1fr}
+  }
   @media(max-width:560px){
     .wrap{padding:0 14px 80px}
     header.masthead{padding:30px 0 20px}
@@ -132,6 +187,7 @@
     .card .csum{-webkit-line-clamp:2}
     .panel{width:100%;border-left:none}
     .disclaimer-bar{font-size:11px;padding:8px 14px}
+    .view-tab{padding:9px 14px;font-size:11px}
   }
   @media(max-width:380px){.grid{grid-template-columns:1fr}}
 </style>
@@ -155,16 +211,31 @@
     </div>
   </header>
 
-  <div class="controls">
-    <div class="search-box">
-      <input type="search" id="search" placeholder="Search name, alias, category, or use…" autocomplete="off" aria-label="Search peptides">
-      <button class="clear" id="searchClear" type="button" aria-label="Clear search">×</button>
+  <nav class="view-tabs" role="tablist" aria-label="View">
+    <button class="view-tab active" id="tabProducts" type="button" role="tab" aria-selected="true" data-view="products">Products</button>
+    <button class="view-tab" id="tabProtocols" type="button" role="tab" aria-selected="false" data-view="protocols">Protocols</button>
+  </nav>
+
+  <div id="productsView">
+    <div class="controls">
+      <div class="search-box">
+        <input type="search" id="search" placeholder="Search name, alias, category, or use…" autocomplete="off" aria-label="Search peptides">
+        <button class="clear" id="searchClear" type="button" aria-label="Clear search">×</button>
+      </div>
+      <div class="filters-wrap" id="filtersWrap">
+        <div class="filters" id="filters"></div>
+        <button class="more-filters" id="moreFilters" type="button" aria-expanded="false"><span class="caret">▼</span><span id="moreFiltersLabel">More filters</span></button>
+      </div>
     </div>
-    <div class="filters" id="filters"></div>
+
+    <div class="count-line" id="countLine"></div>
+    <div id="results"></div>
   </div>
 
-  <div class="count-line" id="countLine"></div>
-  <div id="results"></div>
+  <div id="protocolsView" style="display:none">
+    <div id="protocolsList"></div>
+    <div id="protocolDetail" style="display:none"></div>
+  </div>
 
   <footer class="foot">
     <p><strong>Peptide Cheat Sheet</strong> · static reference · edit <code>data/peptides.json</code> and push to update.</p>
@@ -188,7 +259,245 @@
 (function(){
   "use strict";
   var DATA = [], BY_ID = {}, CATS = [];
-  var state = { q:"", cat:"all" };
+  var state = { q:"", cat:"all", view:"products", protocol:null };
+
+  // ---- protocols ----
+  var PROTOCOLS = [
+    {
+      id:"weight-loss",
+      name:"Weight Loss (GLP-1 stack)",
+      tagline:"Appetite suppression + metabolic remodel",
+      overview:"GLP-1 receptor agonists are the most evidence-backed pharmacological approach to obesity. Semaglutide and tirzepatide are the workhorses; multi-agonist molecules layer GIP, glucagon and amylin pathways for deeper appetite suppression and metabolic effect.",
+      stack:[
+        {id:"semaglutide", role:"Primary weekly GLP-1 RA — strong appetite suppression, gastric slowing."},
+        {id:"tirzepatide", role:"Dual GLP-1 / GIP — superior weight outcomes, better insulin sensitivity, less nausea per kg lost."},
+        {id:"cagrilintide", role:"Long-acting amylin analogue — satiety adjunct, layers cleanly on GLP-1."},
+        {id:"retatrutide", role:"Triple GLP-1 / GIP / glucagon — investigational, largest published weight loss to date."},
+        {id:"cagri-plus-sema-blend", role:"Combined cagri + sema for stacked satiety with single weekly injection."}
+      ],
+      cycle:"Indefinite while losing or maintaining. Titrate dose upward over 16+ weeks to tolerance; do not exceed label-recommended maximums without supervision.",
+      dosing:"Weekly SubQ. Semaglutide 0.25 → 0.5 → 1.0 → 1.7 → 2.4 mg/wk stepping every 4 weeks. Tirzepatide 2.5 → 5 → 7.5 → 10 → 12.5 → 15 mg/wk stepping every 4 weeks. Cagrilintide 0.3 → 2.4 mg/wk in parallel.",
+      monitoring:"HbA1c, fasting glucose, fasting insulin, lipase, full lipid panel, basic metabolic panel, body composition (DXA preferred over BIA), thyroid panel at baseline.",
+      synergy:"GLP-1 lowers appetite and slows gastric emptying. Amylin (cagrilintide) compounds satiety via a separate receptor. The GIP arm in tirzepatide / retatrutide improves insulin sensitivity and meaningfully reduces nausea per kg lost compared with mono GLP-1.",
+      variants:{
+        beginner:"Semaglutide 0.25 mg/wk x 4 weeks, then 0.5 mg. Hold for 4–8 weeks before next step if GI side effects.",
+        intermediate:"Tirzepatide 2.5 → 10 mg/wk over 16 weeks. Re-evaluate goals at 25 mg target weight loss.",
+        advanced:"Cagri+sema blend, or retatrutide if available through a research protocol. Always under clinician supervision."
+      }
+    },
+    {
+      id:"fat-loss-recomp",
+      name:"Fat Loss & Body Recomp",
+      tagline:"Lean fat reduction without muscle loss",
+      overview:"For lean individuals dropping body fat without sacrificing muscle. Combines a mild GH-axis stimulus with selective lipolytic agents — slower than GLP-1 monotherapy but better composition outcomes for trained subjects.",
+      stack:[
+        {id:"tesamorelin", role:"Long-acting GHRH analogue — proven visceral fat reduction."},
+        {id:"hgh-fragment-176-191", role:"GH lipolytic fragment — fat oxidation without IGF-1 elevation."},
+        {id:"aod-9604", role:"Modified C-terminal HGH fragment — β3-mediated lipolysis."},
+        {id:"5-amino-1mq", role:"NNMT inhibitor — preclinical, supports NAD+ and fat oxidation."},
+        {id:"mots-c", role:"Mitochondrial-derived peptide — improves insulin sensitivity and metabolic flexibility."},
+        {id:"l-carnitine", role:"Fatty-acid transport co-factor for intramitochondrial oxidation."},
+        {id:"cagri-plus-sema-blend", role:"Optional appetite-tier add-on in a calorie deficit."}
+      ],
+      cycle:"12 weeks on / 4 weeks off. Repeat 2–3 cycles per year. Avoid back-to-back blocks without a break.",
+      dosing:"Tesamorelin 1–2 mg SubQ before bed daily. HGH-fragment 176-191 250–500 mcg AM fasted and pre-cardio. AOD-9604 250–500 mcg AM. 5-Amino-1MQ 50–150 mg oral daily. L-carnitine 200–500 mg SubQ pre-cardio.",
+      monitoring:"Fasting glucose, fasting insulin, IGF-1 (mid-range target), lipid panel, waist circumference, DXA every 12 weeks.",
+      synergy:"Tesamorelin lifts pulsatile GH which drives lipolysis but raises IGF-1. The 176-191 fragment and AOD-9604 mimic the lipolytic arm of GH via β3-adrenergic signalling without IGF-1 elevation, so they pair safely with tesamorelin. 5-Amino-1MQ and MOTS-c support the underlying NAD+ / mitochondrial machinery that fat oxidation depends on.",
+      variants:{
+        beginner:"Tesamorelin 1 mg PM only. 12-week block. Track waist and DXA.",
+        intermediate:"Tesamorelin PM + HGH-frag 250 mcg AM fasted. Add cagri+sema if appetite is the bottleneck.",
+        advanced:"Tesamorelin + HGH-frag + 5-amino-1MQ. Cycled in a structured deficit with resistance training."
+      }
+    },
+    {
+      id:"muscle-anabolism",
+      name:"Muscle Gain & Anabolism",
+      tagline:"GH/IGF axis + myostatin pathway",
+      overview:"Hypertrophy-focused stack combining a clean GH pulse with direct IGF-1 saturation and optional myostatin pathway modulation. Use only with a structured training stimulus and adequate caloric surplus. Several components are research-only with sparse human data.",
+      stack:[
+        {id:"cjc-1295-plus-ipamorelin-blend", role:"Clean nightly GH pulse — primer for endogenous IGF-1."},
+        {id:"igf-1-lr3", role:"Long-acting IGF-1 — receptor saturation for hyperplasia and hypertrophy."},
+        {id:"igf-1-des", role:"Acute IGF-1 spike — short-acting, locally bioactive."},
+        {id:"mgf", role:"Mechano-growth factor — local satellite cell activation post-load."},
+        {id:"peg-mgf", role:"Pegylated MGF — systemic half-life extension."},
+        {id:"follistatin-344", role:"Myostatin inhibitor — preclinical, removes growth brake."},
+        {id:"ace-031", role:"Soluble activin receptor — myostatin trap, discontinued trial."}
+      ],
+      cycle:"8–12 weeks on / 6–8 weeks off. IGF-1 LR3 should be limited to 4–6 weeks at a time within a block to avoid receptor desensitisation.",
+      dosing:"CJC + IPA blend 200 / 200 mcg SubQ at lights-out, fasted. IGF-1 LR3 30–80 mcg post-workout into trained muscle (bilateral). MGF 200 mcg post-workout local injection. Follistatin 100 mcg SubQ daily for 10–30 day short courses.",
+      monitoring:"IGF-1 (target upper-normal, do not exceed), fasting insulin, fasting glucose, blood pressure, full lipid panel, prostate markers (PSA, DRE) in males >40.",
+      synergy:"The CJC + IPA blend primes hepatic IGF-1 via a physiologic GH pulse. Exogenous IGF-1 LR3 then saturates the receptor for hyperplasia. MGF / PEG-MGF drive local satellite cell recruitment in trained tissue. Follistatin / ACE-031 release the myostatin brake. The stack is biochemically redundant — pick a primer + one IGF + optionally one myostatin agent. Do not run all components simultaneously.",
+      variants:{
+        beginner:"CJC + IPA blend nightly only. 12-week block. Re-test IGF-1 at week 6.",
+        intermediate:"CJC + IPA nightly + IGF-1 LR3 4-week burst post-workout.",
+        advanced:"Add a short follistatin-344 course (cost-prohibitive, preclinical). Strict bloodwork."
+      }
+    },
+    {
+      id:"gh-optimisation",
+      name:"GH Optimisation",
+      tagline:"Restore youthful GH pulsatility",
+      overview:"Restore youthful GH pulsatility without exogenous HGH. GHRH analogues combined with ghrelin mimetics generate physiologic pulses — safer than direct HGH for sleep, recovery and body composition over the long term.",
+      stack:[
+        {id:"tesamorelin", role:"Long-acting GHRH analogue — strongest GHRH-arm peptide."},
+        {id:"cjc-1295-dac", role:"DAC-modified GHRH — extended half-life, less physiologic pulse."},
+        {id:"cjc-1295-no-dac", role:"Short-acting GHRH — preserves natural pulse pattern."},
+        {id:"sermorelin", role:"Native GHRH 1-29 — mildest and oldest GHRH option."},
+        {id:"ipamorelin", role:"Clean ghrelin mimetic — minimal cortisol / prolactin lift."},
+        {id:"cjc-1295-plus-ipamorelin-blend", role:"Combined GHRH + ghrelin pulse in one injection."},
+        {id:"mk-677", role:"Oral ghrelin agonist — convenient but causes water retention and insulin resistance."},
+        {id:"ipamorelin-plus-tesamorelin-blend", role:"Strongest physiologic GHRH + ghrelin combination."}
+      ],
+      cycle:"5 days on / 2 days off, in 12-week blocks with 4-week breaks. Or continuous low-dose for 6 months then break.",
+      dosing:"CJC no-DAC 100 mcg + ipamorelin 200 mcg SubQ 5x/wk, 30 min before bed, fasted (food blunts GH release). MK-677 12.5–25 mg oral PM. Tesamorelin 1 mg SubQ PM daily if maximising GHRH arm.",
+      monitoring:"IGF-1 (target mid- to upper-normal), fasting glucose, fasting insulin, AM cortisol, prolactin (if symptomatic), full thyroid panel.",
+      synergy:"GHRH (tesa / CJC / sermorelin) opens the pituitary gate; the ghrelin mimetic (ipamorelin / MK-677) supplies the push. The combined pulse is 3–5x larger than either alone. Always inject fasted. Avoid MK-677 if pre-diabetic — it raises fasting glucose.",
+      variants:{
+        beginner:"Sermorelin 200 mcg SubQ PM, fasted. Gentlest entry point.",
+        intermediate:"CJC no-DAC + ipamorelin nightly, 5 nights on / 2 off.",
+        advanced:"Tesamorelin + ipamorelin nightly + MK-677 weekends off. Watch glucose."
+      }
+    },
+    {
+      id:"recovery-injury",
+      name:"Recovery & Injury",
+      tagline:"Tissue repair, tendon, post-surgical",
+      overview:"Tissue repair stack for tendon and ligament injury, post-surgical healing or chronic inflammation. BPC-157 and TB-500 are the workhorses; cytokine modulators (KPV, ARA-290, VIP) extend the toolkit for inflammatory pathology.",
+      stack:[
+        {id:"bpc-157", role:"Gut-derived pentadecapeptide — gastric and connective tissue repair, angiogenesis."},
+        {id:"tb-500", role:"Thymosin β-4 fragment — actin polymerisation, cell migration into the lesion."},
+        {id:"bpc-157-plus-tb-500-blend", role:"Combined healing stack in one injection."},
+        {id:"kpv", role:"α-MSH tripeptide — anti-inflammatory, particularly gut and skin."},
+        {id:"ll-37", role:"Cathelicidin antimicrobial peptide — wound healing, biofilm disruption."},
+        {id:"ara-290", role:"EPO-derived peptide — neuropathic pain, tissue protection."},
+        {id:"ghk-cu", role:"Copper-binding tripeptide — dermal, hair, wound matrix remodelling."},
+        {id:"thymosin-alpha-1", role:"Immune-tone adjunct — supports recovery in chronic inflammation."}
+      ],
+      cycle:"4–8 weeks on for acute injury, then taper. Chronic use uncommon outside ongoing pathology. Re-image and reassess function before re-dosing.",
+      dosing:"BPC-157 250–500 mcg SubQ near injury site daily. TB-500 2–2.5 mg SubQ 2x/wk loading dose for 4–6 weeks, then 1x/wk maintenance. KPV 250–500 mcg SubQ or oral daily. Local injection beats systemic for soft-tissue lesions.",
+      monitoring:"Pain / range-of-motion / function reassessment fortnightly. hsCRP if inflammatory. Re-image if structural injury (US or MRI). Track sleep and HRV as global recovery proxies.",
+      synergy:"BPC-157 promotes angiogenesis and granulation; TB-500 drives cell migration into the lesion; KPV / ARA-290 dampen NF-κB inflammation so healing can proceed. Local injection delivers higher tissue concentration than systemic for soft-tissue work.",
+      variants:{
+        beginner:"BPC-157 250 mcg SubQ local, daily, 4 weeks.",
+        intermediate:"BPC + TB blend SubQ local, 6 weeks. Add KPV if there's an inflammatory driver.",
+        advanced:"Full stack with ARA-290 for neuropathic component, GHK-Cu for dermal repair. Imaging-guided."
+      }
+    },
+    {
+      id:"anti-aging-longevity",
+      name:"Anti-Aging & Longevity",
+      tagline:"Senolytics, mitochondria, bioregulators",
+      overview:"Senolytic, mitochondrial and bioregulator peptides aimed at hallmarks of ageing — telomere maintenance, mitochondrial fitness, senescent-cell clearance, organ-system bioregulation. All preclinical or off-label; human evidence is early.",
+      stack:[
+        {id:"epithalon", role:"Pineal bioregulator — telomerase activator in cell models."},
+        {id:"mots-c", role:"Mitochondrial-derived peptide — improves insulin sensitivity, exercise tolerance."},
+        {id:"ss-31", role:"Cardiolipin-binding mitochondrial protector — preserves ATP synthesis."},
+        {id:"humanin", role:"Cytoprotective mitochondrial peptide — apoptosis resistance."},
+        {id:"foxo4-dri", role:"Senolytic — disrupts FOXO4-p53 in senescent cells. Sparse human data."},
+        {id:"nad-plus", role:"NAD+ precursor — mitochondrial cofactor, supports sirtuin function."},
+        {id:"pinealon", role:"Short pineal bioregulator — neuroprotective."},
+        {id:"cartalax", role:"Cartilage bioregulator — joint matrix support."},
+        {id:"vesugen", role:"Vascular bioregulator — endothelial function."},
+        {id:"thymalin", role:"Thymic bioregulator — immune ageing."}
+      ],
+      cycle:"Bioregulators run in short 10–20 day pulses 1–2x/year. Mitochondrial peptides (MOTS-c, SS-31) in 8–12 week blocks. NAD+ ongoing low-dose or weekly IV.",
+      dosing:"Epithalon 5–10 mg SubQ daily x 10 days, twice a year. MOTS-c 5–10 mg SubQ 2x/wk. SS-31 5 mg SubQ daily. FOXO4-DRI 5 mg SubQ EOD x 5 doses (rare, expensive, exploratory). NAD+ 100–500 mg slow SubQ or IV.",
+      monitoring:"hsCRP, IL-6, fasting glucose, VO2max, grip strength, biological-age clocks (e.g. GrimAge / PhenoAge), DXA for body composition, lipids, full thyroid panel.",
+      synergy:"Bioregulators are organ-specific (pineal, thymus, vascular, cartilage) — pair targeted bioregulators with broad-spectrum mitochondrial peptides. NAD+ supplies the substrate pool the others depend on. FOXO4-DRI is the only direct senolytic; the rest are upstream and supportive.",
+      variants:{
+        beginner:"Epithalon 10-day pulse + NAD+ weekly. Twice yearly.",
+        intermediate:"Add MOTS-c 8-week block in summer + thymalin pulse in winter.",
+        advanced:"Full stack rotation: epithalon and thymalin pulses, MOTS-c + SS-31 daily blocks, optional FOXO4-DRI burst with biomarker tracking."
+      }
+    },
+    {
+      id:"cognitive-enhancement",
+      name:"Cognitive Enhancement",
+      tagline:"BDNF, focus, neurotrophic support",
+      overview:"Russian-origin neuropeptides modulating BDNF, dopamine and serotonin systems. Best evidence sits in mood/anxiety and post-stroke recovery; healthy-user nootropic claims are extrapolated. Pulse rather than chronic.",
+      stack:[
+        {id:"selank", role:"Anxiolytic — raises BDNF, modulates GABA and serotonin without sedation."},
+        {id:"semax", role:"Focus and mood — BDNF / NGF upregulation, dopaminergic tone."},
+        {id:"cerebrolysin", role:"Porcine neurotrophic factor concentrate — used in stroke recovery."},
+        {id:"adamax", role:"Selank + semax hybrid — combined anxiolytic and focus peptide."},
+        {id:"pinealon", role:"Short pineal-derived peptide — neuroprotective adjunct."}
+      ],
+      cycle:"10–14 day pulses every 2–3 months. Not for chronic daily use — tachyphylaxis and unknown long-term effects.",
+      dosing:"Selank 250–500 mcg intranasal 1–3x/day. Semax 200–600 mcg intranasal AM. Cerebrolysin 5–10 mL IM daily x 10 days in a structured course. Adamax intranasal as labelled.",
+      monitoring:"Subjective mood / focus scales (PHQ-9, GAD-7), sleep quality, blood pressure. Discontinue and reassess if mood flattens or sleep deteriorates.",
+      synergy:"Selank lifts BDNF and dampens anxiety without sedation. Semax sharpens dopamine-mediated focus. Cerebrolysin supplies a broad neurotrophic cocktail. Run intranasal peptides AM (semax) and as-needed (selank); reserve cerebrolysin for structured 10-day IM courses.",
+      variants:{
+        beginner:"Semax AM only, intranasal, 14-day pulse.",
+        intermediate:"Semax AM + Selank PRN during stress periods.",
+        advanced:"Add Cerebrolysin 10-day IM course twice yearly under clinician supervision."
+      }
+    },
+    {
+      id:"sleep-recovery",
+      name:"Sleep & Recovery",
+      tagline:"Slow-wave sleep, circadian rhythm",
+      overview:"Restoring deep slow-wave sleep architecture and circadian phase. DSIP and epithalon target the pineal / melatonergic axis. Injectable melatonin entrains phase. A nightly GH pulse via CJC + ipamorelin further deepens stage 3 sleep.",
+      stack:[
+        {id:"dsip", role:"Delta sleep-inducing peptide — reduces sleep latency, smooths onset."},
+        {id:"melatonin", role:"Injectable melatonin — circadian phase entrainment, jet lag, shift work."},
+        {id:"epithalon", role:"Pineal bioregulator — supports endogenous melatonin output."},
+        {id:"pinealon", role:"Short pineal bioregulator — neuroprotective adjunct."},
+        {id:"cjc-1295-plus-ipamorelin-blend", role:"Pre-sleep GH pulse — deepens slow-wave sleep."}
+      ],
+      cycle:"2–4 week courses then off, or as-needed for shift work / jet lag. Epithalon 10-day pulse twice yearly. Avoid nightly melatonin year-round.",
+      dosing:"DSIP 100–500 mcg SubQ 1 hr pre-bed. Injectable melatonin 1–3 mg SubQ pre-bed. Epithalon 5–10 mg SubQ PM x 10 days. CJC + ipamorelin 200 / 200 mcg SubQ at lights-out, fasted.",
+      monitoring:"Sleep diary or wearable (Oura / Whoop) — SWS minutes, sleep latency, HRV, resting heart rate. Re-evaluate every 2 weeks.",
+      synergy:"DSIP smooths sleep onset. Injectable melatonin entrains circadian phase. CJC + ipamorelin exploits the natural early-night GH pulse to deepen SWS. Epithalon supports endogenous pineal melatonin output long-term, reducing reliance on exogenous dosing.",
+      variants:{
+        beginner:"DSIP nightly for 2 weeks. Assess.",
+        intermediate:"Add injectable melatonin for circadian dysrhythmia or shift work.",
+        advanced:"Add CJC + ipamorelin at lights-out and seasonal epithalon pulses."
+      }
+    },
+    {
+      id:"hormonal-trt",
+      name:"Hormonal Support (TRT companion)",
+      tagline:"HPG axis preservation, fertility",
+      overview:"For men on exogenous testosterone wanting to preserve testicular function and fertility — or for post-cycle therapy recovery. HCG and gonadorelin are the workhorses; HMG adds FSH for fertility goals; kisspeptin-10 is investigational upstream input.",
+      stack:[
+        {id:"hcg", role:"LH analogue — preserves intratesticular T and Leydig cell function on TRT."},
+        {id:"hmg", role:"FSH + LH — supports spermatogenesis when fertility is a priority."},
+        {id:"gonadorelin", role:"GnRH analogue — pulsatile pituitary stimulation, upstream of LH/FSH."},
+        {id:"kisspeptin-10", role:"Upstream HPG trigger — research only, drives endogenous GnRH."}
+      ],
+      cycle:"Ongoing alongside TRT for testicular preservation. PCT cycles run 4–8 weeks. Re-evaluate fertility goals annually.",
+      dosing:"HCG 250–500 IU SubQ 2–3x/wk on TRT. Gonadorelin 100 mcg SubQ every other day (or pulsatile pump if available). HMG 75 IU SubQ 3x/wk if fertility is the priority.",
+      monitoring:"Total T, free T, LH, FSH, oestradiol, SHBG, prolactin. Semen analysis if fertility is a goal. Testicular volume on physical exam.",
+      synergy:"HCG mimics LH directly at the testis — preserves intratesticular T and Leydig cell mass. HMG adds FSH for Sertoli cell support and spermatogenesis. Gonadorelin works upstream at the pituitary to keep the entire axis trainable. Use HCG alone for testicular preservation, add HMG when fertility is required.",
+      variants:{
+        beginner:"HCG 250 IU SubQ 2x/wk alongside TRT.",
+        intermediate:"HCG + gonadorelin pulses for HPG axis tone.",
+        advanced:"HMG-based fertility protocol with monitored LH / FSH and semen analysis."
+      }
+    },
+    {
+      id:"immune-support",
+      name:"Immune Support",
+      tagline:"Thymic, antimicrobial, anti-inflammatory",
+      overview:"Thymic and antimicrobial peptides for chronic infection, post-viral fatigue and autoimmune modulation. Thymosin alpha-1 is the most-evidenced; LL-37 and VIP cover antimicrobial and anti-inflammatory niches.",
+      stack:[
+        {id:"thymosin-alpha-1", role:"Thymic peptide — T-cell maturation and immune tone, strongest evidence base."},
+        {id:"thymalin", role:"Thymic bioregulator — restores thymic output in pulses."},
+        {id:"ll-37", role:"Cathelicidin antimicrobial peptide — direct antimicrobial, biofilm disruption."},
+        {id:"vip", role:"Vasoactive intestinal peptide — anti-inflammatory, mast-cell modulating."},
+        {id:"kpv", role:"α-MSH tripeptide — anti-inflammatory, gut and skin."}
+      ],
+      cycle:"8–12 weeks for chronic conditions. 4-week pulses for prophylaxis (e.g. cold season).",
+      dosing:"Thymosin alpha-1 1.6 mg SubQ 2x/wk. Thymalin 10 mg SubQ daily x 10 days, twice yearly. LL-37 100–500 mcg SubQ daily (caution, mast cell release). VIP 50 mcg intranasal 2x/day. KPV 250–500 mcg SubQ or oral daily.",
+      monitoring:"CBC with differential, lymphocyte subsets if available, hsCRP, symptom diary, EBV / CMV titres if post-viral, gut markers if relevant.",
+      synergy:"Thymosin alpha-1 and thymalin restore thymic output of naive T cells. LL-37 provides direct antimicrobial action. VIP and KPV dampen aberrant inflammation. Pair an immune-tone peptide (TA-1) with a context-specific anti-inflammatory or antimicrobial.",
+      variants:{
+        beginner:"Thymosin alpha-1 1.6 mg SubQ 2x/wk for 8 weeks.",
+        intermediate:"TA-1 + KPV for gut-led autoimmune or IBD.",
+        advanced:"Full stack including LL-37 for chronic biofilm / Lyme under specialist supervision."
+      }
+    }
+  ];
 
   // ---- theme ----
   var root = document.documentElement;
@@ -350,6 +659,109 @@
     renderResults();
   });
   clearEl.addEventListener("click", function(){ searchEl.value=""; state.q=""; clearEl.classList.remove("show"); renderResults(); searchEl.focus(); });
+
+  // ---- mobile filter collapse ----
+  var filtersWrap = document.getElementById("filtersWrap");
+  var moreBtn = document.getElementById("moreFilters");
+  var moreLabel = document.getElementById("moreFiltersLabel");
+  moreBtn.addEventListener("click", function(){
+    var open = filtersWrap.classList.toggle("open");
+    moreBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    moreLabel.textContent = open ? "Fewer filters" : "More filters";
+  });
+
+  // ---- view tabs ----
+  function setView(v){
+    state.view = v;
+    var isProto = v === "protocols";
+    document.getElementById("productsView").style.display = isProto ? "none" : "";
+    document.getElementById("protocolsView").style.display = isProto ? "" : "none";
+    document.getElementById("tabProducts").classList.toggle("active", !isProto);
+    document.getElementById("tabProducts").setAttribute("aria-selected", !isProto ? "true" : "false");
+    document.getElementById("tabProtocols").classList.toggle("active", isProto);
+    document.getElementById("tabProtocols").setAttribute("aria-selected", isProto ? "true" : "false");
+    if(isProto){
+      if(state.protocol) renderProtocolDetail(state.protocol);
+      else renderProtocolsList();
+    }
+    window.scrollTo({top:0, behavior:"instant" in window ? "instant" : "auto"});
+  }
+  document.getElementById("tabProducts").addEventListener("click", function(){ setView("products"); });
+  document.getElementById("tabProtocols").addEventListener("click", function(){ setView("protocols"); });
+
+  // ---- protocols rendering ----
+  function renderProtocolsList(){
+    state.protocol = null;
+    document.getElementById("protocolDetail").style.display = "none";
+    var listEl = document.getElementById("protocolsList");
+    listEl.style.display = "";
+    var html = '<div class="count-line">'+PROTOCOLS.length+' protocols · educational reference only</div>';
+    html += '<div class="proto-grid">' + PROTOCOLS.map(function(p){
+      return '<button class="proto-card" type="button" data-pid="'+esc(p.id)+'">'
+        + '<span class="ptag-small">Goal</span>'
+        + '<div class="pname">'+esc(p.name)+'</div>'
+        + '<div class="pdesc">'+esc(p.tagline)+'</div>'
+        + '<div class="pmeta">'+p.stack.length+' compounds · tap to view</div>'
+        + '</button>';
+    }).join("") + '</div>';
+    listEl.innerHTML = html;
+    Array.prototype.forEach.call(listEl.querySelectorAll(".proto-card"), function(card){
+      card.addEventListener("click", function(){ renderProtocolDetail(card.getAttribute("data-pid")); });
+    });
+  }
+  function renderProtocolDetail(pid){
+    var p = null; for(var i=0;i<PROTOCOLS.length;i++){ if(PROTOCOLS[i].id===pid){ p = PROTOCOLS[i]; break; } }
+    if(!p){ renderProtocolsList(); return; }
+    state.protocol = pid;
+    document.getElementById("protocolsList").style.display = "none";
+    var detail = document.getElementById("protocolDetail");
+    detail.style.display = "";
+    var stackHTML = p.stack.map(function(s){
+      var prod = BY_ID[s.id];
+      if(prod){
+        return '<button class="compound-row" type="button" data-go="'+esc(s.id)+'">'
+          + '<span class="cr-name">'+esc(prod.name)+'</span>'
+          + '<span class="cr-role">'+esc(s.role)+'</span>'
+          + '</button>';
+      }
+      return '<div class="compound-row missing">'
+        + '<span class="cr-name">'+esc(s.id)+' (not in catalogue)</span>'
+        + '<span class="cr-role">'+esc(s.role)+'</span>'
+        + '</div>';
+    }).join("");
+    var variantsHTML = "";
+    if(p.variants){
+      var vs = [];
+      if(p.variants.beginner) vs.push({l:"Beginner", t:p.variants.beginner});
+      if(p.variants.intermediate) vs.push({l:"Intermediate", t:p.variants.intermediate});
+      if(p.variants.advanced) vs.push({l:"Advanced", t:p.variants.advanced});
+      if(vs.length){
+        variantsHTML = '<section class="proto-section"><h3>Beginner / Intermediate / Advanced</h3><div class="variants-grid">'
+          + vs.map(function(v){ return '<div class="variant-card"><div class="vlabel">'+esc(v.l)+'</div><p>'+esc(v.t)+'</p></div>'; }).join("")
+          + '</div></section>';
+      }
+    }
+    detail.innerHTML = '<div class="proto-detail">'
+      + '<button class="proto-back" id="protoBack" type="button">← All protocols</button>'
+      + '<div class="phead">'
+        + '<div class="ptag-small">Protocol</div>'
+        + '<h2>'+esc(p.name)+'</h2>'
+        + '<p>'+esc(p.overview)+'</p>'
+      + '</div>'
+      + '<section class="proto-section"><h3>Recommended stack</h3><div class="compound-list">'+stackHTML+'</div></section>'
+      + '<section class="proto-section"><h3>Cycle structure</h3><p>'+esc(p.cycle)+'</p></section>'
+      + '<section class="proto-section"><h3>Dosing schedule</h3><p>'+esc(p.dosing)+'</p></section>'
+      + '<section class="proto-section"><h3>Monitoring markers</h3><p>'+esc(p.monitoring)+'</p></section>'
+      + '<section class="proto-section synergybox"><h3>Synergy notes</h3><p>'+esc(p.synergy)+'</p></section>'
+      + variantsHTML
+      + '</div>';
+    document.getElementById("protoBack").addEventListener("click", renderProtocolsList);
+    Array.prototype.forEach.call(detail.querySelectorAll(".compound-row[data-go]"), function(row){
+      var id = row.getAttribute("data-go");
+      row.addEventListener("click", function(){ openPanel(id); });
+    });
+    window.scrollTo({top:0, behavior:"instant" in window ? "instant" : "auto"});
+  }
 
   // ---- boot ----
   fetch("data/peptides.json", {cache:"no-cache"})
