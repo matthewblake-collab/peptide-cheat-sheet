@@ -40,6 +40,12 @@
   :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
   :focus:not(:focus-visible){outline:none}
 
+  /* Touch targets ≥44px (a11y — WCAG 2.5.5 / mobile) */
+  .theme-toggle,.view-tab,.proto-back,.more-filters{min-height:44px}
+  .filter-chip,.syn-chip,.disclaimer-bar button{display:inline-flex;align-items:center;min-height:40px}
+  .panel-close{width:44px;height:44px}
+  .panel-head h3{padding-right:52px}
+
   /* ---- disclaimer banner ---- */
   .disclaimer-bar{background:var(--warn-soft);border-bottom:1px solid var(--line);font-family:'DM Mono',monospace;font-size:12px;color:var(--ink-2);padding:9px 22px;display:flex;gap:14px;align-items:flex-start;line-height:1.5}
   .disclaimer-bar strong{color:var(--warn)}
@@ -103,7 +109,7 @@
   .proto-section h3{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px;display:flex;align-items:center;gap:10px}
   .proto-section h3::after{content:'';flex:1;height:1px;background:var(--line)}
   .proto-section p{font-size:14.5px;color:var(--ink);line-height:1.62}
-  .proto-section.synergybox{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:8px;padding:14px 16px}
+  .proto-section.synergybox{background:var(--accent-soft);border:1px solid var(--accent);border-radius:8px;padding:14px 16px}
   .proto-section.synergybox h3{color:var(--accent)}
   .proto-section.synergybox h3::after{display:none}
   .compound-list{display:flex;flex-direction:column;gap:8px}
@@ -157,9 +163,9 @@
   .panel-body h4{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:7px;display:flex;align-items:center;gap:8px}
   .panel-body h4::after{content:'';flex:1;height:1px;background:var(--line)}
   .panel-body p{font-size:14.5px;color:var(--ink);line-height:1.62}
-  .panel-body section.warnbox{background:var(--warn-soft);border-left:3px solid var(--warn);border-radius:8px;padding:13px 15px}
+  .panel-body section.warnbox{background:var(--warn-soft);border:1px solid var(--warn);border-radius:8px;padding:13px 15px}
   .panel-body section.warnbox h4{color:var(--warn)}.panel-body section.warnbox h4::after{display:none}
-  .panel-body section.dangerbox{background:var(--danger-soft);border-left:3px solid var(--danger);border-radius:8px;padding:13px 15px}
+  .panel-body section.dangerbox{background:var(--danger-soft);border:1px solid var(--danger);border-radius:8px;padding:13px 15px}
   .panel-body section.dangerbox h4{color:var(--danger)}.panel-body section.dangerbox h4::after{display:none}
   .syn-row{display:flex;gap:7px;flex-wrap:wrap;margin-top:3px}
   .syn-chip{font-family:'DM Mono',monospace;font-size:11.5px;padding:5px 10px;border-radius:7px;background:var(--bg-3);border:1px solid var(--line-2);color:var(--ink);cursor:pointer;transition:all .12s}
@@ -193,6 +199,14 @@
     .view-tab{padding:9px 14px;font-size:11px}
   }
   @media(max-width:380px){.grid{grid-template-columns:1fr}}
+
+  /* Respect reduced-motion (a11y — WCAG 2.3.3) */
+  @media (prefers-reduced-motion: reduce){
+    *{transition-duration:.001ms !important;animation-duration:.001ms !important}
+    html{scroll-behavior:auto}
+    .card:hover,.proto-card:hover{transform:none}
+    .panel{transition:none}
+  }
 </style>
 </head>
 <body>
@@ -215,11 +229,11 @@
   </header>
 
   <nav class="view-tabs" role="tablist" aria-label="View">
-    <button class="view-tab active" id="tabProducts" type="button" role="tab" aria-selected="true" data-view="products">Products</button>
-    <button class="view-tab" id="tabProtocols" type="button" role="tab" aria-selected="false" data-view="protocols">Protocols</button>
+    <button class="view-tab active" id="tabProducts" type="button" role="tab" aria-selected="true" aria-controls="productsView" tabindex="0" data-view="products">Products</button>
+    <button class="view-tab" id="tabProtocols" type="button" role="tab" aria-selected="false" aria-controls="protocolsView" tabindex="-1" data-view="protocols">Protocols</button>
   </nav>
 
-  <div id="productsView">
+  <div id="productsView" role="tabpanel" aria-labelledby="tabProducts">
     <div class="controls">
       <div class="search-box">
         <input type="search" id="search" placeholder="Search name, alias, category, or use…" autocomplete="off" aria-label="Search peptides">
@@ -235,7 +249,7 @@
     <div id="results"></div>
   </div>
 
-  <div id="protocolsView" style="display:none">
+  <div id="protocolsView" role="tabpanel" aria-labelledby="tabProtocols" style="display:none">
     <div id="protocolsList"></div>
     <div id="protocolDetail" style="display:none"></div>
   </div>
@@ -653,6 +667,16 @@
   document.getElementById("panelClose").addEventListener("click", closePanel);
   document.getElementById("scrim").addEventListener("click", closePanel);
   document.addEventListener("keydown", function(e){ if(e.key==="Escape" && document.getElementById("panel").classList.contains("open")) closePanel(); });
+  // Trap Tab focus within the panel while open (a11y — WCAG 2.4.3 / 2.1.2)
+  document.addEventListener("keydown", function(e){
+    var panel = document.getElementById("panel");
+    if(e.key !== "Tab" || !panel.classList.contains("open")) return;
+    var f = panel.querySelectorAll('button, a[href], input, [tabindex]:not([tabindex="-1"])');
+    if(!f.length) return;
+    var first = f[0], last = f[f.length-1];
+    if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+  });
 
   // ---- search ----
   var searchEl = document.getElementById("search"), clearEl = document.getElementById("searchClear");
@@ -683,6 +707,8 @@
     document.getElementById("tabProducts").setAttribute("aria-selected", !isProto ? "true" : "false");
     document.getElementById("tabProtocols").classList.toggle("active", isProto);
     document.getElementById("tabProtocols").setAttribute("aria-selected", isProto ? "true" : "false");
+    document.getElementById("tabProducts").setAttribute("tabindex", !isProto ? "0" : "-1");
+    document.getElementById("tabProtocols").setAttribute("tabindex", isProto ? "0" : "-1");
     if(isProto){
       if(state.protocol) renderProtocolDetail(state.protocol);
       else renderProtocolsList();
@@ -691,6 +717,14 @@
   }
   document.getElementById("tabProducts").addEventListener("click", function(){ setView("products"); });
   document.getElementById("tabProtocols").addEventListener("click", function(){ setView("protocols"); });
+  // Arrow-key roving navigation for the tablist (ARIA APG)
+  document.querySelector(".view-tabs").addEventListener("keydown", function(e){
+    if(e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+    e.preventDefault();
+    var next = state.view === "products" ? "protocols" : "products";
+    setView(next);
+    document.getElementById(next === "products" ? "tabProducts" : "tabProtocols").focus();
+  });
 
   // ---- protocols rendering ----
   function renderProtocolsList(){
