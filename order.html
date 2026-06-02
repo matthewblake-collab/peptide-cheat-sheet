@@ -78,8 +78,6 @@ td{padding:6px 10px;border-bottom:1px solid var(--border);vertical-align:middle;
 .qty-in{width:52px;background:var(--bg);border:1px solid var(--border);color:var(--text);text-align:center;padding:4px;border-radius:5px;font-size:12px;font-family:monospace}
 .qty-in:focus{border-color:var(--accent);outline:none}
 .qty-in.has{border-color:#388bfd;background:rgba(31,111,235,.12);color:#fff}
-.sup-sel{background:var(--bg);border:1px solid var(--border);color:var(--text);padding:4px 6px;border-radius:5px;font-size:11px;font-family:monospace;cursor:pointer}
-.sup-sel:focus{outline:none;border-color:var(--accent)}
 
 /* BOTTOM PO */
 #poBar{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:2px solid var(--border);z-index:50;display:none}
@@ -110,6 +108,15 @@ td{padding:6px 10px;border-bottom:1px solid var(--border);vertical-align:middle;
 .print-btn:hover{opacity:.85}
 .copy-btn{background:var(--surface);color:var(--text);border:1px solid var(--border);padding:10px 16px;border-radius:6px;font-weight:700;cursor:pointer;font-family:monospace;font-size:12px;letter-spacing:1px;margin-left:8px}
 .copy-btn:hover{border-color:var(--accent);color:var(--accent)}
+.po-panel.selected{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.po-panel-badges{display:flex;gap:5px;margin-bottom:8px;flex-wrap:wrap;min-height:4px}
+.po-badge{font-size:9px;padding:2px 7px;border-radius:8px;font-weight:700;letter-spacing:.5px}
+.po-badge-best{background:rgba(227,179,65,.2);color:#e3b341;border:1px solid rgba(227,179,65,.4)}
+.po-badge-missing{background:rgba(248,81,73,.15);color:#f85149;border:1px solid rgba(248,81,73,.3)}
+.po-item-na{color:#f85149;font-size:11px;font-weight:700}
+.po-order-btn{width:100%;margin-top:10px;background:var(--surface);color:var(--muted);border:1px solid var(--border);padding:8px;border-radius:5px;font-weight:700;cursor:pointer;font-family:monospace;font-size:10px;letter-spacing:1px;transition:all .15s}
+.po-order-btn:hover{border-color:var(--accent);color:var(--accent)}
+.po-order-btn.selected{background:var(--accent);color:#000;border-color:var(--accent)}
 
 @media print{
   #lock,#poBar .po-toggle,.filters,.hdr-right,.theme-btn{display:none!important}
@@ -168,7 +175,7 @@ td{padding:6px 10px;border-bottom:1px solid var(--border);vertical-align:middle;
           <th style="color:var(--lee)">Lee</th>
           <th style="color:var(--acdc)">ACDC</th>
           <th>Best</th>
-          <th style="min-width:140px">Qty / Supplier</th>
+          <th style="min-width:70px">Qty</th>
         </tr>
       </thead>
       <tbody id="tbody"></tbody>
@@ -188,6 +195,7 @@ td{padding:6px 10px;border-bottom:1px solid var(--border);vertical-align:middle;
       <div class="po-summary-item">
         <span class="po-summary-label">Total USD</span>
         <span class="po-summary-val" id="totUSD">$0.00</span>
+        <span class="po-summary-sub" id="chosenLabel"></span>
       </div>
       <div class="po-summary-item">
         <span class="po-summary-label">Total AUD</span>
@@ -375,7 +383,8 @@ const rows=[
 ];
 rows.forEach((r,i)=>r.id=i);
 
-const order={}; // id -> {qty, sup}
+const order={}; // id -> qty
+let chosenSup=null; // explicit supplier picked via ORDER FROM button (null = auto/best)
 
 function cheapestKey(r){
   const v=SUPS.map(s=>r[s.key]!=null?{v:r[s.key],k:s.key}:null).filter(Boolean);
@@ -402,13 +411,7 @@ function renderTable(data){
     if(r.cat!==lastCat){html+=`<tr class="sec-hdr"><td colspan="8">${r.cat}</td></tr>`;lastCat=r.cat;}
     const w=cheapestKey(r);
     const rc=w&&w!=='tie'?`w-${w}`:'';
-    const cur=order[r.id]||{qty:0,sup:w||'lele'};
-    const qv=cur.qty||'';
-    const supOpts=SUPS.map(s=>{
-      const dis=r[s.key]==null;
-      const sel=cur.sup===s.key?'selected':'';
-      return`<option value="${s.key}" ${dis?'disabled':''} ${sel}>${s.label}${r[s.key]!=null?' $'+r[s.key]:'  N/A'}</option>`;
-    }).join('');
+    const qv=order[r.id]||'';
     html+=`<tr class="${rc}">
       <td><span class="pname">${r.p}</span></td>
       <td><span class="spec">${r.s}</span></td>
@@ -419,7 +422,6 @@ function renderTable(data){
       <td>${badgeHtml(w)}</td>
       <td><div class="qty-cell">
         <input class="qty-in ${qv>0?'has':''}" type="number" min="0" max="999" value="${qv||''}" placeholder="0" oninput="setQty(${r.id},this.value,this)">
-        <select class="sup-sel" onchange="setSup(${r.id},this.value)">${supOpts}</select>
       </div></td>
     </tr>`;
   }
@@ -428,20 +430,13 @@ function renderTable(data){
 
 function setQty(id,val,el){
   const n=parseInt(val)||0;
-  const r=rows[id];
   if(n<=0){delete order[id];el.classList.remove('has');}
-  else{
-    const cur=order[id]||{};
-    const sup=cur.sup||(cheapestKey(r)||SUPS.find(s=>r[s.key]!=null)?.key||'lele');
-    order[id]={qty:n,sup};
-    el.classList.add('has');
-  }
+  else{order[id]=n;el.classList.add('has');}
   updatePO();
 }
 
-function setSup(id,sup){
-  if(order[id])order[id].sup=sup;
-  else{const r=rows[id];if(r[sup]!=null)order[id]={qty:0,sup};}
+function chooseSup(key){
+  chosenSup=key;
   updatePO();
 }
 
@@ -453,53 +448,74 @@ function togglePO(){
   document.getElementById('poArrow').className=poOpen?'po-toggle-arrow open':'po-toggle-arrow';
 }
 
+// build per-supplier breakdown for the full selected basket
+function computeSuppliers(ids){
+  return SUPS.map(s=>{
+    const items=ids.map(id=>{
+      const r=rows[id];const qty=order[id];const price=r[s.key];
+      return{r,qty,price,has:price!=null,line:price!=null?price*qty:0};
+    });
+    const missing=items.filter(x=>!x.has).length;
+    const total=items.reduce((a,x)=>a+x.line,0);
+    return{...s,items,missing,total,complete:missing===0};
+  });
+}
+
 function updatePO(){
-  const ids=Object.keys(order).map(Number).filter(id=>order[id]?.qty>0);
+  const ids=Object.keys(order).map(Number).filter(id=>order[id]>0).sort((a,b)=>a-b);
   const bar=document.getElementById('poBar');
-  if(!ids.length){bar.className='';document.getElementById('selCount').textContent='';updatePills({});return;}
+  if(!ids.length){bar.className='';chosenSup=null;document.getElementById('selCount').textContent='';document.getElementById('poPanels').innerHTML='';updatePills({});return;}
   bar.className='show';
 
-  // group by supplier
-  const grouped={};
-  SUPS.forEach(s=>grouped[s.key]=[]);
-  let totalUSD=0;
-  for(const id of ids){
-    const r=rows[id];const{qty,sup}=order[id];
-    const price=r[sup];
-    if(price==null)continue;
-    grouped[sup].push({r,qty,price,line:price*qty});
-    totalUSD+=price*qty;
+  const sups=computeSuppliers(ids);
+
+  // BEST PRICE = cheapest supplier that can fill the WHOLE basket
+  const complete=sups.filter(s=>s.complete);
+  const bestTotal=complete.length?Math.min(...complete.map(s=>s.total)):null;
+  const bestKey=complete.length?complete.find(s=>s.total===bestTotal).key:null;
+
+  // effective chosen supplier: explicit pick, else best, else cheapest partial
+  let effective=chosenSup;
+  if(!effective||!sups.find(s=>s.key===effective)){
+    effective=bestKey||sups.slice().sort((a,b)=>a.total-b.total)[0].key;
   }
 
   // panels
   let panelsHtml='';
   const activeSups={};
-  for(const s of SUPS){
-    const items=grouped[s.key];
-    if(items.length>0)activeSups[s.key]=true;
-    let itemsHtml=items.length?items.map(({r,qty,line})=>`
+  for(const s of sups){
+    activeSups[s.key]=true;
+    const itemsHtml=s.items.map(({r,qty,price,has,line})=>`
       <div class="po-item">
         <span class="po-item-name">${r.p} <span class="spec">${r.s}</span></span>
-        <span class="po-item-price">×${qty} $${line.toLocaleString()}</span>
-      </div>`).join(''):`<div class="po-no-items">No items</div>`;
-    const supTotal=items.reduce((a,x)=>a+x.line,0);
-    panelsHtml+=`<div class="po-panel">
+        ${has?`<span class="po-item-price">×${qty} $${line.toLocaleString()}</span>`:`<span class="po-item-na">N/A</span>`}
+      </div>`).join('');
+    let badges='';
+    if(s.key===bestKey)badges+=`<span class="po-badge po-badge-best">★ BEST PRICE</span>`;
+    if(s.missing>0)badges+=`<span class="po-badge po-badge-missing">⚠ ${s.missing} MISSING</span>`;
+    const isSel=s.key===effective;
+    panelsHtml+=`<div class="po-panel ${isSel?'selected':''}">
       <div class="po-panel-hdr">
         <span class="po-panel-name" style="color:${s.color}">${s.label}</span>
-        <span class="po-panel-total" style="color:${s.color}">$${supTotal.toLocaleString()} USD</span>
+        <span class="po-panel-total" style="color:${s.color}">$${s.total.toLocaleString()} USD</span>
       </div>
+      <div class="po-panel-badges">${badges}</div>
       ${itemsHtml}
+      <button class="po-order-btn ${isSel?'selected':''}" onclick="chooseSup('${s.key}')">${isSel?'✓ ORDERING FROM '+s.label:'ORDER FROM '+s.label}</button>
     </div>`;
   }
   document.getElementById('poPanels').innerHTML=panelsHtml;
 
-  // totals
+  // summary reflects the chosen supplier's full-basket total
+  const chosen=sups.find(s=>s.key===effective);
+  const totalUSD=chosen.total;
   const rate=parseFloat(document.getElementById('rateIn').value)||1.55;
   const aud=totalUSD*rate;
   document.getElementById('totUSD').textContent=`$${totalUSD.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})} USD`;
   document.getElementById('totAUD').textContent=`A$${aud.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}`;
   document.getElementById('rateLabel').textContent=`@ 1 USD = ${rate.toFixed(2)} AUD`;
   document.getElementById('lineCount').textContent=ids.length;
+  document.getElementById('chosenLabel').textContent=chosen.missing>0?`${chosen.label} · ${chosen.missing} item(s) N/A`:`from ${chosen.label}`;
   document.getElementById('selCount').textContent=`${ids.length} selected`;
   updatePills(activeSups);
   if(!poOpen)togglePO();
@@ -511,32 +527,27 @@ function updatePills(active){
 }
 
 function copyPO(){
-  const ids=Object.keys(order).map(Number).filter(id=>order[id]?.qty>0);
-  const grouped={};
-  SUPS.forEach(s=>grouped[s.key]=[]);
-  let totalUSD=0;
-  for(const id of ids){
-    const r=rows[id];const{qty,sup}=order[id];
-    const price=r[sup];if(price==null)continue;
-    grouped[sup].push({r,qty,price,line:price*qty});
-    totalUSD+=price*qty;
-  }
+  const ids=Object.keys(order).map(Number).filter(id=>order[id]>0).sort((a,b)=>a-b);
+  if(!ids.length)return;
+  const sups=computeSuppliers(ids);
+  const complete=sups.filter(s=>s.complete);
+  const bestTotal=complete.length?Math.min(...complete.map(s=>s.total)):null;
+  const bestKey=complete.length?complete.find(s=>s.total===bestTotal).key:null;
+  let effective=chosenSup;
+  if(!effective||!sups.find(s=>s.key===effective))effective=bestKey||sups.slice().sort((a,b)=>a.total-b.total)[0].key;
+  const s=sups.find(x=>x.key===effective);
   const rate=parseFloat(document.getElementById('rateIn').value)||1.55;
   const date=new Date().toLocaleDateString('en-AU',{day:'2-digit',month:'short',year:'numeric'});
   let txt=`PEPTIDE PURCHASE ORDER — ${date}\n${'═'.repeat(55)}\n`;
-  for(const s of SUPS){
-    const items=grouped[s.key];
-    if(!items.length)continue;
-    txt+=`\n${s.label}\n${s.contact}\n${'─'.repeat(50)}\n`;
-    items.forEach(({r,qty,price,line})=>{
-      txt+=`${r.p} ${r.s}`.padEnd(38)+`×${qty}`.padStart(4)+` $${line.toLocaleString()}`.padStart(10)+'\n';
-    });
-    const st=items.reduce((a,x)=>a+x.line,0);
-    txt+=`${'Subtotal'.padEnd(42)}$${st.toLocaleString().padStart(10)}\n`;
-  }
+  txt+=`SUPPLIER: ${s.label}\n${s.contact}\n${'─'.repeat(50)}\n`;
+  s.items.forEach(({r,qty,price,has,line})=>{
+    const right=has?`×${qty} $${line.toLocaleString()}`:`×${qty}  N/A`;
+    txt+=`${r.p} ${r.s}`.padEnd(38)+right.padStart(14)+'\n';
+  });
+  if(s.missing>0)txt+=`\n⚠ ${s.missing} item(s) not carried by ${s.label} (marked N/A)\n`;
   txt+=`\n${'═'.repeat(55)}\n`;
-  txt+=`${'ORDER TOTAL USD'.padEnd(42)}$${totalUSD.toLocaleString(undefined,{maximumFractionDigits:2}).padStart(10)}\n`;
-  txt+=`${'ORDER TOTAL AUD'.padEnd(42)}A$${(totalUSD*rate).toLocaleString(undefined,{maximumFractionDigits:2}).padStart(9)}\n`;
+  txt+=`${'ORDER TOTAL USD'.padEnd(42)}$${s.total.toLocaleString(undefined,{maximumFractionDigits:2}).padStart(10)}\n`;
+  txt+=`${'ORDER TOTAL AUD'.padEnd(42)}A$${(s.total*rate).toLocaleString(undefined,{maximumFractionDigits:2}).padStart(9)}\n`;
   navigator.clipboard.writeText(txt).then(()=>{
     const btn=document.querySelector('.copy-btn');
     btn.textContent='✅ COPIED';
