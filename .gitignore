@@ -2,3 +2,4 @@
 .DS_Store
 scripts/raw/
 node_modules/
+.claude/
