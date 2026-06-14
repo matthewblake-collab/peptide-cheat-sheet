@@ -3,579 +3,393 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Peptide / Order</title>
+<title>Nico / Order</title>
 <style>
-:root{--bg:#0d1117;--surface:#161b22;--border:#21262d;--text:#e6edf3;--muted:#8b949e;--dim:#484f58;--heading:#f0f6ff;--hk:#58a6ff;--lele:#3fb950;--lee:#f0883e;--acdc:#a371f7;--accent:#e3b341}
-[data-theme=light]{--bg:#f6f8fa;--surface:#ffffff;--border:#d0d7de;--text:#1f2328;--muted:#636c76;--dim:#9198a1;--heading:#1f2328}
+:root{--bg:#0d1117;--sur:#161b22;--bor:#21262d;--txt:#e6edf3;--mut:#8b949e;--dim:#484f58;--hd:#f0f6ff;--ac:#a371f7;--gold:#e3b341}
+[data-theme=light]{--bg:#f6f8fa;--sur:#fff;--bor:#d0d7de;--txt:#1f2328;--mut:#636c76;--dim:#9198a1;--hd:#1f2328}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Courier New',monospace;background:var(--bg);color:var(--text);font-size:13px;min-height:100vh;padding-bottom:260px;transition:background .2s,color .2s}
-
-/* LOCK */
+body{font-family:'Courier New',monospace;background:var(--bg);color:var(--txt);font-size:13px;min-height:100vh;padding-bottom:280px}
 #lock{position:fixed;inset:0;background:var(--bg);z-index:9999;display:flex;align-items:center;justify-content:center}
-.lock-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:32px;width:280px;text-align:center;display:flex;flex-direction:column;gap:14px}
-.lock-card h2{color:var(--accent);font-size:16px;letter-spacing:3px}
-.lock-card p{color:var(--muted);font-size:11px}
-#pwIn{background:var(--bg);border:1px solid var(--border);color:var(--text);padding:10px;border-radius:6px;text-align:center;font-size:16px;letter-spacing:6px;font-family:monospace;width:100%}
-#pwIn:focus{outline:none;border-color:var(--accent)}
+.lc{background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:32px;width:280px;text-align:center;display:flex;flex-direction:column;gap:14px}
+.lc h2{color:var(--gold);font-size:16px;letter-spacing:3px}
+.lc p{color:var(--mut);font-size:11px}
+#pwIn{background:var(--bg);border:1px solid var(--bor);color:var(--txt);padding:10px;border-radius:6px;text-align:center;font-size:18px;letter-spacing:8px;font-family:monospace;width:100%}
+#pwIn:focus{outline:none;border-color:var(--gold)}
 #pwIn.shake{animation:shk .3s}
 @keyframes shk{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
 #pwErr{color:#f85149;font-size:11px;min-height:14px}
-.lock-btn{background:var(--accent);color:#000;border:none;padding:10px;border-radius:6px;font-weight:700;cursor:pointer;font-family:monospace;letter-spacing:1px}
-
-/* HEADER */
+.lbtn{background:var(--gold);color:#000;border:none;padding:10px;border-radius:6px;font-weight:700;cursor:pointer;font-family:monospace;letter-spacing:1px}
 #app{display:none}
-.hdr{display:flex;align-items:center;gap:14px;padding:12px 18px;border-bottom:1px solid var(--border);flex-wrap:wrap;gap:10px}
-.brand{font-size:16px;font-weight:700;color:var(--accent);letter-spacing:2px;white-space:nowrap}
-.brand span{color:var(--muted)}
-.rate-box{display:flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:11px;color:var(--muted)}
-.rate-box input{background:transparent;border:none;color:var(--accent);width:44px;font-family:monospace;font-size:11px;text-align:center}
-.rate-box input:focus{outline:none}
-.sup-pills{display:flex;gap:6px;flex-wrap:wrap}
-.sup-pill{display:flex;align-items:center;gap:4px;font-size:10px;letter-spacing:1px;font-weight:700;color:var(--muted);padding:3px 8px;border-radius:10px;border:1px solid var(--border);background:var(--surface)}
-.sup-pill.active-hk{color:var(--hk);border-color:var(--hk);background:rgba(88,166,255,.08)}
-.sup-pill.active-lele{color:var(--lele);border-color:var(--lele);background:rgba(63,185,80,.08)}
-.sup-pill.active-lee{color:var(--lee);border-color:var(--lee);background:rgba(240,136,62,.08)}
-.sup-pill.active-acdc{color:var(--acdc);border-color:var(--acdc);background:rgba(163,113,247,.08)}
-.hdr-right{margin-left:auto;display:flex;align-items:center;gap:10px}
-.selected-count{font-size:11px;color:var(--muted)}
-.theme-btn{background:none;border:none;cursor:pointer;font-size:18px;line-height:1}
-
-/* FILTERS */
-.filters{padding:8px 18px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--border)}
-.filters input,.filters select{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:6px;font-size:12px;font-family:monospace}
+.hdr{display:flex;align-items:center;gap:12px;padding:12px 18px;border-bottom:1px solid var(--bor);flex-wrap:wrap}
+.brand{font-size:16px;font-weight:700;color:var(--gold);letter-spacing:2px;white-space:nowrap}
+.brand span{color:var(--mut)}
+.rb{display:flex;align-items:center;gap:5px;background:var(--sur);border:1px solid var(--bor);border-radius:6px;padding:4px 10px;font-size:11px;color:var(--mut)}
+.rb input{background:transparent;border:none;color:var(--gold);width:44px;font-family:monospace;font-size:11px;text-align:center}
+.rb input:focus{outline:none}
+.nico-pill{font-size:11px;font-weight:700;padding:3px 12px;border-radius:10px;border:1px solid var(--ac);background:rgba(163,113,247,.12);color:var(--ac);letter-spacing:1px}
+.hdr-r{margin-left:auto;display:flex;align-items:center;gap:10px}
+.sc{font-size:11px;color:var(--mut)}
+.tbtn{background:none;border:none;cursor:pointer;font-size:18px}
+.filters{padding:8px 18px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--bor)}
+.filters input,.filters select{background:var(--sur);border:1px solid var(--bor);color:var(--txt);padding:6px 10px;border-radius:6px;font-size:12px;font-family:monospace}
 .filters input{width:200px}
-
-/* TABLE */
-.tbl-wrap{overflow-x:auto}
+.tw{overflow-x:auto}
 table{width:100%;border-collapse:collapse}
-thead th{background:var(--surface);color:var(--muted);font-weight:600;padding:7px 10px;text-align:left;position:sticky;top:0;z-index:5;border-bottom:1px solid var(--border);font-size:10px;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap}
+thead th{background:var(--sur);color:var(--mut);font-weight:600;padding:7px 10px;text-align:left;position:sticky;top:0;z-index:5;border-bottom:1px solid var(--bor);font-size:10px;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap}
 tbody tr:nth-child(even){background:var(--bg)}
-tbody tr:nth-child(odd){background:var(--surface)}
-tbody tr:hover{background:rgba(88,166,255,.05)!important}
-td{padding:6px 10px;border-bottom:1px solid var(--border);vertical-align:middle;white-space:nowrap}
-.sec-hdr td{background:#21262d!important;color:#f0f6fc;font-weight:700;font-size:10px;padding:5px 10px;letter-spacing:.5px}
-[data-theme=light] .sec-hdr td{background:#eaeef2!important;color:#1f2328}
-.pname{font-weight:700;color:var(--heading)}
-.spec{color:var(--muted);font-size:11px}
-.p-hk{color:var(--hk);font-weight:700}
-.p-lele{color:var(--lele);font-weight:700}
-.p-lee{color:var(--lee);font-weight:700}
-.p-acdc{color:var(--acdc);font-weight:700}
-.na{color:var(--dim)}
-.badge{font-size:9px;padding:2px 7px;border-radius:8px;font-weight:700;letter-spacing:.5px}
-.b-hk{background:rgba(88,166,255,.15);color:var(--hk)}
-.b-lele{background:rgba(63,185,80,.15);color:var(--lele)}
-.b-lee{background:rgba(240,136,62,.15);color:var(--lee)}
-.b-acdc{background:rgba(163,113,247,.15);color:var(--acdc)}
-.b-tie{background:rgba(255,255,255,.08);color:var(--muted)}
-.w-hk{background:rgba(88,166,255,.04)!important}
-.w-lele{background:rgba(63,185,80,.04)!important}
-.w-lee{background:rgba(240,136,62,.04)!important}
-.w-acdc{background:rgba(163,113,247,.04)!important}
-
-/* QTY + SUPPLIER */
-.qty-cell{display:flex;align-items:center;gap:5px}
-.qty-in{width:52px;background:var(--bg);border:1px solid var(--border);color:var(--text);text-align:center;padding:4px;border-radius:5px;font-size:12px;font-family:monospace}
-.qty-in:focus{border-color:var(--accent);outline:none}
-.qty-in.has{border-color:#388bfd;background:rgba(31,111,235,.12);color:#fff}
-
-/* BOTTOM PO */
-#poBar{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:2px solid var(--border);z-index:50;display:none}
+tbody tr:nth-child(odd){background:var(--sur)}
+tbody tr:hover{background:rgba(163,113,247,.05)!important}
+td{padding:7px 10px;border-bottom:1px solid var(--bor);vertical-align:middle;white-space:nowrap}
+.sh td{background:#21262d!important;color:#f0f6fc;font-weight:700;font-size:10px;padding:5px 10px;letter-spacing:.5px}
+[data-theme=light] .sh td{background:#eaeef2!important;color:#1f2328}
+.pn{font-weight:700;color:var(--hd)}
+.dose{color:var(--mut);font-size:11px}
+.code{color:var(--ac);font-size:11px;font-family:monospace;letter-spacing:.5px}
+.price{color:var(--ac);font-weight:700}
+.qi{width:60px;background:var(--bg);border:1px solid var(--bor);color:var(--txt);text-align:center;padding:5px;border-radius:5px;font-size:13px;font-family:monospace}
+.qi:focus{border-color:var(--gold);outline:none}
+.qi.has{border-color:var(--gold);background:rgba(227,179,65,.12);color:#fff;font-weight:700}
+#poBar{position:fixed;bottom:0;left:0;right:0;background:var(--sur);border-top:2px solid var(--bor);z-index:50;display:none}
 #poBar.show{display:block}
-.po-toggle{display:flex;align-items:center;gap:8px;padding:8px 18px;cursor:pointer;border-bottom:1px solid var(--border);user-select:none}
-.po-toggle-label{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--accent)}
-.po-toggle-arrow{font-size:12px;color:var(--muted);transition:transform .2s}
-.po-toggle-arrow.open{transform:rotate(180deg)}
-#poContent{display:none;padding:12px 18px 0}
-#poContent.open{display:block}
-.po-panels{display:flex;gap:10px;overflow-x:auto;padding-bottom:10px}
-.po-panel{flex:0 0 260px;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px;min-height:80px}
-.po-panel-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.po-panel-name{font-size:11px;font-weight:700;letter-spacing:1px}
-.po-panel-total{font-size:14px;font-weight:700}
-.po-item{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--border);font-size:11px}
-.po-item:last-child{border-bottom:none}
-.po-item-name{color:var(--text)}
-.po-item-name .spec{display:inline;color:var(--muted)}
-.po-item-price{color:var(--muted);text-align:right}
-.po-no-items{color:var(--dim);font-size:11px;text-align:center;padding:12px 0}
-.po-summary{display:flex;align-items:center;gap:20px;padding:10px 0 12px;border-top:1px solid var(--border);margin-top:4px;flex-wrap:wrap}
-.po-summary-item{display:flex;flex-direction:column;gap:2px}
-.po-summary-label{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
-.po-summary-val{font-size:16px;font-weight:700;color:var(--heading);font-family:monospace}
-.po-summary-sub{font-size:10px;color:var(--muted)}
-.print-btn{margin-left:auto;background:var(--accent);color:#000;border:none;padding:10px 20px;border-radius:6px;font-weight:700;cursor:pointer;font-family:monospace;font-size:12px;letter-spacing:1px;white-space:nowrap}
-.print-btn:hover{opacity:.85}
-.copy-btn{background:var(--surface);color:var(--text);border:1px solid var(--border);padding:10px 16px;border-radius:6px;font-weight:700;cursor:pointer;font-family:monospace;font-size:12px;letter-spacing:1px;margin-left:8px}
-.copy-btn:hover{border-color:var(--accent);color:var(--accent)}
-.po-panel.selected{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
-.po-panel-badges{display:flex;gap:5px;margin-bottom:8px;flex-wrap:wrap;min-height:4px}
-.po-badge{font-size:9px;padding:2px 7px;border-radius:8px;font-weight:700;letter-spacing:.5px}
-.po-badge-best{background:rgba(227,179,65,.2);color:#e3b341;border:1px solid rgba(227,179,65,.4)}
-.po-badge-missing{background:rgba(248,81,73,.15);color:#f85149;border:1px solid rgba(248,81,73,.3)}
-.po-item-na{color:#f85149;font-size:11px;font-weight:700}
-.po-order-btn{width:100%;margin-top:10px;background:var(--surface);color:var(--muted);border:1px solid var(--border);padding:8px;border-radius:5px;font-weight:700;cursor:pointer;font-family:monospace;font-size:10px;letter-spacing:1px;transition:all .15s}
-.po-order-btn:hover{border-color:var(--accent);color:var(--accent)}
-.po-order-btn.selected{background:var(--accent);color:#000;border-color:var(--accent)}
-
-@media print{
-  #lock,#poBar .po-toggle,.filters,.hdr-right,.theme-btn{display:none!important}
-  #poBar{position:static;border:none}
-  #poContent{display:block!important}
-  body{padding-bottom:0}
-}
-@media(max-width:600px){.po-panel{flex:0 0 220px}.hdr{padding:8px 12px}.brand{font-size:13px}}
+.pot{display:flex;align-items:center;gap:8px;padding:9px 18px;cursor:pointer;border-bottom:1px solid var(--bor);user-select:none}
+.pol{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--gold)}
+.poa{color:var(--mut);transition:transform .2s;font-size:11px}
+.poa.up{transform:rotate(180deg)}
+#pob{display:none;padding:14px 18px 0}
+#pob.open{display:block}
+.po-list{margin-bottom:12px;border:1px solid var(--bor);border-radius:8px;overflow:hidden}
+.po-list-hdr{background:rgba(163,113,247,.08);border-bottom:1px solid var(--bor);padding:8px 14px;display:flex;justify-content:space-between;align-items:center}
+.po-list-title{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--ac)}
+.po-list-total{font-size:15px;font-weight:700;color:var(--ac);font-family:monospace}
+.po-row{display:grid;grid-template-columns:70px 1fr auto auto;gap:10px;align-items:center;padding:6px 14px;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px}
+.po-row:last-child{border-bottom:none}
+.po-code{color:var(--ac);font-family:monospace;font-size:11px;font-weight:700}
+.po-name{color:var(--txt)}
+.po-name .d{color:var(--mut);font-size:10px}
+.po-qty{color:var(--mut);text-align:right;white-space:nowrap}
+.po-line{font-weight:700;text-align:right;white-space:nowrap}
+.po-extras{display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.po-extra{display:flex;align-items:center;gap:6px;background:var(--sur);border:1px solid var(--bor);border-radius:6px;padding:6px 12px;font-size:11px;color:var(--mut)}
+.po-extra label{white-space:nowrap}
+.po-extra input{background:var(--bg);border:1px solid var(--bor);color:var(--txt);padding:4px 7px;border-radius:5px;font-size:11px;font-family:monospace;width:70px;text-align:right}
+.po-extra input:focus{outline:none;border-color:var(--gold)}
+.ps{display:flex;align-items:center;gap:18px;padding:10px 0 12px;border-top:1px solid var(--bor);flex-wrap:wrap}
+.psi{display:flex;flex-direction:column;gap:1px}
+.psl{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--mut)}
+.psv{font-size:15px;font-weight:700;color:var(--hd);font-family:monospace}
+.pss{font-size:10px;color:var(--mut)}
+.cbtn{background:var(--sur);color:var(--txt);border:1px solid var(--bor);padding:9px 16px;border-radius:6px;font-weight:700;cursor:pointer;font-family:monospace;font-size:11px;letter-spacing:1px}
+.cbtn:hover{border-color:var(--gold);color:var(--gold)}
+.pbtn{margin-left:auto;background:var(--gold);color:#000;border:none;padding:10px 20px;border-radius:6px;font-weight:700;cursor:pointer;font-family:monospace;font-size:12px;letter-spacing:1px}
+.pbtn:hover{opacity:.85}
+@media print{#lock,.pot,.filters,.hdr-r,.tbtn,.po-extras{display:none!important}#poBar{position:static;border:none}#pob{display:block!important}body{padding-bottom:0}}
+@media(max-width:600px){.hdr{padding:8px 12px}.po-row{grid-template-columns:55px 1fr auto auto;gap:6px}}
 </style>
 </head>
 <body>
-
-<!-- LOCK -->
 <div id="lock">
-  <div class="lock-card">
-    <div style="font-size:32px">🧬</div>
-    <h2>PEPTIDE / ORDER</h2>
+  <div class="lc">
+    <div style="font-size:36px">🧬</div>
+    <h2>NICO / ORDER</h2>
     <p>Enter access code</p>
-    <input id="pwIn" type="password" placeholder="••••••" maxlength="20" onkeydown="if(event.key==='Enter')unlock()">
+    <input id="pwIn" type="password" placeholder="••••" maxlength="20" onkeydown="if(event.key==='Enter')unlock()">
     <div id="pwErr"></div>
-    <button class="lock-btn" onclick="unlock()">UNLOCK</button>
+    <button class="lbtn" onclick="unlock()">UNLOCK</button>
   </div>
 </div>
-
-<!-- APP -->
 <div id="app">
   <div class="hdr">
-    <div class="brand">PEPTIDE<span> / </span>ORDER</div>
-    <div class="rate-box">1 USD = <input id="rateIn" type="number" value="1.55" step="0.01" oninput="updatePO()"> AUD</div>
-    <div class="sup-pills" id="supPills"></div>
-    <div class="hdr-right">
-      <span class="selected-count" id="selCount"></span>
-      <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙</button>
+    <div class="brand">NICO<span> / </span>ORDER</div>
+    <span class="nico-pill">● ACDC / NICO</span>
+    <div class="rb">1 USD = <input id="rateIn" type="number" value="1.55" step="0.01" min="0.01" oninput="renderPO()"> AUD</div>
+    <div class="hdr-r">
+      <span class="sc" id="selCount"></span>
+      <button class="tbtn" onclick="toggleTheme()" id="themeBtn">🌙</button>
     </div>
   </div>
-
   <div class="filters">
-    <input type="text" id="search" placeholder="Search..." oninput="filterTable()">
-    <select id="filterCat" onchange="filterTable()"><option value="">All categories</option></select>
-    <select id="filterWinner" onchange="filterTable()">
-      <option value="">All suppliers</option>
-      <option value="hk">HKRoids cheapest</option>
-      <option value="lele">LELE cheapest</option>
-      <option value="lee">Lee cheapest</option>
-      <option value="acdc">ACDC cheapest</option>
-    </select>
+    <input type="text" id="search" placeholder="Search product or code..." oninput="ft()">
+    <select id="filterCat" onchange="ft()"><option value="">All categories</option></select>
   </div>
-
-  <div class="tbl-wrap">
+  <div class="tw">
     <table>
       <thead>
         <tr>
-          <th>Product</th><th>Spec</th>
-          <th style="color:var(--hk)">HKRoids</th>
-          <th style="color:var(--lele)">LELE</th>
-          <th style="color:var(--lee)">Lee</th>
-          <th style="color:var(--acdc)">ACDC</th>
-          <th>Best</th>
-          <th style="min-width:70px">Qty</th>
+          <th>Product</th>
+          <th>Dose</th>
+          <th>Code</th>
+          <th style="color:var(--ac)">Price (USD)</th>
+          <th>Qty</th>
         </tr>
       </thead>
       <tbody id="tbody"></tbody>
     </table>
   </div>
 </div>
-
-<!-- BOTTOM PO -->
 <div id="poBar">
-  <div class="po-toggle" onclick="togglePO()">
-    <span class="po-toggle-label">► PURCHASE ORDER</span>
-    <span class="po-toggle-arrow" id="poArrow">▲</span>
+  <div class="pot" onclick="togglePO()">
+    <span class="pol">► PURCHASE ORDER — ACDC / NICO</span>
+    <span class="poa" id="poArrow">▲</span>
   </div>
-  <div id="poContent">
-    <div class="po-panels" id="poPanels"></div>
-    <div class="po-summary">
-      <div class="po-summary-item">
-        <span class="po-summary-label">Total USD</span>
-        <span class="po-summary-val" id="totUSD">$0.00</span>
-        <span class="po-summary-sub" id="chosenLabel"></span>
+  <div id="pob">
+    <div class="po-list">
+      <div class="po-list-hdr">
+        <span class="po-list-title">ACDC / NICO · WhatsApp +852 6324 8271</span>
+        <span class="po-list-total" id="poSubtotal">$0 USD</span>
       </div>
-      <div class="po-summary-item">
-        <span class="po-summary-label">Total AUD</span>
-        <span class="po-summary-val" id="totAUD">A$0.00</span>
-        <span class="po-summary-sub" id="rateLabel">@ 1 USD = 1.55 AUD</span>
-      </div>
-      <div class="po-summary-item">
-        <span class="po-summary-label">Line Items</span>
-        <span class="po-summary-val" id="lineCount">0</span>
-      </div>
-      <button class="copy-btn" onclick="copyPO()">📋 COPY</button>
-      <button class="print-btn" onclick="window.print()">🖨 PRINT ORDER</button>
+      <div id="poItems"></div>
+    </div>
+    <div class="po-extras">
+      <div class="po-extra"><label>Discount %</label><input id="discIn" type="number" min="0" max="100" placeholder="0" oninput="renderPO()"> %</div>
+      <div class="po-extra"><label>Shipping USD</label><input id="shipIn" type="number" min="0" placeholder="0" oninput="renderPO()"> $</div>
+    </div>
+    <div class="ps">
+      <div class="psi"><span class="psl">Total USD</span><span class="psv" id="sumUSD">$0.00</span></div>
+      <div class="psi"><span class="psl">Total AUD</span><span class="psv" id="sumAUD">A$0.00</span><span class="pss" id="rateLabel">@ 1 USD = 1.55 AUD</span></div>
+      <div class="psi"><span class="psl">Line Items</span><span class="psv" id="sumLines">0</span></div>
+      <button class="cbtn" onclick="copyPO()" id="copyBtn">📋 COPY FOR WHATSAPP</button>
+      <button class="pbtn" onclick="window.print()">🖨 PRINT ORDER</button>
     </div>
   </div>
 </div>
-
 <script>
-// ── AUTH ──
-if(sessionStorage.getItem('po_ok')==='1'){
-  document.getElementById('lock').style.display='none';
-  document.getElementById('app').style.display='block';
-}
-function unlock(){
-  if(document.getElementById('pwIn').value==='12345'){
-    sessionStorage.setItem('po_ok','1');
-    document.getElementById('lock').style.display='none';
-    document.getElementById('app').style.display='block';
-    init();
-  } else {
-    const el=document.getElementById('pwIn');
-    el.classList.remove('shake');void el.offsetWidth;el.classList.add('shake');
-    document.getElementById('pwErr').textContent='Incorrect';
-    setTimeout(()=>document.getElementById('pwErr').textContent='',1800);
-  }
-}
-
-// ── THEME ──
-function toggleTheme(){
-  const t=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
-  document.documentElement.setAttribute('data-theme',t);
-  document.getElementById('themeBtn').textContent=t==='dark'?'🌙':'☀️';
-}
-
-// ── SUPPLIERS ──
-const SUPS=[
-  {key:'hk',  label:'HKROIDS', color:'var(--hk)',  contact:'owen@hkroids.net'},
-  {key:'lele',label:'SYNEX',   color:'var(--lele)',contact:'service@synexpeptide.com'},
-  {key:'lee', label:'LEE',     color:'var(--lee)', contact:'(supplier channel)'},
-  {key:'acdc',label:'NICO',    color:'var(--acdc)',contact:'WhatsApp +852 6324 8271 · acdcsource.com'},
+'use strict';
+(function(){if(sessionStorage.getItem('po_ok')==='1'){document.getElementById('lock').style.display='none';document.getElementById('app').style.display='block';}})();
+function unlock(){const v=document.getElementById('pwIn').value;if(v==='12345'){sessionStorage.setItem('po_ok','1');document.getElementById('lock').style.display='none';document.getElementById('app').style.display='block';init();}else{const el=document.getElementById('pwIn');el.classList.remove('shake');void el.offsetWidth;el.classList.add('shake');document.getElementById('pwErr').textContent='Incorrect';setTimeout(()=>{document.getElementById('pwErr').textContent='';},2000);}}
+function toggleTheme(){const t=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);document.getElementById('themeBtn').textContent=t==='dark'?'🌙':'☀️';}
+const ROWS=[
+{cat:"Semaglutide",p:"Semaglutide",s:"5mg",ac:38,code:"SM5"},
+{cat:"Semaglutide",p:"Semaglutide",s:"10mg",ac:51,code:"SM10"},
+{cat:"Semaglutide",p:"Semaglutide",s:"15mg",ac:60,code:"SM15"},
+{cat:"Semaglutide",p:"Semaglutide",s:"20mg",ac:74,code:"SM20"},
+{cat:"Semaglutide",p:"Semaglutide",s:"50mg",ac:128,code:"SM50"},
+{cat:"Tirzepatide",p:"Tirzepatide",s:"5mg",ac:43,code:"TR5"},
+{cat:"Tirzepatide",p:"Tirzepatide",s:"10mg",ac:62,code:"TR10"},
+{cat:"Tirzepatide",p:"Tirzepatide",s:"15mg",ac:81,code:"TR15"},
+{cat:"Tirzepatide",p:"Tirzepatide",s:"20mg",ac:101,code:"TR20"},
+{cat:"Tirzepatide",p:"Tirzepatide",s:"30mg",ac:132,code:"TR30"},
+{cat:"Tirzepatide",p:"Tirzepatide",s:"40mg",ac:177,code:"TR40"},
+{cat:"Tirzepatide",p:"Tirzepatide",s:"50mg",ac:209,code:"TR50"},
+{cat:"Tirzepatide",p:"Tirzepatide",s:"60mg",ac:243,code:"TR60"},
+{cat:"Retatrutide",p:"Retatrutide",s:"5mg",ac:59,code:"RT5"},
+{cat:"Retatrutide",p:"Retatrutide",s:"10mg",ac:99,code:"RT10"},
+{cat:"Retatrutide",p:"Retatrutide",s:"15mg",ac:139,code:"RT15"},
+{cat:"Retatrutide",p:"Retatrutide",s:"20mg",ac:158,code:"RT20"},
+{cat:"Retatrutide",p:"Retatrutide",s:"30mg",ac:189,code:"RT30"},
+{cat:"Retatrutide",p:"Retatrutide",s:"40mg",ac:238,code:"RT40"},
+{cat:"Retatrutide",p:"Retatrutide",s:"60mg",ac:355,code:"RT60"},
+{cat:"Cagrilintide",p:"Cagrilintide",s:"5mg",ac:119,code:"CGL5"},
+{cat:"Cagrilintide",p:"Cagrilintide",s:"10mg",ac:227,code:"CGL10"},
+{cat:"Cagrilintide",p:"Cagri+Sema Blend",s:"5+5mg",ac:88,code:"CS10"},
+{cat:"Tesamorelin",p:"Tesamorelin",s:"5mg",ac:107,code:"TSM5"},
+{cat:"Tesamorelin",p:"Tesamorelin",s:"10mg",ac:206,code:"TSM10"},
+{cat:"Tesamorelin",p:"Tesamorelin",s:"20mg",ac:362,code:"TSM20"},
+{cat:"Other GLP-1",p:"Survodutide",s:"10mg",ac:237,code:"SUR10"},
+{cat:"Other GLP-1",p:"Mazdutide",s:"10mg",ac:254,code:"MZ10"},
+{cat:"Other GLP-1",p:"Liraglutide",s:"5mg",ac:90,code:"LG5"},
+{cat:"Other GLP-1",p:"Liraglutide",s:"10mg",ac:160,code:"LG10"},
+{cat:"Other GLP-1",p:"Liraglutide",s:"30mg",ac:457,code:"LG30"},
+{cat:"Other GLP-1",p:"Ret+Tirz Blend",s:"20mg+40mg",ac:254,code:"RT-TR"},
+{cat:"HGH / GH Axis",p:"HGH 191AA",s:"10iu",ac:64,code:"H10"},
+{cat:"HGH / GH Axis",p:"HGH 191AA",s:"12iu",ac:74,code:"H12"},
+{cat:"HGH / GH Axis",p:"HGH 191AA",s:"15iu",ac:92,code:"H15"},
+{cat:"HGH / GH Axis",p:"HGH 191AA",s:"24iu",ac:141,code:"H24"},
+{cat:"HGH / GH Axis",p:"HGH 191AA",s:"36iu",ac:200,code:"H36"},
+{cat:"HGH / GH Axis",p:"HGH Frag 176-191",s:"5mg",ac:90,code:"Frag5"},
+{cat:"HGH / GH Axis",p:"HGH Frag 176-191",s:"10mg",ac:171,code:"Frag10"},
+{cat:"HGH / GH Axis",p:"HGH Frag 176-191",s:"15mg",ac:226,code:"Frag15"},
+{cat:"HGH / GH Axis",p:"GHRP-2",s:"5mg",ac:37,code:"G25"},
+{cat:"HGH / GH Axis",p:"GHRP-2",s:"10mg",ac:52,code:"G210"},
+{cat:"HGH / GH Axis",p:"GHRP-6",s:"5mg",ac:37,code:"G65"},
+{cat:"HGH / GH Axis",p:"GHRP-6",s:"10mg",ac:52,code:"G610"},
+{cat:"HGH / GH Axis",p:"Sermorelin",s:"5mg",ac:79,code:"SMO5"},
+{cat:"HGH / GH Axis",p:"Sermorelin",s:"10mg",ac:137,code:"SMO10"},
+{cat:"HGH / GH Axis",p:"Ipamorelin",s:"5mg",ac:43,code:"IP5"},
+{cat:"HGH / GH Axis",p:"Ipamorelin",s:"10mg",ac:56,code:"IP10"},
+{cat:"HGH / GH Axis",p:"Hexarelin",s:"5mg",ac:140,code:"HX5"},
+{cat:"HGH / GH Axis",p:"Hexarelin",s:"10mg",ac:155,code:"HX10"},
+{cat:"HGH / GH Axis",p:"IGF-1 LR3",s:"0.1mg",ac:41,code:"IG01"},
+{cat:"HGH / GH Axis",p:"IGF-1 LR3",s:"1mg",ac:218,code:"IG1"},
+{cat:"HGH / GH Axis",p:"MGF",s:"2mg",ac:69,code:"FM2"},
+{cat:"HGH / GH Axis",p:"MOTS-C",s:"10mg",ac:74,code:"MS10"},
+{cat:"HGH / GH Axis",p:"MOTS-C",s:"15mg",ac:117,code:"MS15"},
+{cat:"HGH / GH Axis",p:"MOTS-C",s:"20mg",ac:134,code:"MS20"},
+{cat:"HGH / GH Axis",p:"MOTS-C",s:"40mg",ac:272,code:"MS40"},
+{cat:"HGH / GH Axis",p:"CJC-1295 DAC",s:"5mg",ac:167,code:"CD5"},
+{cat:"HGH / GH Axis",p:"CJC-1295 DAC",s:"10mg",ac:319,code:"CD10"},
+{cat:"HGH / GH Axis",p:"CJC-1295 nDAC",s:"5mg",ac:78,code:"CND5"},
+{cat:"HGH / GH Axis",p:"CJC-1295 nDAC",s:"10mg",ac:127,code:"CND10"},
+{cat:"HGH / GH Axis",p:"CJC nD + Ipa Blend",s:"5+5mg",ac:93,code:"CP10"},
+{cat:"Repair / Recovery",p:"BPC-157",s:"5mg",ac:45,code:"BC5"},
+{cat:"Repair / Recovery",p:"BPC-157",s:"10mg",ac:65,code:"BC10"},
+{cat:"Repair / Recovery",p:"TB-500",s:"5mg",ac:86,code:"TB5"},
+{cat:"Repair / Recovery",p:"TB-500",s:"10mg",ac:160,code:"TB10"},
+{cat:"Repair / Recovery",p:"TB-500",s:"20mg",ac:278,code:"TB20"},
+{cat:"Repair / Recovery",p:"BPC+TB Blend",s:"5+5mg",ac:117,code:"BB10"},
+{cat:"Repair / Recovery",p:"BPC+TB Blend",s:"10+10mg",ac:191,code:"BB20"},
+{cat:"Repair / Recovery",p:"GLOW70 (BPC+TB+GHK)",s:"70mg",ac:208,code:"BBG"},
+{cat:"Repair / Recovery",p:"KLOW80 (BPC+TB+GHK+KPV)",s:"80mg",ac:244,code:"KL80"},
+{cat:"Repair / Recovery",p:"ARA-290",s:"10mg",ac:79,code:"RA10"},
+{cat:"Repair / Recovery",p:"KPV",s:"5mg",ac:41,code:"KP5"},
+{cat:"Repair / Recovery",p:"KPV",s:"10mg",ac:51,code:"KP10"},
+{cat:"Repair / Recovery",p:"VIP",s:"5mg",ac:85,code:"VP5"},
+{cat:"Repair / Recovery",p:"VIP",s:"10mg",ac:145,code:"VP10"},
+{cat:"Repair / Recovery",p:"LL-37",s:"5mg",ac:106,code:"LL37"},
+{cat:"Repair / Recovery",p:"SS-31",s:"10mg",ac:86,code:"2S10"},
+{cat:"Repair / Recovery",p:"SS-31",s:"50mg",ac:333,code:"2S50"},
+{cat:"Repair / Recovery",p:"B7-33",s:"2mg",ac:62,code:"B7-2"},
+{cat:"Repair / Recovery",p:"B7-33",s:"10mg",ac:219,code:"B7-10"},
+{cat:"Copper / Skin",p:"GHK-Cu",s:"50mg",ac:30,code:"CU50"},
+{cat:"Copper / Skin",p:"GHK-Cu",s:"100mg",ac:43,code:"CU100"},
+{cat:"Copper / Skin",p:"AHK-Cu",s:"50mg",ac:76,code:"AU50"},
+{cat:"Copper / Skin",p:"Matrixyl",s:"10mg",ac:40,code:"MX10"},
+{cat:"HCG / Gonadal",p:"HCG",s:"2000iu",ac:54,code:"G2K"},
+{cat:"HCG / Gonadal",p:"HCG",s:"5000iu",ac:87,code:"G5K"},
+{cat:"HCG / Gonadal",p:"HCG",s:"10000iu",ac:162,code:"G10K"},
+{cat:"HCG / Gonadal",p:"Kisspeptin-10",s:"5mg",ac:47,code:"KS5"},
+{cat:"HCG / Gonadal",p:"Kisspeptin-10",s:"10mg",ac:79,code:"KS10"},
+{cat:"HCG / Gonadal",p:"Oxytocin",s:"5mg",ac:39,code:"OT5"},
+{cat:"Cognitive / Neuro",p:"Selank",s:"5mg",ac:39,code:"SK5"},
+{cat:"Cognitive / Neuro",p:"Selank",s:"10mg",ac:58,code:"SK10"},
+{cat:"Cognitive / Neuro",p:"Semax",s:"5mg",ac:44,code:"XA5"},
+{cat:"Cognitive / Neuro",p:"Semax",s:"10mg",ac:62,code:"XA10"},
+{cat:"Cognitive / Neuro",p:"DSIP",s:"5mg",ac:45,code:"DS5"},
+{cat:"Cognitive / Neuro",p:"DSIP",s:"10mg",ac:85,code:"DS10"},
+{cat:"Cognitive / Neuro",p:"DSIP",s:"15mg",ac:125,code:"DS15"},
+{cat:"Cognitive / Neuro",p:"Epithalon",s:"10mg",ac:49,code:"ET10"},
+{cat:"Cognitive / Neuro",p:"Epithalon",s:"50mg",ac:151,code:"ET50"},
+{cat:"Cognitive / Neuro",p:"Snap-8",s:"10mg",ac:37,code:"NP810"},
+{cat:"Cognitive / Neuro",p:"PT-141",s:"10mg",ac:64,code:"P41"},
+{cat:"Cognitive / Neuro",p:"Melanotan 1",s:"10mg",ac:53,code:"MT1"},
+{cat:"Cognitive / Neuro",p:"Melanotan 2",s:"10mg",ac:55,code:"MT2"},
+{cat:"Cognitive / Neuro",p:"Lemon Bottle",s:"10ml",ac:65,code:"LEMON"},
+{cat:"Cognitive / Neuro",p:"Adamax",s:"5mg",ac:86,code:"ADM5"},
+{cat:"Cognitive / Neuro",p:"Adamax",s:"10mg",ac:124,code:"ADM10"},
+{cat:"Cognitive / Neuro",p:"Pinealon",s:"5mg",ac:43,code:"PIN5"},
+{cat:"Cognitive / Neuro",p:"Pinealon",s:"10mg",ac:67,code:"PIN10"},
+{cat:"Cognitive / Neuro",p:"Cerebrolysin",s:"60mg (6 vials)",ac:48,code:"CBL"},
+{cat:"Cognitive / Neuro",p:"PE-22-28",s:"5mg",ac:46,code:"PE5"},
+{cat:"Cognitive / Neuro",p:"PE-22-28",s:"10mg",ac:89,code:"PE10"},
+{cat:"Immune / Longevity",p:"Thymosin Alpha-1",s:"5mg",ac:102,code:"TA5"},
+{cat:"Immune / Longevity",p:"Thymosin Alpha-1",s:"10mg",ac:171,code:"TA10"},
+{cat:"Immune / Longevity",p:"Thymalin",s:"10mg",ac:74,code:"TY10"},
+{cat:"Immune / Longevity",p:"FOXO4-DRI",s:"10mg",ac:50,code:"FOXO4"},
+{cat:"Immune / Longevity",p:"ACE-031",s:"1mg",ac:43,code:"AC1"},
+{cat:"Immune / Longevity",p:"Follistatin 344",s:"10ml",ac:289,code:"344"},
+{cat:"Immune / Longevity",p:"PNC-27",s:"5mg",ac:103,code:"PNC27"},
+{cat:"Immune / Longevity",p:"Humanin",s:"10mg",ac:297,code:"HMN"},
+{cat:"Immune / Longevity",p:"Triptorelin",s:"2mg",ac:49,code:"TRIP2"},
+{cat:"Immune / Longevity",p:"Bronchogen",s:"20mg",ac:109,code:"BRON"},
+{cat:"NAD+ / Mito",p:"NAD+",s:"100mg",ac:28,code:"NJ100"},
+{cat:"NAD+ / Mito",p:"NAD+",s:"500mg",ac:42,code:"NJ500"},
+{cat:"NAD+ / Mito",p:"NAD+",s:"1000mg",ac:54,code:"NJ1000"},
+{cat:"NAD+ / Mito",p:"AICAR",s:"50mg",ac:51,code:"AR50"},
+{cat:"NAD+ / Mito",p:"5-amino-1MQ",s:"5mg",ac:39,code:"AM5"},
+{cat:"NAD+ / Mito",p:"5-amino-1MQ",s:"10mg",ac:58,code:"AM10"},
+{cat:"NAD+ / Mito",p:"SLU-PP-332",s:"5mg",ac:143,code:"332"},
+{cat:"Glutathione / IV",p:"Glutathione",s:"1500mg",ac:75,code:"GTT1500"},
+{cat:"Glutathione / IV",p:"Lipo-C (LC120)",s:"10ml",ac:65,code:"LC120"},
+{cat:"Glutathione / IV",p:"Lipo-C Fat Blaster (LC526)",s:"10ml",ac:112,code:"LC526"},
+{cat:"Glutathione / IV",p:"Super Shred (LC553)",s:"10ml",ac:112,code:"LC553"},
+{cat:"Glutathione / IV",p:"L-Carnitine 600mg",s:"10ml",ac:60,code:"LC600"},
+{cat:"Glutathione / IV",p:"L-Carnitine 1200mg",s:"10ml",ac:66,code:"LC1200"},
+{cat:"Glutathione / IV",p:"MIC+Arginine (LC216)",s:"10ml",ac:65,code:"LC216"},
+{cat:"Glutathione / IV",p:"Super Human Blend",s:"10ml",ac:146,code:"SHB"},
+{cat:"Glutathione / IV",p:"B12",s:"10ml",ac:44,code:"B12"},
+{cat:"Glutathione / IV",p:"EPO",s:"3000iu",ac:66,code:"EPO"},
+{cat:"Consumables",p:"Bac Water",s:"3ml",ac:8,code:"BA3"},
+{cat:"Consumables",p:"Bac Water",s:"10ml",ac:15,code:"BA10"},
+{cat:"Consumables",p:"Acetic Acid",s:"3ml",ac:10,code:"AA3"},
 ];
-
-// ── DATA ──
-const rows=[
-  {cat:"Semaglutide",p:"Semaglutide",s:"2mg×10",hk:41,lele:30,lee:null,acdc:null},
-  {cat:"Semaglutide",p:"Semaglutide",s:"5mg×10",hk:50,lele:40,lee:35,acdc:38},
-  {cat:"Semaglutide",p:"Semaglutide",s:"10mg×10",hk:69,lele:55,lee:55,acdc:51},
-  {cat:"Semaglutide",p:"Semaglutide",s:"15mg×10",hk:88,lele:65,lee:70,acdc:60},
-  {cat:"Semaglutide",p:"Semaglutide",s:"20mg×10",hk:110,lele:80,lee:80,acdc:74},
-  {cat:"Semaglutide",p:"Semaglutide",s:"30mg×10",hk:145,lele:98,lee:110,acdc:null},
-  {cat:"Semaglutide",p:"Semaglutide",s:"50mg×10",hk:null,lele:130,lee:null,acdc:128},
-  {cat:"Tirzepatide",p:"Tirzepatide",s:"5mg×10",hk:57,lele:45,lee:40,acdc:43},
-  {cat:"Tirzepatide",p:"Tirzepatide",s:"10mg×10",hk:75,lele:60,lee:50,acdc:62},
-  {cat:"Tirzepatide",p:"Tirzepatide",s:"15mg×10",hk:94,lele:70,lee:70,acdc:81},
-  {cat:"Tirzepatide",p:"Tirzepatide",s:"20mg×10",hk:126,lele:90,lee:85,acdc:101},
-  {cat:"Tirzepatide",p:"Tirzepatide",s:"30mg×10",hk:157,lele:110,lee:105,acdc:132},
-  {cat:"Tirzepatide",p:"Tirzepatide",s:"40mg×10",hk:189,lele:140,lee:130,acdc:177},
-  {cat:"Tirzepatide",p:"Tirzepatide",s:"50mg×10",hk:220,lele:180,lee:200,acdc:209},
-  {cat:"Tirzepatide",p:"Tirzepatide",s:"60mg×10",hk:251,lele:200,lee:220,acdc:243},
-  {cat:"Retatrutide",p:"Retatrutide",s:"5mg×10",hk:94,lele:60,lee:50,acdc:59},
-  {cat:"Retatrutide",p:"Retatrutide",s:"10mg×10",hk:141,lele:95,lee:90,acdc:99},
-  {cat:"Retatrutide",p:"Retatrutide",s:"15mg×10",hk:204,lele:130,lee:125,acdc:139},
-  {cat:"Retatrutide",p:"Retatrutide",s:"20mg×10",hk:267,lele:155,lee:150,acdc:158},
-  {cat:"Retatrutide",p:"Retatrutide",s:"30mg×10",hk:361,lele:200,lee:200,acdc:189},
-  {cat:"Retatrutide",p:"Retatrutide",s:"40mg×10",hk:456,lele:270,lee:280,acdc:238},
-  {cat:"Retatrutide",p:"Retatrutide",s:"60mg×10",hk:644,lele:350,lee:460,acdc:355},
-  {cat:"Cagrilintide",p:"Cagrilintide",s:"5mg×10",hk:151,lele:125,lee:null,acdc:119},
-  {cat:"Cagrilintide",p:"Cagrilintide",s:"10mg×10",hk:299,lele:220,lee:230,acdc:227},
-  {cat:"Cagrilintide",p:"Cagri+Sema",s:"5+5mg×10",hk:204,lele:160,lee:100,acdc:88},
-  {cat:"Tesamorelin",p:"Tesamorelin",s:"2mg×10",hk:63,lele:60,lee:null,acdc:null},
-  {cat:"Tesamorelin",p:"Tesamorelin",s:"5mg×10",hk:129,lele:115,lee:110,acdc:107},
-  {cat:"Tesamorelin",p:"Tesamorelin",s:"10mg×10",hk:245,lele:200,lee:200,acdc:206},
-  {cat:"Tesamorelin",p:"Tesamorelin",s:"20mg×10",hk:471,lele:420,lee:350,acdc:362},
-  {cat:"Other GLP-1",p:"Survodutide",s:"10mg×10",hk:409,lele:325,lee:320,acdc:237},
-  {cat:"Other GLP-1",p:"Mazdutide",s:"10mg×10",hk:257,lele:240,lee:null,acdc:254},
-  {cat:"Other GLP-1",p:"Liraglutide",s:"5mg×10",hk:null,lele:110,lee:null,acdc:90},
-  {cat:"Other GLP-1",p:"Liraglutide",s:"10mg×10",hk:null,lele:200,lee:null,acdc:160},
-  {cat:"HGH / GH",p:"HGH 191AA",s:"10iu×10",hk:63,lele:65,lee:38,acdc:64},
-  {cat:"HGH / GH",p:"HGH 191AA",s:"12iu×10",hk:75,lele:null,lee:null,acdc:74},
-  {cat:"HGH / GH",p:"HGH 191AA",s:"15iu×10",hk:94,lele:100,lee:70,acdc:92},
-  {cat:"HGH / GH",p:"HGH 191AA",s:"24iu×10",hk:151,lele:140,lee:125,acdc:141},
-  {cat:"HGH / GH",p:"HGH 191AA",s:"36iu×10",hk:209,lele:210,lee:150,acdc:200},
-  {cat:"HGH / GH",p:"HGH Frag 176-191",s:"5mg×10",hk:119,lele:100,lee:null,acdc:90},
-  {cat:"HGH / GH",p:"HGH Frag 176-191",s:"10mg×10",hk:null,lele:180,lee:null,acdc:171},
-  {cat:"HGH / GH",p:"GHRP-2",s:"5mg×10",hk:31,lele:35,lee:26,acdc:37},
-  {cat:"HGH / GH",p:"GHRP-2",s:"10mg×10",hk:57,lele:65,lee:50,acdc:52},
-  {cat:"HGH / GH",p:"GHRP-6",s:"5mg×10",hk:31,lele:40,lee:26,acdc:37},
-  {cat:"HGH / GH",p:"GHRP-6",s:"10mg×10",hk:57,lele:60,lee:50,acdc:52},
-  {cat:"HGH / GH",p:"Sermorelin",s:"5mg×10",hk:88,lele:85,lee:75,acdc:79},
-  {cat:"HGH / GH",p:"Sermorelin",s:"10mg×10",hk:167,lele:145,lee:140,acdc:137},
-  {cat:"HGH / GH",p:"Ipamorelin",s:"5mg×10",hk:47,lele:45,lee:40,acdc:43},
-  {cat:"HGH / GH",p:"Ipamorelin",s:"10mg×10",hk:82,lele:80,lee:70,acdc:56},
-  {cat:"HGH / GH",p:"Hexarelin",s:"2mg×10",hk:63,lele:55,lee:55,acdc:null},
-  {cat:"HGH / GH",p:"Hexarelin",s:"5mg×10",hk:101,lele:130,lee:85,acdc:140},
-  {cat:"HGH / GH",p:"IGF-1 LR3",s:"0.1mg×10",hk:50,lele:45,lee:null,acdc:41},
-  {cat:"HGH / GH",p:"IGF-1 LR3",s:"1mg×10",hk:245,lele:230,lee:400,acdc:218},
-  {cat:"HGH / GH",p:"MGF",s:"2mg×10",hk:44,lele:70,lee:40,acdc:69},
-  {cat:"HGH / GH",p:"PEG-MGF",s:"2mg×10",hk:101,lele:100,lee:null,acdc:null},
-  {cat:"HGH / GH",p:"MOTS-C",s:"10mg×10",hk:79,lele:80,lee:65,acdc:74},
-  {cat:"HGH / GH",p:"MOTS-C",s:"20mg×10",hk:157,lele:150,lee:125,acdc:134},
-  {cat:"HGH / GH",p:"MOTS-C",s:"40mg×10",hk:314,lele:260,lee:255,acdc:272},
-  {cat:"HGH / GH",p:"CJC-1295 DAC",s:"5mg×10",hk:204,lele:190,lee:180,acdc:167},
-  {cat:"HGH / GH",p:"CJC-1295 nDAC",s:"5mg×10",hk:101,lele:95,lee:85,acdc:78},
-  {cat:"HGH / GH",p:"CJC-1295 nDAC",s:"10mg×10",hk:189,lele:165,lee:160,acdc:127},
-  {cat:"HGH / GH",p:"CJC nD + Ipa",s:"5+5mg×10",hk:132,lele:110,lee:110,acdc:93},
-  {cat:"Repair",p:"BPC-157",s:"5mg×10",hk:47,lele:45,lee:40,acdc:45},
-  {cat:"Repair",p:"BPC-157",s:"10mg×10",hk:82,lele:70,lee:70,acdc:65},
-  {cat:"Repair",p:"TB-500",s:"2mg×10",hk:50,lele:null,lee:null,acdc:null},
-  {cat:"Repair",p:"TB-500",s:"5mg×10",hk:110,lele:90,lee:95,acdc:86},
-  {cat:"Repair",p:"TB-500",s:"10mg×10",hk:204,lele:160,lee:160,acdc:160},
-  {cat:"Repair",p:"BPC+TB Blend",s:"5+5mg×10",hk:141,lele:115,lee:120,acdc:117},
-  {cat:"Repair",p:"BPC+TB Blend",s:"10+10mg×10",hk:267,lele:220,lee:220,acdc:191},
-  {cat:"Repair",p:"GLOW70 (BPC+TB+GHK)",s:"70mg×10",hk:283,lele:215,lee:190,acdc:208},
-  {cat:"Repair",p:"KLOW80 (BPC+TB+GHK+KPV)",s:"80mg×10",hk:314,lele:270,lee:190,acdc:244},
-  {cat:"Repair",p:"AOD 9604",s:"5mg×10",hk:119,lele:115,lee:100,acdc:null},
-  {cat:"Repair",p:"AOD 9604",s:"10mg×10",hk:236,lele:195,lee:180,acdc:null},
-  {cat:"Repair",p:"ARA-290",s:"10mg×10",hk:88,lele:80,lee:null,acdc:79},
-  {cat:"Repair",p:"KPV",s:"5mg×10",hk:null,lele:45,lee:38,acdc:41},
-  {cat:"Repair",p:"KPV",s:"10mg×10",hk:82,lele:60,lee:70,acdc:51},
-  {cat:"Repair",p:"VIP",s:"10mg×10",hk:220,lele:150,lee:180,acdc:145},
-  {cat:"Repair",p:"LL-37",s:"5mg×10",hk:113,lele:105,lee:null,acdc:106},
-  {cat:"Repair",p:"SS-31",s:"10mg×10",hk:119,lele:98,lee:100,acdc:86},
-  {cat:"Repair",p:"SS-31",s:"50mg×10",hk:566,lele:350,lee:400,acdc:333},
-  {cat:"Copper / Skin",p:"GHK-Cu",s:"50mg×10",hk:38,lele:30,lee:35,acdc:30},
-  {cat:"Copper / Skin",p:"GHK-Cu",s:"100mg×10",hk:69,lele:40,lee:60,acdc:43},
-  {cat:"Copper / Skin",p:"AHK-Cu",s:"50mg×10",hk:null,lele:75,lee:42,acdc:76},
-  {cat:"HCG / Gonadal",p:"HCG",s:"5000iu×10",hk:101,lele:90,lee:90,acdc:87},
-  {cat:"HCG / Gonadal",p:"HCG",s:"10000iu×10",hk:189,lele:160,lee:160,acdc:162},
-  {cat:"HCG / Gonadal",p:"HMG",s:"75iu×10",hk:72,lele:75,lee:null,acdc:null},
-  {cat:"HCG / Gonadal",p:"Gonadorelin",s:"2mg×10",hk:38,lele:null,lee:35,acdc:null},
-  {cat:"HCG / Gonadal",p:"Kisspeptin-10",s:"5mg×10",hk:79,lele:70,lee:70,acdc:47},
-  {cat:"HCG / Gonadal",p:"Kisspeptin-10",s:"10mg×10",hk:126,lele:100,lee:110,acdc:79},
-  {cat:"HCG / Gonadal",p:"Oxytocin",s:"5mg×10",hk:57,lele:60,lee:null,acdc:39},
-  {cat:"HCG / Gonadal",p:"Oxytocin",s:"10mg×10",hk:110,lele:90,lee:90,acdc:null},
-  {cat:"Cognitive / Neuro",p:"Selank",s:"5mg×10",hk:63,lele:45,lee:55,acdc:39},
-  {cat:"Cognitive / Neuro",p:"Selank",s:"10mg×10",hk:110,lele:70,lee:95,acdc:58},
-  {cat:"Cognitive / Neuro",p:"Semax",s:"5mg×10",hk:63,lele:50,lee:55,acdc:44},
-  {cat:"Cognitive / Neuro",p:"Semax",s:"10mg×10",hk:110,lele:70,lee:95,acdc:62},
-  {cat:"Cognitive / Neuro",p:"DSIP",s:"5mg×10",hk:53,lele:45,lee:87,acdc:45},
-  {cat:"Cognitive / Neuro",p:"Epithalon",s:"10mg×10",hk:44,lele:65,lee:40,acdc:49},
-  {cat:"Cognitive / Neuro",p:"Epithalon",s:"50mg×10",hk:189,lele:200,lee:150,acdc:151},
-  {cat:"Cognitive / Neuro",p:"Melatonin",s:"10mg×10",hk:79,lele:70,lee:null,acdc:null},
-  {cat:"Cognitive / Neuro",p:"Snap-8",s:"10mg×10",hk:50,lele:50,lee:45,acdc:37},
-  {cat:"Cognitive / Neuro",p:"PT-141",s:"10mg×10",hk:82,lele:70,lee:70,acdc:64},
-  {cat:"Cognitive / Neuro",p:"Melanotan 1",s:"10mg×10",hk:63,lele:65,lee:55,acdc:53},
-  {cat:"Cognitive / Neuro",p:"Melanotan 2",s:"10mg×10",hk:63,lele:65,lee:55,acdc:55},
-  {cat:"Cognitive / Neuro",p:"Lemon Bottle",s:"10ml×10",hk:80,lele:70,lee:55,acdc:65},
-  {cat:"Cognitive / Neuro",p:"Adamax",s:"5mg×10",hk:null,lele:110,lee:null,acdc:86},
-  {cat:"Immune / Longevity",p:"Thymosin Alpha-1",s:"5mg×10",hk:126,lele:100,lee:110,acdc:102},
-  {cat:"Immune / Longevity",p:"Thymosin Alpha-1",s:"10mg×10",hk:220,lele:200,lee:180,acdc:171},
-  {cat:"Immune / Longevity",p:"Thymalin",s:"10mg×10",hk:82,lele:80,lee:null,acdc:74},
-  {cat:"Immune / Longevity",p:"FOXO4-DRI",s:"10mg×10",hk:440,lele:380,lee:330,acdc:50},
-  {cat:"Immune / Longevity",p:"ACE-031",s:"1mg×10",hk:369,lele:40,lee:null,acdc:43},
-  {cat:"Immune / Longevity",p:"Follistatin 344",s:"1mg×10",hk:16,lele:280,lee:null,acdc:289},
-  {cat:"Immune / Longevity",p:"PNC-27",s:"5mg×10",hk:null,lele:125,lee:null,acdc:103},
-  {cat:"Immune / Longevity",p:"Humanin",s:"10mg×10",hk:null,lele:320,lee:null,acdc:297},
-  {cat:"NAD+ / Mito",p:"NAD+",s:"100mg×10",hk:47,lele:40,lee:40,acdc:28},
-  {cat:"NAD+ / Mito",p:"NAD+",s:"500mg×10",hk:94,lele:75,lee:80,acdc:42},
-  {cat:"NAD+ / Mito",p:"NAD+",s:"1000mg×10",hk:182,lele:120,lee:140,acdc:54},
-  {cat:"NAD+ / Mito",p:"AICAR",s:"50mg×10",hk:75,lele:85,lee:65,acdc:51},
-  {cat:"NAD+ / Mito",p:"5-amino-1MQ",s:"5mg×10",hk:63,lele:45,lee:55,acdc:39},
-  {cat:"NAD+ / Mito",p:"5-amino-1MQ",s:"50mg×10",hk:126,lele:150,lee:110,acdc:null},
-  {cat:"NAD+ / Mito",p:"SLU-PP-332",s:"5mg×10",hk:119,lele:120,lee:70,acdc:143},
-  {cat:"Glutathione / IV",p:"Glutathione GT1500",s:"1500mg×10",hk:112,lele:75,lee:80,acdc:75},
-  {cat:"Glutathione / IV",p:"Glutathione 600mg",s:"600mg×10",hk:null,lele:50,lee:45,acdc:null},
-  {cat:"Glutathione / IV",p:"Lipo-B (LC120)",s:"10ml×10",hk:106,lele:75,lee:55,acdc:65},
-  {cat:"Glutathione / IV",p:"L-Carnitine 600mg",s:"10ml×10",hk:74,lele:75,lee:45,acdc:60},
-  {cat:"Glutathione / IV",p:"L-Carnitine 1200mg",s:"10ml×10",hk:null,lele:85,lee:null,acdc:66},
-  {cat:"Glutathione / IV",p:"MIC+B LC216",s:"10ml×10",hk:80,lele:80,lee:55,acdc:65},
-  {cat:"Glutathione / IV",p:"B12",s:"10ml×10",hk:null,lele:60,lee:25,acdc:44},
-  {cat:"Consumables",p:"Bac Water",s:"3ml×10",hk:9,lele:10,lee:8,acdc:8},
-  {cat:"Consumables",p:"Bac Water",s:"10ml×10",hk:13,lele:12,lee:10,acdc:15},
-  {cat:"Consumables",p:"Acetic Acid",s:"3ml×10",hk:null,lele:10,lee:8,acdc:10},
-  {cat:"Consumables",p:"Acetic Acid",s:"10ml×10",hk:null,lele:12,lee:10,acdc:null},
-  {cat:"Consumables",p:"Sterile Water",s:"10ml×10",hk:null,lele:12,lee:10,acdc:null},
-];
-rows.forEach((r,i)=>r.id=i);
-
-const order={}; // id -> qty
-let chosenSup=null; // explicit supplier picked via ORDER FROM button (null = auto/best)
-
-function cheapestKey(r){
-  const v=SUPS.map(s=>r[s.key]!=null?{v:r[s.key],k:s.key}:null).filter(Boolean);
-  if(!v.length)return null;
-  const mn=Math.min(...v.map(x=>x.v));
-  const w=v.filter(x=>x.v===mn);
-  return w.length===1?w[0].k:'tie';
-}
-
-function badgeHtml(w){
-  if(!w||w==='tie')return`<span class="badge b-tie">TIE</span>`;
-  const s=SUPS.find(x=>x.key===w);
-  return`<span class="badge b-${w}">${s.label}</span>`;
-}
-
-function priceCell(r,key){
-  return r[key]!=null?`<span class="p-${key}">$${r[key]}</span>`:`<span class="na">—</span>`;
-}
-
+ROWS.forEach((r,i)=>r.id=i);
+const basket={};
+let poOpen=false;
 function renderTable(data){
   const tbody=document.getElementById('tbody');
   let html='',lastCat='';
   for(const r of data){
-    if(r.cat!==lastCat){html+=`<tr class="sec-hdr"><td colspan="8">${r.cat}</td></tr>`;lastCat=r.cat;}
-    const w=cheapestKey(r);
-    const rc=w&&w!=='tie'?`w-${w}`:'';
-    const qv=order[r.id]||'';
-    html+=`<tr class="${rc}">
-      <td><span class="pname">${r.p}</span></td>
-      <td><span class="spec">${r.s}</span></td>
-      <td>${priceCell(r,'hk')}</td>
-      <td>${priceCell(r,'lele')}</td>
-      <td>${priceCell(r,'lee')}</td>
-      <td>${priceCell(r,'acdc')}</td>
-      <td>${badgeHtml(w)}</td>
-      <td><div class="qty-cell">
-        <input class="qty-in ${qv>0?'has':''}" type="number" min="0" max="999" value="${qv||''}" placeholder="0" oninput="setQty(${r.id},this.value,this)">
-      </div></td>
-    </tr>`;
+    if(r.ac==null)continue;
+    if(r.cat!==lastCat){html+=`<tr class="sh"><td colspan="5">${r.cat}</td></tr>`;lastCat=r.cat;}
+    const qty=basket[r.id]||'';
+    html+=`<tr><td><span class="pn">${r.p}</span></td><td><span class="dose">${r.s}</span></td><td><span class="code">${r.code}</span></td><td><span class="price">$${r.ac}</span></td><td><input class="qi${qty>0?' has':''}" type="number" min="0" max="999" value="${qty||''}" placeholder="0" data-id="${r.id}" oninput="handleQty(this)"></td></tr>`;
   }
   tbody.innerHTML=html;
 }
-
-function setQty(id,val,el){
-  const n=parseInt(val)||0;
-  if(n<=0){delete order[id];el.classList.remove('has');}
-  else{order[id]=n;el.classList.add('has');}
-  updatePO();
+function handleQty(el){
+  const id=parseInt(el.dataset.id);
+  const n=parseInt(el.value)||0;
+  if(n<=0){delete basket[id];el.classList.remove('has');}
+  else{basket[id]=n;el.classList.add('has');}
+  renderPO();
 }
-
-function chooseSup(key){
-  chosenSup=key;
-  updatePO();
+function ft(){
+  const q=document.getElementById('search').value.toLowerCase();
+  const fc=document.getElementById('filterCat').value;
+  renderTable(ROWS.filter(r=>{
+    const mQ=!q||r.p.toLowerCase().includes(q)||r.s.toLowerCase().includes(q)||r.code.toLowerCase().includes(q)||r.cat.toLowerCase().includes(q);
+    return mQ&&(!fc||r.cat===fc);
+  }));
 }
-
-// ── PO UPDATE ──
-let poOpen=false;
 function togglePO(){
   poOpen=!poOpen;
-  document.getElementById('poContent').className=poOpen?'open':'';
-  document.getElementById('poArrow').className=poOpen?'po-toggle-arrow open':'po-toggle-arrow';
+  document.getElementById('pob').className=poOpen?'open':'';
+  document.getElementById('poArrow').className=poOpen?'poa up':'poa';
 }
-
-// build per-supplier breakdown for the full selected basket
-function computeSuppliers(ids){
-  return SUPS.map(s=>{
-    const items=ids.map(id=>{
-      const r=rows[id];const qty=order[id];const price=r[s.key];
-      return{r,qty,price,has:price!=null,line:price!=null?price*qty:0};
-    });
-    const missing=items.filter(x=>!x.has).length;
-    const total=items.reduce((a,x)=>a+x.line,0);
-    return{...s,items,missing,total,complete:missing===0};
-  });
-}
-
-function updatePO(){
-  const ids=Object.keys(order).map(Number).filter(id=>order[id]>0).sort((a,b)=>a-b);
+function renderPO(){
+  const ids=Object.keys(basket).map(Number).filter(id=>basket[id]>0);
+  document.getElementById('selCount').textContent=ids.length?`${ids.length} selected`:'';
   const bar=document.getElementById('poBar');
-  if(!ids.length){bar.className='';chosenSup=null;document.getElementById('selCount').textContent='';document.getElementById('poPanels').innerHTML='';updatePills({});return;}
+  if(!ids.length){bar.className='';return;}
   bar.className='show';
-
-  const sups=computeSuppliers(ids);
-
-  // BEST PRICE = cheapest supplier that can fill the WHOLE basket
-  const complete=sups.filter(s=>s.complete);
-  const bestTotal=complete.length?Math.min(...complete.map(s=>s.total)):null;
-  const bestKey=complete.length?complete.find(s=>s.total===bestTotal).key:null;
-
-  // effective chosen supplier: explicit pick, else best, else cheapest partial
-  let effective=chosenSup;
-  if(!effective||!sups.find(s=>s.key===effective)){
-    effective=bestKey||sups.slice().sort((a,b)=>a.total-b.total)[0].key;
-  }
-
-  // panels
-  let panelsHtml='';
-  const activeSups={};
-  for(const s of sups){
-    activeSups[s.key]=true;
-    const itemsHtml=s.items.map(({r,qty,price,has,line})=>`
-      <div class="po-item">
-        <span class="po-item-name">${r.p} <span class="spec">${r.s}</span></span>
-        ${has?`<span class="po-item-price">×${qty} $${line.toLocaleString()}</span>`:`<span class="po-item-na">N/A</span>`}
-      </div>`).join('');
-    let badges='';
-    if(s.key===bestKey)badges+=`<span class="po-badge po-badge-best">★ BEST PRICE</span>`;
-    if(s.missing>0)badges+=`<span class="po-badge po-badge-missing">⚠ ${s.missing} MISSING</span>`;
-    const isSel=s.key===effective;
-    panelsHtml+=`<div class="po-panel ${isSel?'selected':''}">
-      <div class="po-panel-hdr">
-        <span class="po-panel-name" style="color:${s.color}">${s.label}</span>
-        <span class="po-panel-total" style="color:${s.color}">$${s.total.toLocaleString()} USD</span>
-      </div>
-      <div class="po-panel-badges">${badges}</div>
-      ${itemsHtml}
-      <button class="po-order-btn ${isSel?'selected':''}" onclick="chooseSup('${s.key}')">${isSel?'✓ ORDERING FROM '+s.label:'ORDER FROM '+s.label}</button>
-    </div>`;
-  }
-  document.getElementById('poPanels').innerHTML=panelsHtml;
-
-  // summary reflects the chosen supplier's full-basket total
-  const chosen=sups.find(s=>s.key===effective);
-  const totalUSD=chosen.total;
+  const items=ids.map(id=>({r:ROWS[id],qty:basket[id]}));
+  let sub=0;
+  let html='';
+  items.forEach(({r,qty})=>{
+    const line=r.ac*qty;sub+=line;
+    html+=`<div class="po-row"><span class="po-code">${r.code}</span><span class="po-name">${r.p} <span class="d">${r.s}</span></span><span class="po-qty">x${qty}</span><span class="po-line">$${line.toLocaleString()}</span></div>`;
+  });
+  document.getElementById('poItems').innerHTML=html;
+  document.getElementById('poSubtotal').textContent=`$${sub.toLocaleString()} USD`;
+  const disc=parseFloat(document.getElementById('discIn').value)||0;
+  const ship=parseFloat(document.getElementById('shipIn').value)||0;
+  const discAmt=sub*(disc/100);
+  const total=sub-discAmt+ship;
   const rate=parseFloat(document.getElementById('rateIn').value)||1.55;
-  const aud=totalUSD*rate;
-  document.getElementById('totUSD').textContent=`$${totalUSD.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})} USD`;
-  document.getElementById('totAUD').textContent=`A$${aud.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}`;
+  document.getElementById('sumUSD').textContent=`$${total.toFixed(2)} USD`;
+  document.getElementById('sumAUD').textContent=`A$${(total*rate).toFixed(2)}`;
   document.getElementById('rateLabel').textContent=`@ 1 USD = ${rate.toFixed(2)} AUD`;
-  document.getElementById('lineCount').textContent=ids.length;
-  document.getElementById('chosenLabel').textContent=chosen.missing>0?`${chosen.label} · ${chosen.missing} item(s) N/A`:`from ${chosen.label}`;
-  document.getElementById('selCount').textContent=`${ids.length} selected`;
-  updatePills(activeSups);
+  document.getElementById('sumLines').textContent=ids.length;
   if(!poOpen)togglePO();
 }
-
-function updatePills(active){
-  const container=document.getElementById('supPills');
-  container.innerHTML=SUPS.map(s=>`<span class="sup-pill ${active[s.key]?`active-${s.key}`:''}">● ${s.label}</span>`).join('');
-}
-
 function copyPO(){
-  const ids=Object.keys(order).map(Number).filter(id=>order[id]>0).sort((a,b)=>a-b);
+  const ids=Object.keys(basket).map(Number).filter(id=>basket[id]>0);
   if(!ids.length)return;
-  const sups=computeSuppliers(ids);
-  const complete=sups.filter(s=>s.complete);
-  const bestTotal=complete.length?Math.min(...complete.map(s=>s.total)):null;
-  const bestKey=complete.length?complete.find(s=>s.total===bestTotal).key:null;
-  let effective=chosenSup;
-  if(!effective||!sups.find(s=>s.key===effective))effective=bestKey||sups.slice().sort((a,b)=>a.total-b.total)[0].key;
-  const s=sups.find(x=>x.key===effective);
+  const items=ids.map(id=>({r:ROWS[id],qty:basket[id]}));
+  const disc=parseFloat(document.getElementById('discIn').value)||0;
+  const ship=parseFloat(document.getElementById('shipIn').value)||0;
   const rate=parseFloat(document.getElementById('rateIn').value)||1.55;
   const date=new Date().toLocaleDateString('en-AU',{day:'2-digit',month:'short',year:'numeric'});
-  let txt=`PEPTIDE PURCHASE ORDER — ${date}\n${'═'.repeat(55)}\n`;
-  txt+=`SUPPLIER: ${s.label}\n${s.contact}\n${'─'.repeat(50)}\n`;
-  s.items.forEach(({r,qty,price,has,line})=>{
-    const right=has?`×${qty} $${line.toLocaleString()}`:`×${qty}  N/A`;
-    txt+=`${r.p} ${r.s}`.padEnd(38)+right.padStart(14)+'\n';
+  let sub=0;
+  let lines='';
+  items.forEach(({r,qty})=>{
+    const line=r.ac*qty;sub+=line;
+    const label=`${r.code}  ${r.p} ${r.s}`;
+    lines+=`${label.padEnd(38)}x${qty}   $${String(line).padStart(6)}\n`;
   });
-  if(s.missing>0)txt+=`\n⚠ ${s.missing} item(s) not carried by ${s.label} (marked N/A)\n`;
-  txt+=`\n${'═'.repeat(55)}\n`;
-  txt+=`${'ORDER TOTAL USD'.padEnd(42)}$${s.total.toLocaleString(undefined,{maximumFractionDigits:2}).padStart(10)}\n`;
-  txt+=`${'ORDER TOTAL AUD'.padEnd(42)}A$${(s.total*rate).toLocaleString(undefined,{maximumFractionDigits:2}).padStart(9)}\n`;
-  navigator.clipboard.writeText(txt).then(()=>{
-    const btn=document.querySelector('.copy-btn');
-    btn.textContent='✅ COPIED';
-    setTimeout(()=>btn.textContent='📋 COPY',2000);
-  });
+  const discAmt=sub*(disc/100);
+  const total=sub-discAmt+ship;
+  let txt=`ORDER — ACDC / NICO\nWhatsApp +852 6324 8271\nacdcsource.com\n${date}\n${'─'.repeat(50)}\n${lines}${'─'.repeat(50)}\nSubtotal:          $${sub.toFixed(2)}\n`;
+  if(disc>0)txt+=`Discount (${disc}%):  -$${discAmt.toFixed(2)}\n`;
+  if(ship>0)txt+=`Shipping:          +$${ship.toFixed(2)}\n`;
+  txt+=`TOTAL USD:          $${total.toFixed(2)}\nTOTAL AUD:         A$${(total*rate).toFixed(2)}\n`;
+  navigator.clipboard.writeText(txt).then(()=>{const btn=document.getElementById('copyBtn');btn.textContent='✅ COPIED!';setTimeout(()=>{btn.textContent='📋 COPY FOR WHATSAPP';},2500);});
 }
-
-// ── FILTER ──
 function populateCats(){
-  const cats=[...new Set(rows.map(r=>r.cat))];
+  const cats=[...new Set(ROWS.filter(r=>r.ac!=null).map(r=>r.cat))];
   const sel=document.getElementById('filterCat');
   cats.forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;sel.appendChild(o);});
 }
-
-function filterTable(){
-  const q=document.getElementById('search').value.toLowerCase();
-  const fc=document.getElementById('filterCat').value;
-  const fw=document.getElementById('filterWinner').value;
-  renderTable(rows.filter(r=>{
-    const mQ=!q||r.p.toLowerCase().includes(q)||r.cat.toLowerCase().includes(q)||r.s.toLowerCase().includes(q);
-    const mC=!fc||r.cat===fc;
-    const w=cheapestKey(r);
-    const mW=!fw||w===fw;
-    return mQ&&mC&&mW;
-  }));
-}
-
-function init(){populateCats();renderTable(rows);updatePills({});}
+function init(){populateCats();renderTable(ROWS);}
 if(sessionStorage.getItem('po_ok')==='1')init();
 </script>
 </body>
